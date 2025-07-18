@@ -1,0 +1,146 @@
+{
+  "users" :[],
+  "products" : [
+  {
+    "id": 1,
+    "title": "UltraSound Wireless Earbuds",
+    "description": "Compact true wireless earbuds with noise cancellation & 30 hr battery life.",
+    "image_url": "https://images.unsplash.com/photo-1585386959984-a4155224b8e1?auto=format&fit=crop&w=500&q=60",
+    "price": 59.99
+  },
+  {
+    "id": 2,
+    "title": "ProFit Fitness Tracker",
+    "description": "Water‑resistant fitness band with heart‑rate monitor and sleep tracking.",
+    "image_url": "https://images.unsplash.com/photo-1598970434795-0c54fe7c0640?auto=format&fit=crop&w=500&q=60",
+    "price": 39.99
+  },
+  {
+    "id": 3,
+    "title": "EcoBlend Bamboo Cutting Board Set",
+    "description": "Set of 3 eco‑friendly bamboo boards with juice groove and non‑slip feet.",
+    "image_url": "https://images.unsplash.com/photo-1564758866814-904dad9d9a4e?auto=format&fit=crop&w=500&q=60",
+    "price": 24.5
+  },
+  {
+    "id": 4,
+    "title": "ThermaCozy Electric Blanket",
+    "description": "Fleece electric blanket with 10 heat settings and auto shut‑off timer.",
+    "image_url": "https://images.unsplash.com/photo-1609676450191-d1ad3f7c8c00?auto=format&fit=crop&w=500&q=60",
+    "price": 69.99
+  },
+  {
+    "id": 5,
+    "title": "WindCharge USB‑C Power Bank 20,000 mAh",
+    "description": "High‑capacity power bank with dual fast‑charge ports and LED display.",
+    "image_url": "https://images.unsplash.com/photo-1587614382346-ac4f94aa1f0c?auto=format&fit=crop&w=500&q=60",
+    "price": 29.99
+  },
+  {
+    "id": 6,
+    "title": "Artisan Clay Serving Bowl",
+    "description": "Hand‑thrown ceramic bowl, dishwasher safe, 12″ diameter, speckled glaze.",
+    "image_url": "https://images.unsplash.com/photo-1521086117359-848e96c24976?auto=format&fit=crop&w=500&q=60",
+    "price": 34.0
+  },
+  {
+    "id": 7,
+    "title": "Lumina LED Desk Lamp",
+    "description": "Adjustable color‑temperature lamp with wireless phone charging pad.",
+    "image_url": "https://images.unsplash.com/photo-1580734077993-8e84287ed2e5?auto=format&fit=crop&w=500&q=60",
+    "price": 45.75
+  },
+  {
+    "id": 8,
+    "title": "UrbanTrail Backpack 25 L",
+    "description": "Lightweight daypack with laptop compartment and water‑resistant fabric.",
+    "image_url": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=500&q=60",
+    "price": 49.99
+  },
+  {
+    "id": 9,
+    "title": "PureMist Cool‑Mist Humidifier",
+    "description": "Ultrasonic humidifier for rooms up to 500 sq ft, quiet operation, 10‑hr run time.",
+    "image_url": "https://images.unsplash.com/photo-1582719478197-444ab8f240d4?auto=format&fit=crop&w=500&q=60",
+    "price": 39.95
+  },
+  {
+    "id": 10,
+    "title": "SteelChef 10″ Non‑Stick Frying Pan",
+    "description": "Durable kitchen pan with PFOA‑free non‑stick coating and stay‑cool handle.",
+    "image_url": "https://images.unsplash.com/photo-1600891965059-cd9f4ed16831?auto=format&fit=crop&w=500&q=60",
+    "price": 27.99
+  },
+  {
+    "id": 11,
+    "title": "Refresh Natural Shampoo Bar – Lavender",
+    "description": "Solid shampoo bar for all hair types, sulfate‑free, vegan & cruelty‑free.",
+    "image_url": "https://images.unsplash.com/photo-1571236205255-65ff6fc0db54?auto=format&fit=crop&w=500&q=60",
+    "price": 8.99
+  },
+  {
+    "id": 12,
+    "title": "GamerPro RGB Mechanical Keyboard",
+    "description": "Full‑size mechanical keyboard with customizable RGB lighting and tactile switches.",
+    "image_url": "https://images.unsplash.com/photo-1611922150904-62c42651ba6b?auto=format&fit=crop&w=500&q=60",
+    "price": 79.99
+  },
+  {
+    "id": 13,
+    "title": "AromaHome Reed Diffuser – Ocean Breeze",
+    "description": "Luxury reed diffuser that provides up to 3 months of fresh scent.",
+    "image_url": "https://images.unsplash.com/photo-1563245379-c177ee5c4539?auto=format&fit=crop&w=500&q=60",
+    "price": 22.5
+  },
+  {
+    "id": 14,
+    "title": "FlexiMat Eco Yoga Mat",
+    "description": "Non‑slip, eco‑friendly TPE yoga mat with alignment lines, 6 mm thickness.",
+    "image_url": "https://images.unsplash.com/photo-1594737625785-141f4d8d1b36?auto=format&fit=crop&w=500&q=60",
+    "price": 29.95
+  },
+  {
+    "id": 15,
+    "title": "QuickBrew Portable Espresso Maker",
+    "description": "Compact manual espresso press—no electricity needed, up to 16 bar pressure.",
+    "image_url": "https://images.unsplash.com/photo-1565525640563-cb95f698fcb0?auto=format&fit=crop&w=500&q=60",
+    "price": 59.0
+  },
+  {
+    "id": 16,
+    "title": "SkyView 200″ Inflatable Outdoor Movie Screen",
+    "description": "Portable on‑ground screen with tripod and carrying case; suitable for backyard theaters.",
+    "image_url": "https://images.unsplash.com/photo-1544274882-e0900d30ec2b?auto=format&fit=crop&w=500&q=60",
+    "price": 129.99
+  },
+  {
+    "id": 17,
+    "title": "ClearTone Bluetooth Portable Speaker",
+    "description": "Water‑resistant speaker with 12‑hr playback, built‑in mic for calls.",
+    "image_url": "https://images.unsplash.com/photo-1595241472980-344507eabb76?auto=format&fit=crop&w=500&q=60",
+    "price": 49.5
+  },
+  {
+    "id": 18,
+    "title": "ClassicWool Men’s Crew Sweater",
+    "description": "100% merino wool crewneck sweater, regular fit, multiple colors available.",
+    "image_url": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=500&q=60",
+    "price": 85.0
+  },
+  {
+    "id": 19,
+    "title": "PhotoSnap 12‑pack Prop Display Frames",
+    "description": "Set of 12 decorative frames ideal for events, photo booths, or home multiplex displays.",
+    "image_url": "https://images.unsplash.com/photo-1606090473553-f1d7ad1edef9?auto=format&fit=crop&w=500&q=60",
+    "price": 19.99
+  },
+  {
+    "id": 20,
+    "title": "EcoSip Stainless Steel Insulated Bottle 750 ml",
+    "description": "Double‑wall vacuum insulated bottle keeps drinks cold for 24 hrs or hot for 12 hrs.",
+    "image_url": "https://images.unsplash.com/photo-1571689938662-e38aaf6cca60?auto=format&fit=crop&w=500&q=60",
+    "price": 32.0
+  }
+]
+
+}
