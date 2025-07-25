@@ -1,1 +1,22 @@
 @import "tailwindcss";
+
+
+
+
+
+#name{
+  border-bottom: 2px solid #000;
+}
+#email{
+  border-bottom: 2px solid #000;
+}
+#number{
+   border-bottom: 2px solid #000;
+}
+#newPass{
+  border-bottom: 2px solid #000;
+}
+#conPass{
+  border-bottom: 2px solid #000;
+}
+
