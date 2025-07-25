@@ -12,6 +12,9 @@ const ProductPage = () => {
     <>
       <h1>product</h1>
       <h2>sub products</h2>
+
+
+      
     </>
   );
 };
