@@ -3,6 +3,12 @@ import React, { useEffect, useState } from "react";
 import { FaShoppingCart, FaMoneyBillWave } from "react-icons/fa";
 
 const ProductPage = () => {
+
+  const product = useSelector((state) => state.productData.products);
+  console.log(product);
+  
+  
+
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -29,6 +35,7 @@ const ProductPage = () => {
 
     fetchProducts();
   }, []);
+
 
   return (
     <div className="min-h-screen bg-gray-100">

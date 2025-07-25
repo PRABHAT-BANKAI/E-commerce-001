@@ -1,11 +1,12 @@
+import axios from 'axios';
 import React, { useState } from 'react'
 import { Link } from 'react-router'
 
 const Signup = () => {
+  // const USER_URL = "http://localhost:3004/users";
   const [data, setData] = useState({ name: "", email: "", password: "", confirmpass: "", phoneno: "" })
   const [error, setError] = useState({})
   const [submit, setSubmitData] = useState(null)
-  
  
   function handlesubmit(e) {
     e.preventDefault()
@@ -59,6 +60,14 @@ const Signup = () => {
     return val
   }
 
+  async function handleSubmitData(){
+     let res = await axios.post("http://localhost:3000/users",data)
+    //  setData({ name: "", email: "", password: "", confirmpass: "", phoneno: "" })
+    setData(res.data)
+    setSubmitData(res.data)
+
+  }
+
   return (
 
     <div className='w-[100vw] h-[100vh]  relative' id='signup'>
@@ -102,14 +111,30 @@ const Signup = () => {
         </label>
         {error.confirmpass && <p style={{ color: "red" }}>{error.confirmpass}</p>}
 
+
+        <button onClick={handleSubmitData} className='mt-[40px] border w-[250px] h-[40px] rounded-[5px] bg-white cursor-pointer'>submit</button>
+
         <button className='mt-[40px] border w-[250px] h-[40px] text-white rounded-[5px] bg-blue-500 cursor-pointer'>submit</button>
+
 
         <div className='flex mt-[20px]  text-white'>
           <p>If You Have Already Account ?</p>
        <Link to={"/"}>   <button className='text-cyan-400 cursor-pointer pl-[10px]'>Login</button></Link>
         </div>
       </form>
+
+      {/* {submit && (
+        <div className='ml-[20px]  text-black'>
+          <p>Name :-{submit.name}</p>
+          <p>Phone No :- {submit.phoneno}</p>    
+          <p>E-mail :- {submit.email}</p>
+          <p>password :-{submit.password}</p>
+          
+        </div>
+      )} */}
+
     
+
     </div>
   )
 }
