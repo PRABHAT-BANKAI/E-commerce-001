@@ -1,14 +1,41 @@
 {
-  "users" :[
+  "users": [
     {
-      "id":1,
-      "name":"param",
-      "email":"abc@gmail.com",
-      "phone no":"123456789",
-      "password":"pam123"
+      "id": "1",
+      "name": "param",
+      "email": "abc@gmail.com",
+      "phone no": "123456789",
+      "password": "pam123"
+    },
+    {
+      "id": "db4a"
+    },
+    {
+      "id": "efb1"
+    },
+    {
+      "id": "a19b"
+    },
+    {
+      "id": "ef97"
+    },
+    {
+      "id": "3828",
+      "name": "pam",
+      "email": "p@gmail.com",
+      "password": "pam",
+      "confirmpass": "pam",
+      "phoneno": "123"
+    },
+    {
+      "id": "bd16",
+      "name": "",
+      "email": "",
+      "password": "",
+      "confirmpass": "",
+      "phoneno": ""
     }
   ],
-
   "products" : [
   {
     "id": 1,
@@ -151,4 +178,5 @@
     "price": 32.0
   }
 ]
+
 }
