@@ -1,13 +1,11 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { FaShoppingCart, FaMoneyBillWave } from "react-icons/fa";
+import { useSelector } from "react-redux";
 
 const ProductPage = () => {
-
   const product = useSelector((state) => state.productData.products);
   console.log(product);
-  
-  
 
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -36,29 +34,22 @@ const ProductPage = () => {
     fetchProducts();
   }, []);
 
-
   return (
-    <div className="min-h-screen bg-gray-100">
-      <header className="bg-white shadow p-6 mb-6">
-        <h1 className="text-3xl font-bold text-center text-gray-900">
-          Product Catalog
-        </h1>
+    <div className="min-h-screen py-6 px-4" style={{ backgroundColor: "#23223b" }}>
+      <header className="bg-white shadow p-6 mb-8 rounded-xl">
+        <h1 className="text-3xl font-bold text-center text-[#23223b]">Product Catalog</h1>
       </header>
 
-      <main className="max-w-7xl mx-auto px-4">
-        {loading && (
-          <p className="text-center text-gray-500">Loading products...</p>
-        )}
-        {error && (
-          <p className="text-center text-red-500">Error: {error}</p>
-        )}
+      <main className="max-w-7xl mx-auto">
+        {loading && <p className="text-center text-gray-300">Loading products...</p>}
+        {error && <p className="text-center text-red-400">Error: {error}</p>}
 
         {!loading && !error && (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             {products.map((product) => (
               <div
                 key={product.id}
-                className="bg-white shadow-xl rounded-2xl overflow-hidden transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl"
+                className="bg-white border-4 border-[#23223b] rounded-2xl shadow-xl overflow-hidden transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl"
               >
                 <img
                   src={product.image_url}
@@ -66,14 +57,10 @@ const ProductPage = () => {
                   className="w-full h-64 object-cover hover:opacity-90 transition-opacity duration-300"
                 />
                 <div className="p-5">
-                  <h2 className="font-bold text-lg text-gray-800 mb-2">
-                    {product.title}
-                  </h2>
-                  <p className="text-sm text-gray-600 mb-3 line-clamp-3">
-                    {product.description}
-                  </p>
+                  <h2 className="font-bold text-lg text-[#23223b] mb-2">{product.title}</h2>
+                  <p className="text-sm text-gray-600 mb-3 line-clamp-3">{product.description}</p>
                   <div className="flex justify-between items-center mb-3">
-                    <span className="text-blue-600 font-bold text-lg">
+                    <span className="text-[#23223b] font-extrabold text-lg">
                       ${product.price}
                     </span>
                   </div>
@@ -81,7 +68,7 @@ const ProductPage = () => {
                     {/* Add to Cart Button */}
                     <button
                       onClick={() => handleAddToCart(product)}
-                      className="flex items-center justify-center gap-2 border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white text-sm font-semibold py-2 px-4 rounded-lg transition duration-300"
+                      className="flex items-center justify-center gap-2 border-2 border-[#23223b] text-[#23223b] hover:bg-[#23223b] hover:text-white text-sm font-semibold py-2 px-4 rounded-lg transition duration-300"
                     >
                       <FaShoppingCart />
                       Add to Cart
@@ -90,7 +77,7 @@ const ProductPage = () => {
                     {/* Buy Now Button */}
                     <button
                       onClick={() => handleBuyNow(product)}
-                      className="flex items-center justify-center gap-2 border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white text-sm font-semibold py-2 px-4 rounded-lg transition duration-300"
+                      className="flex items-center justify-center gap-2 border-2 border-[#23223b] text-[#23223b] hover:bg-[#23223b] hover:text-white text-sm font-semibold py-2 px-4 rounded-lg transition duration-300"
                     >
                       <FaMoneyBillWave />
                       Buy Now
