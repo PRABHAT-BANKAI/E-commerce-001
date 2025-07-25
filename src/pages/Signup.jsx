@@ -112,7 +112,7 @@ const Signup = () => {
       {submit && (
         <div className='ml-[20px]  text-black'>
           <p>Name :-{submit.name}</p>
-          <p>Phone No :- {submit.phoneno}</p>
+          <p>Phone No :- {submit.phoneno}</p>    
           <p>E-mail :- {submit.email}</p>
           <p>password :-{submit.password}</p>
         </div>
