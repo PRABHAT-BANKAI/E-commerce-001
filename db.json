@@ -1,5 +1,14 @@
 {
-  "users" :[],
+  "users" :[
+    {
+      "id":1,
+      "name":"param",
+      "email":"abc@gmail.com",
+      "phone no":"123456789",
+      "password":"pam123"
+    }
+  ],
+
   "products" : [
   {
     "id": 1,
@@ -142,5 +151,4 @@
     "price": 32.0
   }
 ]
-
 }
