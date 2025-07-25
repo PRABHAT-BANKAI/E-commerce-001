@@ -3,20 +3,30 @@
 
 
 
+#signup{
+    background-image: url("https://segwitz.com/wp-content/uploads/2021/09/why-ecommerce-need-mobile-apps.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation:animateBg 5s linear infinite;
+  
+}
 
 #name{
-  border-bottom: 2px solid #000;
+  border-bottom: 2px solid #fff;
 }
 #email{
-  border-bottom: 2px solid #000;
+  border-bottom: 2px solid #fff;
 }
 #number{
-   border-bottom: 2px solid #000;
+   border-bottom: 2px solid #fff;
 }
 #newPass{
-  border-bottom: 2px solid #000;
+  border-bottom: 2px solid #fff;
 }
 #conPass{
-  border-bottom: 2px solid #000;
+  border-bottom: 2px solid #fff;
 }
 
+#signupform{
+   backdrop-filter: blur(15px);
+}
