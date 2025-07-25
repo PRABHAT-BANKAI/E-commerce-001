@@ -109,14 +109,7 @@ const Signup = () => {
        <Link to={"/"}>   <button className='text-cyan-400 cursor-pointer pl-[10px]'>Login</button></Link>
         </div>
       </form>
-      {submit && (
-        <div className='ml-[20px]  text-black'>
-          <p>Name :-{submit.name}</p>
-          <p>Phone No :- {submit.phoneno}</p>    
-          <p>E-mail :- {submit.email}</p>
-          <p>password :-{submit.password}</p>
-        </div>
-      )}
+    
     </div>
   )
 }
