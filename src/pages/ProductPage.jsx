@@ -4,6 +4,9 @@ import { useSelector } from "react-redux";
 const ProductPage = () => {
   const product = useSelector((state) => state.productData.products);
   console.log(product);
+  const users = useSelector((state) => state.productData.users);
+  console.log(users);
+  
 
   return (
     <>
