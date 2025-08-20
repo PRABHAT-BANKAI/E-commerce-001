@@ -1,23 +1,31 @@
 import axios from 'axios';
 import React, { useState } from 'react'
-import { Link } from 'react-router'
+import { Link, useNavigate } from 'react-router'
 
 const Signup = () => {
   // const USER_URL = "http://localhost:3004/users";
   const [data, setData] = useState({ name: "", email: "", password: "", confirmpass: "", phoneno: "" })
   const [error, setError] = useState({})
   const [submit, setSubmitData] = useState(null)
- 
-  function handlesubmit(e) {
+  const navigate = useNavigate()
+
+
+  async function handlesubmit(e) {
     e.preventDefault()
 
     if (handleError()) {
-      
-      setSubmitData(data)
-   
-      setData({ name: "", email: "", password: "", confirmpass: "", phoneno: "" })
+      try {
+        const res = await axios.post("http://localhost:3000/users", data)
+        setSubmitData(res.data) 
+        setData({ name: "", email: "", password: "", confirmpass: "", phoneno: "" }) 
+        alert("You are successfully signup")
+        navigate('/')
+      } catch (error) {
+        console.error("Failed to submit data:", error)
+      }
     }
   }
+
   function handleError() {
     let obj = {}
     let val = true
@@ -25,7 +33,6 @@ const Signup = () => {
     if (!data.name.trim()) {
       val = false
       obj.name = "Enter a valid name"
-
     }
 
     if (!data.email.trim()) {
@@ -36,42 +43,36 @@ const Signup = () => {
     if (!data.password.trim()) {
       val = false
       obj.password = "Enter a valid password"
+    } else if (data.password.length < 6) {
+      val = false
+      obj.password = "Password length should be greater than or equal to 6"
     }
+
     if (!data.phoneno.trim()) {
       val = false
       obj.phoneno = "Enter a valid Phone No"
-    }
-     if (!data.phoneno > 9) {
+    } else if (data.phoneno.length < 10) {
       val = false
-      obj.phoneno = "password length should be grater then 10"
+      obj.phoneno = "Phone number length should be at least 10 digits"
     }
 
     if (!data.confirmpass.trim()) {
       val = false
-
       obj.confirmpass = "Enter a valid confirm password"
-    }
-    if(data.password !== data.confirmpass){
+    } else if (data.password !== data.confirmpass) {
       val = false
-     obj.confirmpass = "Confirm password does not match the password";
-
+      obj.confirmpass = "Confirm password does not match the password"
     }
+
     setError(obj)
     return val
   }
 
-  async function handleSubmitData(){
-     let res = await axios.post("http://localhost:3000/users",data)
-    //  setData({ name: "", email: "", password: "", confirmpass: "", phoneno: "" })
-    setData(res.data)
-    setSubmitData(res.data)
-
-  }
 
   return (
 
     <div className='w-[100vw] h-[100vh]  relative' id='signup'>
-      <form className=' border-white border-[2px] rounded-[25px] w-[500px] h-[600px] flex flex-col  items-center absolute top-[20%] left-[12%]' id='signupform' action="" onSubmit={handlesubmit}>
+      <form className=' border-white border-[2px] rounded-[25px] w-[500px] h-[600px] flex flex-col  items-center absolute top-[10%] left-[12%]' id='signupform' action="" onSubmit={handlesubmit}>
 
         <h2 className='text-[22px] font-medium mt-[18px] text-white'>CREATE ACCOUNT</h2>
         <label htmlFor="" className='w-[60%]  h-[40px] flex justify-center mt-[30px]' id='name'>
@@ -112,28 +113,20 @@ const Signup = () => {
         {error.confirmpass && <p style={{ color: "red" }}>{error.confirmpass}</p>}
 
 
-        <button onClick={handleSubmitData} className='mt-[40px] border w-[250px] h-[40px] rounded-[5px] bg-white cursor-pointer'>submit</button>
+        <button className='mt-[40px] border w-[250px] h-[40px] rounded-[5px] bg-white cursor-pointer'>submit</button>
 
-        <button className='mt-[40px] border w-[250px] h-[40px] text-white rounded-[5px] bg-blue-500 cursor-pointer'>submit</button>
+
 
 
         <div className='flex mt-[20px]  text-white'>
           <p>If You Have Already Account ?</p>
-       <Link to={"/"}>   <button className='text-cyan-400 cursor-pointer pl-[10px]'>Login</button></Link>
+          <Link to={"/"}>   <button className='text-cyan-400 cursor-pointer pl-[10px]'>Login</button></Link>
         </div>
       </form>
 
-      {/* {submit && (
-        <div className='ml-[20px]  text-black'>
-          <p>Name :-{submit.name}</p>
-          <p>Phone No :- {submit.phoneno}</p>    
-          <p>E-mail :- {submit.email}</p>
-          <p>password :-{submit.password}</p>
-          
-        </div>
-      )} */}
 
-    
+
+
 
     </div>
   )
