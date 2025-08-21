@@ -4,6 +4,7 @@ import { FaShoppingCart, FaMoneyBillWave } from "react-icons/fa";
 import { IoMdSearch } from "react-icons/io";
 import { useSelector } from "react-redux";
 import Slider from "./Slider";
+import Footer from "../components/Footer";
 
 const ProductPage = () => {
   const product = useSelector((state) => state.productData.products);
