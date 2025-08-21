@@ -59,8 +59,8 @@ const Signup = () => {
       } catch (error) {
         console.error("Failed to submit data:", error);
       }
-    }
-  }
+    }     
+  }    
 
   function handleError() {
     let obj = {};
