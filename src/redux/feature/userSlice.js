@@ -11,7 +11,7 @@ export const fetchUsers = createAsyncThunk("users/fetchUsers", async () => {
 export const signupUser = createAsyncThunk(
   "users/signupUser",
   async (userData, { rejectWithValue }) => {
-    try {
+    try {      
       const { data: existingUsers } = await axios.get(USER_URL);
 
       const isEmailTaken = existingUsers.some(
