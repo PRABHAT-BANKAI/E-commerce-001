@@ -38,6 +38,14 @@
       "password": "123456",
       "confirmpass": "123456",
       "phoneno": "7859999392"
+    },
+    {
+      "id": "aee1",
+      "name": "Param",
+      "email": "p@gmail.com",
+      "password": "123456",
+      "confirmpass": "123456",
+      "phoneno": "9773430104"
     }
   ],
   "products": [
@@ -147,6 +155,7 @@
       "price": 59
     },
     {
+      
       "id": "16",
       "title": "SkyView 200″ Inflatable Outdoor Movie Screen",
       "description": "Portable on‑ground screen with tripod and carrying case; suitable for backyard theaters.",
@@ -180,6 +189,44 @@
       "description": "Double‑wall vacuum insulated bottle keeps drinks cold for 24 hrs or hot for 12 hrs.",
       "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOsButy4Iwhu20UwibimBoZWmXuI56USTGIA&s",
       "price": 32
+    }
+  ],
+
+  "category": [
+    {
+      "id":"",
+      "name":"",
+      "img":"",
+      "description":"",
+      "category":"all"
+    },
+    {
+      "id":"",
+      "name":"",
+      "img":"",
+      "description":"",
+      "category":"mobiles"
+    },
+    {
+      "id":"",
+      "name":"",
+      "img":"",
+      "description":"",
+      "category":"electronics"
+    },
+    {
+      "id":"",
+      "name":"",
+      "img":"",
+      "description":"",
+      "category":"fashion"
+    },
+    {
+      "id":"",
+      "name":"",
+      "img":"",
+      "description":"",
+      "category":"furniture"
     }
   ]
 }
