@@ -1,30 +1,16 @@
 {
   "users": [
+
+
     {
-      "id": "c72f",
-      "name": "Gondaliya Arshil Shaileshbhai",
-      "email": "aar@gmail.com",
-      "password": "123456",
-      "confirmpass": "123456",
-      "phoneno": "1234567899"
-    },
-    {
-      "id": "0ed0",
+      "id": "9013",
       "name": "arshil",
-      "email": "arshilgondaliya5@gmail.com",
+      "email": "123@gmail.com",
       "password": "123456",
       "confirmpass": "123456",
       "phoneno": "07383020929"
-    },
-    {
-      "id": "de95",
-      "name": "Gondaliya Arshil Shaileshbhai",
-      "email": "arshil567@gmail.com",
-      "password": "arshil",
-      "confirmpass": "arshil",
-      "phoneno": "7859999392",
-      "confirmPassword": "123456"
     }
+
   ],
   "products": [
     {
@@ -167,6 +153,7 @@
       "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOsButy4Iwhu20UwibimBoZWmXuI56USTGIA&s",
       "price": 32
     }
+
   ],
   "category": [
     {
@@ -204,5 +191,6 @@
       "description": "",
       "category": "furniture"
     }
+
   ]
 }

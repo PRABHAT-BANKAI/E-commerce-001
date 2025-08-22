@@ -1,6 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router";
+import { resetSignupState, signupUser } from "../redux/feature/userSlice";
 
 const Signup = () => {
   const [data, setData] = useState({
@@ -10,103 +12,118 @@ const Signup = () => {
     confirmpass: "",
     phoneno: "",
   });
-  const [error, setError] = useState({});
-  const [fetchData, setFetchData] = useState([]);
+  // const [error, setError] = useState({});
+  // const [fetchData, setFetchData] = useState([]);
 
-  const [submit, setSubmitData] = useState(null);
+  // const [submit, setSubmitData] = useState(null);
 
   const navigate = useNavigate();
+  const dispatch = useDispatch()
+
+    const { loading, error, signupSuccess } = useSelector((state) => state.users);
 
 
-  async function getData() {
-    let userData = await axios.get(`http://localhost:3000/users`);
-    setFetchData(userData.data);
+  function handlesubmit(e){
+    e.preventDefault()
+    dispatch(signupUser(data))
+
   }
 
+  // async function getData() {
+  //   let userData = await axios.get(`http://localhost:3000/users`);
+  //   setFetchData(userData.data);
+  // }
 
-  async function handlesubmit(e) {
-    e.preventDefault();
 
-    if (!handleError()) return;
+  // async function handlesubmit(e) {
+  //   e.preventDefault();
 
-    const isEmailTaken = fetchData.some(
-      (user) => user.email.toLowerCase() === data.email.toLowerCase()
-    );
+  //   if (!handleError()) return;
 
-    if (isEmailTaken) {
-      setError((prev) => ({
-        ...prev,
-        email: "Email is already registered",
-      }));
-      return;
-    }
+  //   const isEmailTaken = fetchData.some(
+  //     (user) => user.email.toLowerCase() === data.email.toLowerCase()
+  //   );
 
-    if (handleError()) {
-      try {
-        const res = await axios.post("http://localhost:3000/users", data);
-        setSubmitData(res.data);
+  //   if (isEmailTaken) {
+  //     setError((prev) => ({
+  //       ...prev,
+  //       email: "Email is already registered",
+  //     }));
+  //     return;
+  //   }
 
-        setData({
-          name: "",
-          email: "",
-          password: "",
-          confirmpass: "",
-          phoneno: "",
-        });
+  //   if (handleError()) {
+  //     try {
+  //       const res = await axios.post("http://localhost:3000/users", data);
+  //       setSubmitData(res.data);
 
-        alert("You are successfully signup");
-        navigate("/");
-      } catch (error) {
-        console.error("Failed to submit data:", error);
-      }
-    }       
-  }    
+  //       setData({
+  //         name: "",
+  //         email: "",
+  //         password: "",
+  //         confirmpass: "",
+  //         phoneno: "",
+  //       });
 
-  function handleError() {
-    let obj = {};
-    let val = true;
+  //       alert("You are successfully signup");
+  //       navigate("/");
+  //     } catch (error) {
+  //       console.error("Failed to submit data:", error);
+  //     }
+  //   }       
+  // }    
 
-    if (!data.name.trim()) {
-      val = false;
-      obj.name = "Enter a valid name";
-    }
+  // function handleError() {
+  //   let obj = {};
+  //   let val = true;
 
-    if (!data.email.trim()) {
-      val = false;
-      obj.email = "Enter a valid email";
-    }
+  //   if (!data.name.trim()) {
+  //     val = false;
+  //     obj.name = "Enter a valid name";
+  //   }
 
-    if (!data.password.trim()) {
-      val = false;
-      obj.password = "Enter a valid password";
-    } else if (data.password.length < 6) {
-      val = false;
-      obj.password = "Password length should be greater than or equal to 6";
-    }
+  //   if (!data.email.trim()) {
+  //     val = false;
+  //     obj.email = "Enter a valid email";
+  //   }
 
-    if (!data.phoneno.trim()) {
-      val = false;
-      obj.phoneno = "Enter a valid Phone No";
-    } else if (data.phoneno.length < 10) {
-      val = false;
-      obj.phoneno = "Phone number length should be at least 10 digits";
-    }
+  //   if (!data.password.trim()) {
+  //     val = false;
+  //     obj.password = "Enter a valid password";
+  //   } else if (data.password.length < 6) {
+  //     val = false;
+  //     obj.password = "Password length should be greater than or equal to 6";
+  //   }
 
-    if (!data.confirmpass.trim()) {
-      val = false;
-      obj.confirmpass = "Enter a valid confirm password";
-    } else if (data.password !== data.confirmpass) {
-      val = false;
-      obj.confirmpass = "Confirm password does not match the password";
-    }
+  //   if (!data.phoneno.trim()) {
+  //     val = false;
+  //     obj.phoneno = "Enter a valid Phone No";
+  //   } else if (data.phoneno.length < 10) {
+  //     val = false;
+  //     obj.phoneno = "Phone number length should be at least 10 digits";
+  //   }
 
-    setError(obj);
-    return val;
-  }
+  //   if (!data.confirmpass.trim()) {
+  //     val = false;
+  //     obj.confirmpass = "Enter a valid confirm password";
+  //   } else if (data.password !== data.confirmpass) {
+  //     val = false;
+  //     obj.confirmpass = "Confirm password does not match the password";
+  //   }
+
+  //   setError(obj);
+  //   return val;
+  // }
 
   useEffect(() => {
-    getData();
-  }, []);
+    if(signupSuccess){
+      alert("signup successful")
+      navigate("/")
+      dispatch(resetSignupState())
+    }
+  }, [signupSuccess,navigate,dispatch]);
+
+  
   return (
     <div className="w-[100vw] h-[100vh]  relative" id="signup">
       <form
@@ -118,11 +135,13 @@ const Signup = () => {
         <h2 className="text-[22px] font-medium mt-[18px] text-white">
           CREATE ACCOUNT
         </h2>
+
         <label
           htmlFor=""
           className="w-[60%]  h-[40px] flex justify-center mt-[30px]"
           id="name"
         >
+
           <input
             className="w-[100%] pl-[20px]   text-white"
             type="text"
@@ -133,7 +152,7 @@ const Signup = () => {
             }}
           />
         </label>
-        {error.name && <p style={{ color: "red" }}>{error.name}</p>}
+  
         <label
           htmlFor=""
           id="email"
@@ -149,7 +168,7 @@ const Signup = () => {
             }}
           />
         </label>
-        {error.email && <p style={{ color: "red" }}>{error.email}</p>}
+
         <label
           htmlFor=""
           className="w-[60%]  h-[40px] flex justify-center mt-[30px]"
@@ -165,7 +184,6 @@ const Signup = () => {
             }}
           />
         </label>
-        {error.phoneno && <p style={{ color: "red" }}>{error.phoneno}</p>}
 
         <label
           htmlFor=""
@@ -205,7 +223,6 @@ const Signup = () => {
             }}
           />
         </label>
-        {error.password && <p style={{ color: "red" }}>{error.password}</p>}
 
         <label
           htmlFor=""
@@ -222,9 +239,10 @@ const Signup = () => {
             }}
           />
         </label>
-        {error.confirmpass && (
-          <p style={{ color: "red" }}>{error.confirmpass}</p>
-        )}
+     
+          {error && <p style={{ color: "red" }}>{error}</p>}
+          {loading && <p className="text-white mt-2">Signing up...</p>}
+
 
         <button className="mt-[40px] border w-[250px] h-[40px] rounded-[5px] bg-white cursor-pointer">
           submit
