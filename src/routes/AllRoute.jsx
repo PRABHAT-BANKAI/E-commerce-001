@@ -9,6 +9,8 @@ import Forgotpassword from "../pages/Forgotpassword";
 import About from "../pages/About";
 import Features from "../pages/Features";
 import Contact from "../pages/Contact";
+import CartPage from "../pages/CartPage";
+
 
 
 const AllRoute = () => {
@@ -25,6 +27,8 @@ const AllRoute = () => {
         <Route path="/about" element={<About />} />
         <Route path="/features" element={<Features/>} />
         <Route path="/contact" element={<Contact />} />
+
+        <Route path="/cart" element={<CartPage/>}/>
 
       </Routes>
     </div>
