@@ -22,7 +22,7 @@ const ProductPage = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get("http://localhost:3004/products");
+        const response = await axios.get("http://localhost:3000/products");
         setProducts(response.data);
         setLoading(false);
       } catch (err) {
