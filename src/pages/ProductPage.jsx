@@ -1,10 +1,13 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, } from "react";
 import { FaShoppingCart, FaMoneyBillWave } from "react-icons/fa";
 import { IoMdSearch } from "react-icons/io";
-import { useSelector } from "react-redux";
+import { useSelector,useDispatch } from "react-redux";
 import Slider from "./Slider";
 import Footer from "../components/Footer";
+import { addToCart } from "../redux/feature/cartSlice";
+import { useNavigate } from "react-router";
+
 
 const ProductPage = () => {
   const product = useSelector((state) => state.productData.products);
@@ -20,11 +23,18 @@ const ProductPage = () => {
   const [category, setCategory] = useState("all");
   const [sort, setSort] = useState("");
 
+  //cart
+
+  const dispatch = useDispatch();
+  const  navigate = useNavigate();
   const handleAddToCart = (product) => {
+    dispatch(addToCart(product));
     alert(`🛒 Added "${product.title}" to cart`);
   };
 
   const handleBuyNow = (product) => {
+    dispatch(addToCart(product)); 
+    navigate("/cartpage");
     alert(`💰 Buying "${product.title}"`);
   };
 
