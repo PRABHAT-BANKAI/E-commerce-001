@@ -2,6 +2,11 @@ import React, { useEffect, useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router";
 import { FaShoppingCart } from "react-icons/fa";
 
+import { IoMdSearch } from "react-icons/io";
+import image from "../assets/main.png";
+import { useSelector } from "react-redux";
+
+
 // Helper: Get initials
 const getInitials = (firstName, lastName, fullName) => {
   if (firstName && lastName) {
@@ -16,7 +21,6 @@ const getInitials = (firstName, lastName, fullName) => {
   return "";
 };
 
-
 // Helper: Random background color with text color
 const getRandomBgColor = () => {
   const colors = [
@@ -30,15 +34,24 @@ const getRandomBgColor = () => {
   return colors[Math.floor(Math.random() * colors.length)];
 };
 
-const Navbar = () => {
+const Navbar = ({ onSearch }) => {
   const [user, setUser] = useState(null);
   const [bgColor, setBgColor] = useState("bg-gray-500 text-white");
   const [menuOpen, setMenuOpen] = useState(false);
+  const [search, setSearch] = useState("");
   const navigate = useNavigate();
   const location = useLocation();
 
+
+  // cartsection 
+ const cartItems = useSelector((state) => state.cart.cartItems);
+const cartCount = cartItems.reduce((acc, item) => acc + item.quantity, 0);
+
+
+
+
   useEffect(() => {
-    // Fetch from db.json (example: http://localhost:3000/users/1)
+    // Example: fetch user (from json-server)
     fetch("http://localhost:3000/users/1")
       .then((res) => res.json())
       .then((data) => {
@@ -53,32 +66,38 @@ const Navbar = () => {
     navigate("/");
   };
 
+  const handleSearchChange = (e) => {
+    setSearch(e.target.value);
+    if (onSearch) onSearch(e.target.value); // Pass search value to parent (like Product page)
+  };
+
   return (
-    <nav className="flex justify-between items-center px-8 py-4 bg-white shadow-md relative">
+    <nav className="flex justify-between items-center px-6 py-4 bg-white shadow-md relative">
       {/* Logo */}
-      <Link to="/product" className="text-2xl font-bold text-blue-600">
-        ApanaCart
+      <Link to="/product" className="flex items-center">
+        <img src={image} alt="logo" className="w-28 h-auto" />
       </Link>
 
-      {/* Navigation Links */}
-      <div className="hidden md:flex space-x-6 text-gray-700 font-medium">
-        <Link to="/product" className="hover:text-blue-600 transition">
-          Product
-        </Link>
-        <Link to="/about" className="hover:text-blue-600 transition">
-          About
-        </Link>
-        <Link to="/features" className="hover:text-blue-600 transition">
-          Features
-        </Link>
-        <Link to="/contact" className="hover:text-blue-600 transition">
-          Contact
-        </Link>
+      {/* 🔍 Search Bar */}
+      <div className="flex items-center border rounded-lg px-3 py-1 w-1/2 max-w-md bg-gray-50">
+        <IoMdSearch className="text-gray-500 text-xl mr-2" />
+        <input
+          type="text"
+          placeholder="Search products..."
+          value={search}
+          onChange={handleSearchChange}
+          className="w-full bg-transparent outline-none text-gray-700"
+        />
       </div>
 
       {/* Right Section */}
-      <div className="flex items-center space-x-6 relative">
-        <FaShoppingCart className="text-xl text-gray-700 hover:text-blue-600 cursor-pointer" />
+      <div className="flex items-center space-x-6 relative"> 
+        <Link to="/cart" className="relative"> 
+         <FaShoppingCart/>
+         {cartCount > 0 && ( 
+          <span className="absolute -top-2 -right-2 bg-red-600 text-white text-xs px-2 py-1 rounded-full"> {cartCount} </span> 
+          )}
+          </Link>
 
         {/* Profile Avatar if logged in */}
         {user ? (
@@ -125,8 +144,7 @@ const Navbar = () => {
                 </button>
               </Link>
             ) : (
-              // Default show login if user is not logged in
-              <Link to="">
+              <Link to="/">
                 <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
                   Login
                 </button>

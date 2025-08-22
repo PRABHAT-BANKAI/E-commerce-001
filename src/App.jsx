@@ -1,8 +1,6 @@
 import React from 'react'
 import Navbar from './components/Navbar'
 import AllRoute from './routes/AllRoute'
-import ProductPage from './pages/ProductPage'
-import Footer from './components/Footer'
 
 
 const App = () => {
@@ -10,7 +8,6 @@ const App = () => {
     <div>
       <Navbar/>
       <AllRoute/>
-      <Footer/>
     </div>
   )
 }

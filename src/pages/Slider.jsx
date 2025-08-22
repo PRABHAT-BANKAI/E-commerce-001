@@ -15,12 +15,12 @@ const Slider = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrent((prev) => (prev + 1) % images.length);
-    }, 3000);
+    }, 4000);
     return () => clearInterval(timer);
   }, []);
 
   return (
-    <div className="relative w-full h-56 md:h-150 m-5 overflow-hidden rounded-lg">
+    <div className="relative w-full h-56 md:h-56 mb-5 overflow-hidden rounded-lg">
       {/* Slides container */}
       <div
         className="flex transition-transform duration-1000 ease-in-out"

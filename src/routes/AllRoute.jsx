@@ -10,6 +10,11 @@ import About from "../pages/About";
 import Features from "../pages/Features";
 import Contact from "../pages/Contact";
 
+import Home from "../pages/Home";
+
+import CartPage from "../pages/CartPage";
+
+
 
 const AllRoute = () => {
   return (
@@ -20,11 +25,12 @@ const AllRoute = () => {
 
         <Route path="/product" element={<ProductPage />} />
         <Route path="/fpass" element={<Forgotpassword />} />
-
-        <Route path="/product" element={<ProductPage />} />        
+        <Route path="/Home" element={<Home />}/>
         <Route path="/about" element={<About />} />
         <Route path="/features" element={<Features/>} />
         <Route path="/contact" element={<Contact />} />
+
+        <Route path="/cart" element={<CartPage/>}/>
 
       </Routes>
     </div>
