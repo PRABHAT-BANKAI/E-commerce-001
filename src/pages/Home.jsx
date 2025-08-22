@@ -1,11 +1,12 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
+import axios from "axios";
 import { FaShoppingCart, FaMoneyBillWave } from "react-icons/fa";
 import { IoMdSearch } from "react-icons/io";
 import { useSelector } from "react-redux";
+import Slider from "./Slider";
 import Footer from "../components/Footer";
 
-const ProductPage = () => {
+const Home = () => {
   const product = useSelector((state) => state.productData.products);
   console.log(product);
 
@@ -66,7 +67,7 @@ const ProductPage = () => {
 
   return (
     <div className="min-h-screen py-6 px-4 bg-gray-50">
-      {/* Header */}
+      <Slider />
 
       {/* Filters */}
       <div className="max-w-7xl mx-auto mb-6 flex flex-col sm:flex-row gap-4 items-center justify-between">
@@ -107,6 +108,7 @@ const ProductPage = () => {
         </select>
       </div>
 
+      {/* Header */}
       <header className="bg-white shadow p-6 mb-8 rounded-xl">
         <h1 className="text-3xl font-bold text-center text-gray-800">
           Product Catalog
@@ -115,10 +117,16 @@ const ProductPage = () => {
 
       {/* Main Section */}
       <main className="max-w-7xl mx-auto">
-        {loading && <p className="text-center text-gray-500">Loading products...</p>}
+        {loading && (
+          <p className="text-center text-gray-500">Loading products...</p>
+        )}
         {error && <p className="text-center text-red-500">Error: {error}</p>}
 
-        {!loading && !error && (
+        {!loading && !error && filteredProducts.length === 0 && (
+          <p className="text-center text-gray-500">No products found.</p>
+        )}
+
+        {!loading && !error && filteredProducts.length > 0 && (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             {filteredProducts.map((product) => (
               <div
@@ -164,9 +172,10 @@ const ProductPage = () => {
           </div>
         )}
       </main>
+
       <Footer />
     </div>
   );
 };
 
-export default ProductPage;
+export default Home;
