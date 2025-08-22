@@ -12,108 +12,61 @@ const Signup = () => {
     confirmpass: "",
     phoneno: "",
   });
-  // const [error, setError] = useState({});
-  // const [fetchData, setFetchData] = useState([]);
-
-  // const [submit, setSubmitData] = useState(null);
+  const [error, setError] = useState({});
 
   const navigate = useNavigate();
   const dispatch = useDispatch()
 
-    const { loading, error, signupSuccess } = useSelector((state) => state.users);
+    const { loading, signupSuccess } = useSelector((state) => state.users);
 
 
   function handlesubmit(e){
     e.preventDefault()
-    dispatch(signupUser(data))
-
+     if (!handleError()) return;
+    dispatch(signupUser(data));
   }
 
-  // async function getData() {
-  //   let userData = await axios.get(`http://localhost:3000/users`);
-  //   setFetchData(userData.data);
-  // }
+  function handleError() {
+    let obj = {};
+    let val = true;
 
+    if (!data.name.trim()) {
+      val = false;
+      obj.name = "Enter a valid name";
+    }
 
-  // async function handlesubmit(e) {
-  //   e.preventDefault();
+    if (!data.email.trim()) {
+      val = false;
+      obj.email = "Enter a valid email";
+    }
 
-  //   if (!handleError()) return;
+    if (!data.password.trim()) {
+      val = false;
+      obj.password = "Enter a valid password";
+    } else if (data.password.length < 6) {
+      val = false;
+      obj.password = "Password length should be greater than or equal to 6";
+    }
 
-  //   const isEmailTaken = fetchData.some(
-  //     (user) => user.email.toLowerCase() === data.email.toLowerCase()
-  //   );
+    if (!data.phoneno.trim()) {
+      val = false;
+      obj.phoneno = "Enter a valid Phone No";
+    } else if (data.phoneno.length < 10) {
+      val = false;
+      obj.phoneno = "Phone number length should be at least 10 digits";
+    }
 
-  //   if (isEmailTaken) {
-  //     setError((prev) => ({
-  //       ...prev,
-  //       email: "Email is already registered",
-  //     }));
-  //     return;
-  //   }
+    if (!data.confirmpass.trim()) {
+      val = false;
+      obj.confirmpass = "Enter a valid confirm password";
+    } else if (data.password !== data.confirmpass) {
+      val = false;
+      obj.confirmpass = "Confirm password does not match the password";
+    }
 
-  //   if (handleError()) {
-  //     try {
-  //       const res = await axios.post("http://localhost:3000/users", data);
-  //       setSubmitData(res.data);
-
-  //       setData({
-  //         name: "",
-  //         email: "",
-  //         password: "",
-  //         confirmpass: "",
-  //         phoneno: "",
-  //       });
-
-  //       alert("You are successfully signup");
-  //       navigate("/");
-  //     } catch (error) {
-  //       console.error("Failed to submit data:", error);
-  //     }
-  //   }       
-  // }    
-
-  // function handleError() {
-  //   let obj = {};
-  //   let val = true;
-
-  //   if (!data.name.trim()) {
-  //     val = false;
-  //     obj.name = "Enter a valid name";
-  //   }
-
-  //   if (!data.email.trim()) {
-  //     val = false;
-  //     obj.email = "Enter a valid email";
-  //   }
-
-  //   if (!data.password.trim()) {
-  //     val = false;
-  //     obj.password = "Enter a valid password";
-  //   } else if (data.password.length < 6) {
-  //     val = false;
-  //     obj.password = "Password length should be greater than or equal to 6";
-  //   }
-
-  //   if (!data.phoneno.trim()) {
-  //     val = false;
-  //     obj.phoneno = "Enter a valid Phone No";
-  //   } else if (data.phoneno.length < 10) {
-  //     val = false;
-  //     obj.phoneno = "Phone number length should be at least 10 digits";
-  //   }
-
-  //   if (!data.confirmpass.trim()) {
-  //     val = false;
-  //     obj.confirmpass = "Enter a valid confirm password";
-  //   } else if (data.password !== data.confirmpass) {
-  //     val = false;
-  //     obj.confirmpass = "Confirm password does not match the password";
-  //   }
-
-  //   setError(obj);
-  //   return val;
-  // }
+    setError(obj);
+    return val;
+  }
 
   useEffect(() => {
     if(signupSuccess){
@@ -152,6 +105,7 @@ const Signup = () => {
             }}
           />
         </label>
+        {error.name && <p style={{ color: "red" }}>{error.name}</p>}
   
         <label
           htmlFor=""
@@ -168,6 +122,7 @@ const Signup = () => {
             }}
           />
         </label>
+        {error.email && <p style={{ color: "red" }}>{error.email}</p>}
 
         <label
           htmlFor=""
@@ -184,6 +139,7 @@ const Signup = () => {
             }}
           />
         </label>
+        {error.phoneno && <p style={{ color: "red" }}>{error.phoneno}</p>}
 
         <label
           htmlFor=""
@@ -223,6 +179,7 @@ const Signup = () => {
             }}
           />
         </label>
+        {error.password && <p style={{ color: "red" }}>{error.password}</p>}
 
         <label
           htmlFor=""
@@ -239,8 +196,8 @@ const Signup = () => {
             }}
           />
         </label>
+        {error.confirmpass && <p style={{ color: "red" }}>{error.confirmpass}</p>}
      
-          {error && <p style={{ color: "red" }}>{error}</p>}
           {loading && <p className="text-white mt-2">Signing up...</p>}
 
 
