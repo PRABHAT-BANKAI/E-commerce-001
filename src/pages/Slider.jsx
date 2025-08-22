@@ -20,7 +20,7 @@ const Slider = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-56 md:h-56 m-5 overflow-hidden rounded-lg">
+    <div className="relative w-full h-56 md:h-150 m-5 overflow-hidden rounded-lg">
       {/* Slides container */}
       <div
         className="flex transition-transform duration-1000 ease-in-out"

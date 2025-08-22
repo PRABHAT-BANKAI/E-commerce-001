@@ -1,15 +1,21 @@
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate, useLocation } from "react-router"; 
+import { Link, useNavigate, useLocation } from "react-router";
 import { FaShoppingCart } from "react-icons/fa";
 
 // Helper: Get initials
-const getInitials = (firstName, lastName) => {
-  if (!firstName) return "";
-  if (!lastName || lastName.trim() === "") {
-    return firstName[0].toUpperCase();
+const getInitials = (firstName, lastName, fullName) => {
+  if (firstName && lastName) {
+    return `${firstName[0]}${lastName[0]}`.toUpperCase();
   }
-  return `${firstName[0]}${lastName[0]}`.toUpperCase();
+  if (firstName) return firstName[0].toUpperCase();
+  if (fullName) {
+    const parts = fullName.trim().split(" ");
+    if (parts.length === 1) return parts[0][0].toUpperCase();
+    return `${parts[0][0]}${parts[1][0]}`.toUpperCase();
+  }
+  return "";
 };
+
 
 // Helper: Random background color with text color
 const getRandomBgColor = () => {
@@ -29,7 +35,7 @@ const Navbar = () => {
   const [bgColor, setBgColor] = useState("bg-gray-500 text-white");
   const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
-  const location = useLocation(); 
+  const location = useLocation();
 
   useEffect(() => {
     // Fetch from db.json (example: http://localhost:3000/users/1)
@@ -44,7 +50,7 @@ const Navbar = () => {
   const handleLogout = () => {
     setUser(null);
     setMenuOpen(false);
-    navigate("/"); 
+    navigate("/");
   };
 
   return (
@@ -81,7 +87,7 @@ const Navbar = () => {
               onClick={() => setMenuOpen(!menuOpen)}
               className={`w-10 h-10 flex items-center justify-center rounded-full font-semibold cursor-pointer ${bgColor}`}
             >
-              {getInitials(user.firstName, user.lastName)}
+              {getInitials(user.firstName, user.lastName, user.name)}
             </div>
 
             {/* Dropdown Menu */}
