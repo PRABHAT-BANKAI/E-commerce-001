@@ -1,6 +1,38 @@
 {
   "users": [
     {
+
+      "id": "1",
+      "name": "param",
+      "email": "abc@gmail.com",
+      "phone no": "123456789",
+      "password": "pam123"
+    },
+    {
+      "id": "3828",
+      "name": "pam",
+      "email": "p@gmail.com",
+      "password": "pam",
+      "confirmpass": "pam",
+      "phoneno": "123"
+    },
+    {
+      "id": "562f",
+      "name": "Gondaliya Arshil Shaileshbhai",
+      "email": "arshil@gmail.com",
+      "password": "123",
+      "confirmpass": "123",
+      "phoneno": "7859999392"
+    },
+    {
+      "id": "c72f",
+      "name": "Gondaliya Arshil Shaileshbhai",
+      "email": "aar@gmail.com",
+      "password": "123456",
+      "confirmpass": "123456",
+      "phoneno": "1234567899"
+    },
+    {
       "id": "9013",
       "name": "arshil",
       "email": "123@gmail.com",
@@ -18,6 +50,169 @@
     }
   ],
   "products": [
+
+{
+"id":"01",
+"name": "Apple (iPhone)",
+"title": "iPhone 15 Pro",
+"description": "The ultimate iPhone experience. Forged in aerospace-grade titanium with a new customizable Action button, a powerful A17 Pro chip that enables next-level gaming and performance,and an advanced camera system for stunning photos and video.",
+"price":"999",
+"image_url":"https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-7inch-naturaltitanium?wid=2560&hei=1440&fmt=p-jpg&qlt=80&.v=1692846359310"
+},
+{
+"id":"02",
+"name":"Samsung",
+"title": "Samsung Galaxy S24 Ultra",
+"description": "Unleash your creativity with the power of Galaxy AI. The S24 Ultra features a brilliant 6.8-inch Dynamic AMOLED 2X display, a built-in S Pen for precise note-taking, and a professional-grade quad camera system with a 200MP main sensor for incredible detail.",
+"price":"1,299",
+"image_url": "https://m.media-amazon.com/images/I/717Q2swzhBL._SL1500_.jpg"
+},
+{
+"id":"03",
+"name":"Google (Pixel)",
+"title":"Google Pixel 8 Pro",
+"description": "The smartest Pixel yet, powered by Google AI. It boasts the revolutionary Tensor G3 chip, an advanced camera system with pro-level controls, and the best-of-Google features like Call Screen and Magic Editor, all running on the clean, intuitive Android experience.",
+"price":"999",
+"image_url": "https://m.media-amazon.com/images/I/71r0349s3cL._SL1500_.jpg"
+},
+{
+"id":"04",
+"name":"OnePlus",
+"title":"OnePlus 12",
+"description": "Never Settle for extraordinary performance. The OnePlus 12 is equipped with the latest Snapdragon 8 Gen 3 processor, a Hasselblad-tuned camera for natural color science, and incredibly fast 100W wired charging, all wrapped in a sleek, premium design.",
+"price":"799",
+"image_url": "https://m.media-amazon.com/images/I/71YzJwmRFCL._SL1500_.jpg"
+},
+{
+"id":"05",
+"name":"Xiaomi",
+"title": "Xiaomi 15",
+"description": "A photography masterclass in your pocket. Created in collaboration with Leica, this device features a state-of-the-art quad-camera array with a 1-inch-type main sensor, offering unparalleled versatility and image quality for mobile photographers.",
+"price":"1,299",
+"image_url": "https://m.media-amazon.com/images/I/61+unAVMvUL._SL1500_.jpg"
+},
+{
+"id":"06",
+"name":"OPPO",
+"title": "OPPO Find X7 Ultra",
+"description": "Pioneering the future of smartphone imaging with a dual periscope camera system. It offers powerful telephoto capabilities alongside a flagship Hasselblad-tuned main camera, all powered by a top-tier processor for seamless performance.",
+"price":"950",
+"image_url":"https://m.media-amazon.com/images/I/61UqPjhVI3L._SL1500_.jpg"
+},
+{
+"id":"07",
+"name":"vivo",
+"title": "vivo X200 Pro",
+"description": "Redefining mobile portrait photography with ZEISS co-engineering. The X100 Pro features a large APO-style telephoto lens and the powerful MediaTek Dimensity 9300 chip, delivering stunning bokeh and exceptional performance in an elegant design.",
+"price":"900",
+"image_url":"https://m.media-amazon.com/images/I/71chuQByj0L._SL1500_.jpg"
+},
+{
+"id":"08",
+"name":"Motorola",
+"title": "motorola edge 40 Neo",
+"description": "Style and substance that doesn't break the bank. This phone offers a gorgeous pOLED display with a 144Hz refresh rate, a capable 50MP main camera with Optical Image Stabilization, and super-fast charging in a sleek, vegan leather design.",
+"price":"399",
+"image_url": "https://m.media-amazon.com/images/I/71P+JBEZ7fL._SL1500_.jpg"
+},
+{
+"id":"09",
+"name":"Nothing",
+"title":"Nothing Phone (2)",
+"description": "A unique blend of iconic design and sharp interface. The transparent Glyph Interface on the back allows for intuitive light-based notifications and controls, paired with a powerful Snapdragon chip and a clean, custom Android experience for a truly distinct flagship.",
+"price":"599",
+"image_url":"https://m.media-amazon.com/images/I/81lRPeeHZgL._SL1500_.jpg"
+},
+{
+  "id":"10",
+  "name":"Huawei",
+  "title": "HUAWEI P60 Pro",
+  "description": "Celebrating aesthetics and imaging innovation. Renowned for its unique Rococo Pearl finish and ultra-bright, variable aperture camera system, the P60 Pro captures breathtaking light and detail in any condition, showcasing a truly artistic design philosophy.",
+  "price":"1,200",
+  "image_url": "https://m.media-amazon.com/images/I/71mClJrjDJL._SL1500_.jpg"
+},
+{
+  "id":"11", 
+  "name":"Sony WH-1000XM5 Wireless Headphones",
+  "title": "Sony WH-1000XM5",
+  "description":"Experience industry-leading noise cancellation for immersive sound. With 30-hour battery life, crystal-clear call quality, and ultra-comfortable design.",
+  "price":"328.00",
+  "image_url": "https://m.media-amazon.com/images/I/61C9nWyExyL._SL1500_.jpg"
+},
+{
+  "id": "12",
+  "name": "Apple MacBook Air (M3, 13-inch)",
+  "title": "MacBook Air 13\" (M3)",
+  "description": "Supercharged by the M3 chip. Featuring a stunning Liquid Retina display, all-day battery life, and a silent, fanless design.",
+  "price": "1,099.00",
+  "image_url": "https://m.media-amazon.com/images/I/71wKmwQQgLL._SL1500_.jpg"
+},
+{
+  "id": "13",
+  "name": "Nintendo Switch OLED Model",
+  "title": "Nintendo Switch - OLED Model",
+  "description": "Play at home or on the go with a vibrant 7-inch OLED screen, enhanced audio, and a wide adjustable stand.",
+  "price": "349.99",
+  "image_url": "https://m.media-amazon.com/images/I/61nqNujSF2L._SL1330_.jpg"
+},
+{
+  "id": "14",
+  "name": "Dyson V15 Detect Cordless Vacuum",
+  "title": "Dyson V15 Detect",
+  "description": "Powerful suction with intelligent laser detection that reveals hidden dust. A piezoelectric sensor automatically adjusts suction.",
+  "price": "749.99",
+  "image_url": "https://m.media-amazon.com/images/I/81A-a1HatmL._SL1500_.jpg"
+},
+{
+  "id": "15",
+  "name": "Samsung Odyssey G9 Gaming Monitor",
+  "title": "Samsung Odyssey G9",
+  "description": "A massive 49-inch Dual QHD curved screen with a 240Hz refresh rate and 1ms response time for incredibly vivid and smooth gameplay.",
+  "price": "1,399.99",
+  "image_url": "https://m.media-amazon.com/images/I/71nyeKrwdnL._SL1500_.jpg"
+ },
+{
+  "id": "16",
+  "name": "Fujifilm X-T5 Mirrorless Camera",
+  "title": "Fujifilm X-T5",
+  "description": "A classic camera with modern power. Features a 40.2MP sensor, 6.2K video, and in-body image stabilization.",
+  "price": "1,699.00",
+  "image_url": "https://m.media-amazon.com/images/I/71sR1sF3yhL._SL1500_.jpg"
+  },
+  {
+  "id": "17",
+  "name": "Amazon Echo Show 10 (3rd Gen)",
+  "title": "Echo Show 10 (3rd Gen)",
+  "description": "A smart display that moves with you. The 10.1\" HD screen rotates to keep you on camera during video calls.",
+  "price": "249.99",
+  "image_url": "https://m.media-amazon.com/images/I/61KVpz9L0gL._SL1000_.jpg"
+  },
+  {
+  "id": "18",
+   "name": "Logitech MX Keys Mini for Mac",
+  "title": "MX Keys Mini for Mac",
+  "description": "A compact, wireless keyboard with smart backlighting, perfect stroke keys, and multi-device pairing.",
+  "price": "99.99",
+  "image_url": "https://m.media-amazon.com/images/I/71F0FsBoFWL._SL1500_.jpg"
+  },
+  {
+  "id": "19",
+  "name": "Canon PIXMA TR8620 All-in-One Printer",
+  "title": "Canon PIXMA TR8620",
+  "description": "A versatile home office printer. Print, scan, copy, and fax. Features automatic duplex printing and a 250-sheet paper capacity.",
+  "price": "299.99",
+  "image_url": "https://m.media-amazon.com/images/I/51XRimXugOL._SL1333_.jpg"
+  },
+  {
+  "id": "20",
+  "name": "Anker 737 Power Bank (PowerCore 24K)",
+  "title": "Anker 737 Power Bank",
+  "description": "A giant 24,000mAh capacity with 140W output. Can charge a laptop, tablet, and phone simultaneously with a digital display.",
+  "price": "149.99",
+  "image_url": "https://m.media-amazon.com/images/I/717ByupjUvL._SL1500_.jpg"
+  }
+]
+=======
     {
       "id": "1",
       "title": "UltraSound Wireless Earbuds",
@@ -196,4 +391,5 @@
       "category": "furniture"
     }
   ]
+
 }

@@ -15,4 +15,8 @@ const App = () => {
   )
 }
 
+// git add .
+// git commit -m "db.json"
+// git push origin krish
+
 export default App
