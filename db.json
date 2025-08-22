@@ -1,45 +1,12 @@
 {
   "users": [
     {
-      "id": "1",
-      "name": "param",
-      "email": "abc@gmail.com",
-      "phone no": "123456789",
-      "password": "pam123"
-    },
-    {
-      "id": "3828",
-      "name": "pam",
-      "email": "p@gmail.com",
-      "password": "pam",
-      "confirmpass": "pam",
-      "phoneno": "123"
-    },
-    {
-      "id": "562f",
-      "name": "Gondaliya Arshil Shaileshbhai",
-      "email": "arshil@gmail.com",
-      "password": "123",
-      "confirmpass": "123",
-      "phoneno": "7859999392"
-    },
-    {
       "id": "c72f",
       "name": "Gondaliya Arshil Shaileshbhai",
       "email": "aar@gmail.com",
       "password": "123456",
       "confirmpass": "123456",
       "phoneno": "1234567899"
-    },
-   
-
-    {
-      "id": "9013",
-      "name": "arshil",
-      "email": "123@gmail.com",
-      "password": "123456",
-      "confirmpass": "123456",
-      "phoneno": "07383020929"
     },
     {
       "id": "0ed0",
@@ -48,7 +15,15 @@
       "password": "123456",
       "confirmpass": "123456",
       "phoneno": "07383020929"
-
+    },
+    {
+      "id": "de95",
+      "name": "Gondaliya Arshil Shaileshbhai",
+      "email": "arshil567@gmail.com",
+      "password": "arshil",
+      "confirmpass": "arshil",
+      "phoneno": "7859999392",
+      "confirmPassword": "123456"
     }
   ],
   "products": [
@@ -158,7 +133,6 @@
       "price": 59
     },
     {
-      
       "id": "16",
       "title": "SkyView 200″ Inflatable Outdoor Movie Screen",
       "description": "Portable on‑ground screen with tripod and carrying case; suitable for backyard theaters.",
@@ -193,43 +167,42 @@
       "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOsButy4Iwhu20UwibimBoZWmXuI56USTGIA&s",
       "price": 32
     }
-  ],  
-
+  ],
   "category": [
     {
-      "id":"",
-      "name":"",
-      "img":"",
-      "description":"",
-      "category":"all"
+      "id": "",
+      "name": "",
+      "img": "",
+      "description": "",
+      "category": "all"
     },
     {
-      "id":"",
-      "name":"",
-      "img":"",
-      "description":"",
-      "category":"mobiles"
+      "id": "",
+      "name": "",
+      "img": "",
+      "description": "",
+      "category": "mobiles"
     },
     {
-      "id":"",
-      "name":"",
-      "img":"",
-      "description":"",
-      "category":"electronics"
+      "id": "",
+      "name": "",
+      "img": "",
+      "description": "",
+      "category": "electronics"
     },
     {
-      "id":"",
-      "name":"",
-      "img":"",
-      "description":"",
-      "category":"fashion"
+      "id": "",
+      "name": "",
+      "img": "",
+      "description": "",
+      "category": "fashion"
     },
     {
-      "id":"",
-      "name":"",
-      "img":"",
-      "description":"",
-      "category":"furniture"
+      "id": "",
+      "name": "",
+      "img": "",
+      "description": "",
+      "category": "furniture"
     }
   ]
 }
