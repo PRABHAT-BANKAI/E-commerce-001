@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router";
 import { FaShoppingCart } from "react-icons/fa";
+
 import { IoMdSearch } from "react-icons/io";
 import image from "../assets/main.png";
+import { useSelector } from "react-redux";
+
 
 // Helper: Get initials
 const getInitials = (firstName, lastName, fullName) => {
@@ -38,6 +41,14 @@ const Navbar = ({ onSearch }) => {
   const [search, setSearch] = useState("");
   const navigate = useNavigate();
   const location = useLocation();
+
+
+  // cartsection 
+ const cartItems = useSelector((state) => state.cart.cartItems);
+const cartCount = cartItems.reduce((acc, item) => acc + item.quantity, 0);
+
+
+
 
   useEffect(() => {
     // Example: fetch user (from json-server)
@@ -80,8 +91,13 @@ const Navbar = ({ onSearch }) => {
       </div>
 
       {/* Right Section */}
-      <div className="flex items-center space-x-6 relative">
-        <FaShoppingCart className="text-xl text-gray-700 hover:text-blue-600 cursor-pointer" />
+      <div className="flex items-center space-x-6 relative"> 
+        <Link to="/cart" className="relative"> 
+         <FaShoppingCart/>
+         {cartCount > 0 && ( 
+          <span className="absolute -top-2 -right-2 bg-red-600 text-white text-xs px-2 py-1 rounded-full"> {cartCount} </span> 
+          )}
+          </Link>
 
         {/* Profile Avatar if logged in */}
         {user ? (
