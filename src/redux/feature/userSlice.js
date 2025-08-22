@@ -19,19 +19,6 @@ export const signupUser = createAsyncThunk(
     }
   }
 );    
-  //     const { data: existingUsers } = await axios.get(USER_URL);
-
-  //     const isEmailTaken = existingUsers.some(
-  //       (user) => user.email.toLowerCase() === userData.email.toLowerCase()
-  //     );
-
-  //     if (isEmailTaken) {
-  //       return rejectWithValue("Email is already registered");
-  //     }
-
-      // const res = await axios.post(USER_URL, userData);
-      // return res.data;
-  // }
 
 const userSlice = createSlice({
   name: "users",
