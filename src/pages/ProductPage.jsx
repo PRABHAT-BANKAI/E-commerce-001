@@ -1,15 +1,24 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { FaShoppingCart, FaMoneyBillWave } from "react-icons/fa";
+import { IoMdSearch } from "react-icons/io";
 import { useSelector } from "react-redux";
+import Slider from "./Slider";
+import Footer from "../components/Footer";
 
 const ProductPage = () => {
   const product = useSelector((state) => state.productData.products);
   console.log(product);
 
   const [products, setProducts] = useState([]);
+  const [filteredProducts, setFilteredProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+
+  // filters
+  const [search, setSearch] = useState("");
+  const [category, setCategory] = useState("all");
+  const [sort, setSort] = useState("");
 
   const handleAddToCart = (product) => {
     alert(`🛒 Added "${product.title}" to cart`);
@@ -19,65 +28,133 @@ const ProductPage = () => {
     alert(`💰 Buying "${product.title}"`);
   };
 
+  // Fetch products
   useEffect(() => {
     const fetchProducts = async () => {
       try {
         const response = await axios.get("http://localhost:3000/products");
         setProducts(response.data);
+        setFilteredProducts(response.data);
         setLoading(false);
       } catch (err) {
         setError(err.message || "Something went wrong");
         setLoading(false);
       }
     };
-
     fetchProducts();
   }, []);
 
+  // Filtering + Sorting
+  useEffect(() => {
+    let temp = [...products];
+
+    if (search.trim() !== "") {
+      temp = temp.filter((p) =>
+        p.title.toLowerCase().includes(search.toLowerCase())
+      );
+    }
+    if (category !== "all") {
+      temp = temp.filter((p) => p.category === category);
+    }
+    if (sort === "low-high") {
+      temp.sort((a, b) => a.price - b.price);
+    } else if (sort === "high-low") {
+      temp.sort((a, b) => b.price - a.price);
+    }
+
+    setFilteredProducts(temp);
+  }, [search, category, sort, products]);
+
   return (
-    <div className="min-h-screen py-6 px-4" style={{ backgroundColor: "#23223b" }}>
+    <div className="min-h-screen py-6 px-4 bg-gray-50">
+      <Slider/>
+      {/* Header */}
+
+      {/* Filters */}
+      <div className="max-w-7xl mx-auto mb-6 flex flex-col sm:flex-row gap-4 items-center justify-between">
+        {/* Search */}
+        <div className="relative w-full sm:w-1/3">
+          <input
+            type="text"
+            placeholder="Search products..."
+            className="px-4 py-2 pl-10 border rounded-lg w-full shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
+          <IoMdSearch className="absolute left-3 top-3 text-gray-500 text-lg" />
+        </div>
+
+        {/* Category Filter */}
+        <select
+          className="px-4 py-2 border rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500"
+          value={category}
+          onChange={(e) => setCategory(e.target.value)}
+        >
+          <option value="all">All Categories</option>
+          <option value="electronics">Electronics</option>
+          <option value="fashion">Fashion</option>
+          <option value="books">Books</option>
+          <option value="home">Home</option>
+        </select>
+
+        {/* Price Sorting */}
+        <select
+          className="px-4 py-2 border rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500"
+          value={sort}
+          onChange={(e) => setSort(e.target.value)}
+        >
+          <option value="">Sort by Price</option>
+          <option value="low-high">Low → High</option>
+          <option value="high-low">High → Low</option>
+        </select>
+      </div>
+
       <header className="bg-white shadow p-6 mb-8 rounded-xl">
-        <h1 className="text-3xl font-bold text-center text-[#23223b]">Product Catalog</h1>
+        <h1 className="text-3xl font-bold text-center text-gray-800">
+          Product Catalog
+        </h1>
       </header>
 
+      {/* Main Section */}
       <main className="max-w-7xl mx-auto">
-        {loading && <p className="text-center text-gray-300">Loading products...</p>}
-        {error && <p className="text-center text-red-400">Error: {error}</p>}
+        {loading && <p className="text-center text-gray-500">Loading products...</p>}
+        {error && <p className="text-center text-red-500">Error: {error}</p>}
 
         {!loading && !error && (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            {products.map((product) => (
+            {filteredProducts.map((product) => (
               <div
                 key={product.id}
-                className="bg-white border-4 border-[#23223b] rounded-2xl shadow-xl overflow-hidden transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl"
+                className="bg-white border border-gray-200 rounded-2xl shadow-lg overflow-hidden transform transition duration-300 hover:-translate-y-1 hover:shadow-xl"
               >
                 <img
                   src={product.image_url}
                   alt={product.title}
-                  className="w-full h-64 object-cover hover:opacity-90 transition-opacity duration-300"
+                  className="w-full h-64 object-cover hover:opacity-90 transition"
                 />
                 <div className="p-5">
-                  <h2 className="font-bold text-lg text-[#23223b] mb-2">{product.title}</h2>
-                  <p className="text-sm text-gray-600 mb-3 line-clamp-3">{product.description}</p>
+                  <h2 className="font-bold text-lg text-gray-800 mb-2">
+                    {product.title}
+                  </h2>
+                  <p className="text-sm text-gray-600 mb-3 line-clamp-3">
+                    {product.description}
+                  </p>
                   <div className="flex justify-between items-center mb-3">
-                    <span className="text-[#23223b] font-extrabold text-lg">
+                    <span className="text-gray-900 font-extrabold text-lg">
                       ${product.price}
                     </span>
                   </div>
                   <div className="flex flex-col gap-2">
-                    {/* Add to Cart Button */}
                     <button
                       onClick={() => handleAddToCart(product)}
-                      className="flex items-center justify-center gap-2 border-2 border-[#23223b] text-[#23223b] hover:bg-[#23223b] hover:text-white text-sm font-semibold py-2 px-4 rounded-lg transition duration-300"
+                      className="flex items-center justify-center gap-2 border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white text-sm font-semibold py-2 px-4 rounded-lg transition duration-300"
                     >
                       <FaShoppingCart />
                       Add to Cart
                     </button>
-
-                    {/* Buy Now Button */}
                     <button
                       onClick={() => handleBuyNow(product)}
-                      className="flex items-center justify-center gap-2 border-2 border-[#23223b] text-[#23223b] hover:bg-[#23223b] hover:text-white text-sm font-semibold py-2 px-4 rounded-lg transition duration-300"
+                      className="flex items-center justify-center gap-2 border border-green-600 text-green-600 hover:bg-green-600 hover:text-white text-sm font-semibold py-2 px-4 rounded-lg transition duration-300"
                     >
                       <FaMoneyBillWave />
                       Buy Now
