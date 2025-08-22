@@ -11,40 +11,14 @@ export const fetchUsers = createAsyncThunk("users/fetchUsers", async () => {
 export const signupUser = createAsyncThunk(
   "users/signupUser",
   async (userData, { rejectWithValue }) => {
-    try {      
-      const { data: existingUsers } = await axios.get(USER_URL);
-
-      const isEmailTaken = existingUsers.some(
-        (user) => user.email.toLowerCase() === userData.email.toLowerCase()
-      );
-
-      if (isEmailTaken) {
-        return rejectWithValue("Email is already registered");
-      }
-
-      // Validation checks
-      if (!userData.name.trim()) return rejectWithValue("Enter a valid name");
-      if (!userData.email.trim()) return rejectWithValue("Enter a valid email");
-      if (!userData.password.trim() || userData.password.length < 6)
-        return rejectWithValue(
-          "Password length should be greater than or equal to 6"
-        );
-      if (!userData.phoneno.trim() || userData.phoneno.length < 10)
-        return rejectWithValue(
-          "Phone number length should be at least 10 digits"
-        );
-      if (!userData.confirmpass.trim())
-        return rejectWithValue("Enter a valid confirm password");
-      if (userData.password !== userData.confirmpass)
-        return rejectWithValue("Confirm password does not match");
-
+    try {  
       const res = await axios.post(USER_URL, userData);
       return res.data;
     } catch (error) {
       return rejectWithValue(error.message);
     }
   }
-);
+);    
 
 const userSlice = createSlice({
   name: "users",
