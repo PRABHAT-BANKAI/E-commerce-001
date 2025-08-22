@@ -9,22 +9,12 @@
       "phoneno": "07383020929"
     },
     {
-
       "id": "d5eb",
       "name": "Gondaliya Arshil Shaileshbhai",
       "email": "arshilgondaliya5@gmail.com",
       "password": "arshil",
       "confirmpass": "arshil",
       "phoneno": "7859999392"
-    },
-    { 
-        "id": "6da1",
-      "name": "param",
-      "email": "ps26032005@gmail.com",
-      "password": "123456",
-      "confirmpass": "123456",
-      "phoneno": "9773430101"
-
     }
   ],
   "products": [
@@ -168,7 +158,6 @@
       "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOsButy4Iwhu20UwibimBoZWmXuI56USTGIA&s",
       "price": 32
     }
-
   ],
   "category": [
     {
@@ -206,6 +195,5 @@
       "description": "",
       "category": "furniture"
     }
-
   ]
 }
