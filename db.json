@@ -1,7 +1,5 @@
 {
   "users": [
-
-
     {
       "id": "9013",
       "name": "arshil",
@@ -9,8 +7,15 @@
       "password": "123456",
       "confirmpass": "123456",
       "phoneno": "07383020929"
+    },
+    {
+      "id": "d5eb",
+      "name": "Gondaliya Arshil Shaileshbhai",
+      "email": "arshilgondaliya5@gmail.com",
+      "password": "arshil",
+      "confirmpass": "arshil",
+      "phoneno": "7859999392"
     }
-
   ],
   "products": [
     {
@@ -153,7 +158,6 @@
       "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOsButy4Iwhu20UwibimBoZWmXuI56USTGIA&s",
       "price": 32
     }
-
   ],
   "category": [
     {
@@ -191,6 +195,5 @@
       "description": "",
       "category": "furniture"
     }
-
   ]
 }

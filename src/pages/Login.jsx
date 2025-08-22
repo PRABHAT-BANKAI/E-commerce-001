@@ -107,7 +107,7 @@ const Login = () => {
           <p className="text-red-600 text-sm mt-1">{error.password}</p>
         )}
         <Link to={"/fpass"}>
-          <p>Forget Password</p>
+          <p>Forgot Password</p>
         </Link>
         <button
           type="submit"
