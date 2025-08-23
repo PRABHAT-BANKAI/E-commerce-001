@@ -19,8 +19,8 @@
       "id": "562f",
       "name": "Gondaliya Arshil Shaileshbhai",
       "email": "arshil@gmail.com",
-      "password": "123",
-      "confirmpass": "123",
+      "password": "123456",
+      "confirmpass": "123456",
       "phoneno": "7859999392"
     },
     {
@@ -55,15 +55,19 @@
       "title": "iPhone 15 Pro",
       "description": "The ultimate iPhone experience. Forged in aerospace-grade titanium with a new customizable Action button, a powerful A17 Pro chip that enables next-level gaming and performance,and an advanced camera system for stunning photos and video.",
       "price": "999",
-      "image_url": "https://m.media-amazon.com/images/I/81SigpJN1KL._SL1500_.jpg"
+      "image_url": "https://m.media-amazon.com/images/I/81SigpJN1KL._SL1500_.jpg",
+      "r_img1": "",
+      "r_img2": "",
+      "r_img3": "",
+      "r_img4": ""
     },
     {
       "id": 2,
-      "name": "Samsung",
-      "title": "Samsung Galaxy S24 Ultra",
-      "description": "Unleash your creativity with the power of Galaxy AI. The S24 Ultra features a brilliant 6.8-inch Dynamic AMOLED 2X display, a built-in S Pen for precise note-taking, and a professional-grade quad camera system with a 200MP main sensor for incredible detail.",
-      "price": "1,299",
-      "image_url": "https://m.media-amazon.com/images/I/71Nwtop9jtL._SL1500_.jpg"
+      "name": "iphone",
+      "title": "iPhone 16 Pro",
+      "description": "Titanium design with larger 15.9 cm (6.3″) Super Retina XDR display, footnote 1 durable, latest-generation Ceramic Shield, Action button, and USB-C with USB 3 speeds footnote 2",
+      "price": "1,599",
+      "image_url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone16pro-digitalmat-gallery-3-202409?wid=728&hei=666&fmt=p-jpg&qlt=95&.v=VWJuckJvbkZqeTMwRFJZSHhSVnN1K2tBbTY2NGE0RXZvM3VONU9MVlluajBVMUIwNFV6MXNoZGhsYWgvZGlmdEJnNER5bEtzeFpoMTlNVnpVcXBTR0NDaXNCSFl3ajdkc3ZBMkZreEM2YjArdUxKZmY1NUtWbjl2NkdEREpaOVo"
     },
     {
       "id": 3,
@@ -76,10 +80,10 @@
     {
       "id": 4,
       "name": "OnePlus",
-      "title": "OnePlus 12",
-      "description": "Never Settle for extraordinary performance. The OnePlus 12 is equipped with the latest Snapdragon 8 Gen 3 processor, a Hasselblad-tuned camera for natural color science, and incredibly fast 100W wired charging, all wrapped in a sleek, premium design.",
+      "title": "OnePlus 13s",
+      "description": "Never Settle for extraordinary performance. The OnePlus 13s is equipped with the latest Snapdragon 8 Gen 3 processor, a Hasselblad-tuned camera for natural color science, and incredibly fast 100W wired charging, all wrapped in a sleek, premium design.",
       "price": "799",
-      "image_url": "https://m.media-amazon.com/images/I/71YzJwmRFCL._SL1500_.jpg"
+      "image_url": "https://image01-in.oneplus.net/media/202505/22/92023197f208cd7b3171b97377a4b90a.png?x-amz-process=image/format,webp/quality,Q_80"
     },
     {
       "id": 5,
@@ -92,18 +96,18 @@
     {
       "id": 6,
       "name": "OPPO",
-      "title": "OPPO Find X7 Ultra",
+      "title": "OPPO K13 Turbo Pro 5G",
       "description": "Pioneering the future of smartphone imaging with a dual periscope camera system. It offers powerful telephoto capabilities alongside a flagship Hasselblad-tuned main camera, all powered by a top-tier processor for seamless performance.",
       "price": "950",
-      "image_url": "https://m.media-amazon.com/images/I/61UqPjhVI3L._SL1500_.jpg"
+      "image_url": "https://opsg-img-cdn-gl.heytapimg.com/epb/202508/13/FY4yVVB5FoJnbAXc.png"
     },
     {
       "id": 7,
-      "name": "vivo",
-      "title": "vivo X200 Pro",
-      "description": "Redefining mobile portrait photography with ZEISS co-engineering. The X100 Pro features a large APO-style telephoto lens and the powerful MediaTek Dimensity 9300 chip, delivering stunning bokeh and exceptional performance in an elegant design.",
-      "price": "900",
-      "image_url": "https://m.media-amazon.com/images/I/71chuQByj0L._SL1500_.jpg"
+      "name": "oppo",
+      "title": "OPPO Reno14 5G",
+      "description": "Redefining mobile portrait photography with ZEISS co-engineering. The  Pro features a large APO-style telephoto lens and the powerful MediaTek Dimensity 9300 chip, delivering stunning bokeh and exceptional performance in an elegant design.",
+      "price": "1000",
+      "image_url": "https://opsg-img-cdn-gl.heytapimg.com/epb/202507/24/ID5JedZaFI8HDQ9Q.png"
     },
     {
       "id": 8,
@@ -119,15 +123,15 @@
       "title": "Nothing Phone (2)",
       "description": "A unique blend of iconic design and sharp interface. The transparent Glyph Interface on the back allows for intuitive light-based notifications and controls, paired with a powerful Snapdragon chip and a clean, custom Android experience for a truly distinct flagship.",
       "price": "599",
-      "image_url": "https://m.media-amazon.com/images/I/81lRPeeHZgL._SL1500_.jpg"
+      "image_url": "https://cdn.shopify.com/s/files/1/0376/5420/0459/files/0000s_0017_Phone-2a-milk.png?v=1753438427"
     },
     {
       "id": 10,
-      "name": "Huawei",
-      "title": "HUAWEI P60 Pro",
+      "name": "Xiaomi",
+      "title": "Xiaomi 15 Black 12 GB + 512 GB",
       "description": "Celebrating aesthetics and imaging innovation. Renowned for its unique Rococo Pearl finish and ultra-bright, variable aperture camera system, the P60 Pro captures breathtaking light and detail in any condition, showcasing a truly artistic design philosophy.",
       "price": "1,200",
-      "image_url": "https://m.media-amazon.com/images/I/71mClJrjDJL.SL1500.jpg"
+      "image_url": "https://i03.appmifile.com/783_item_in/17/03/2025/d8ecae0f2ed29d943d83c44afac14873.png?thumb=1&f=webp&q=85"
     },
     {
       "id": 11,
@@ -151,7 +155,7 @@
       "title": "Nintendo Switch - OLED Model",
       "description": "Play at home or on the go with a vibrant 7-inch OLED screen, enhanced audio, and a wide adjustable stand.",
       "price": "349.99",
-      "image_url": "https://m.media-amazon.com/images/I/61nqNujSF2L.SL1330.jpg"
+      "image_url": "https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_1240/b_white/f_auto/q_auto/ncom/en_US/products/hardware/nintendo-switch-oled-model-white-set/115461-switch-oled-white-boxart-1200x675"
     },
     {
       "id": 14,
@@ -167,7 +171,7 @@
       "title": "Samsung Odyssey G9",
       "description": "A massive 49-inch Dual QHD curved screen with a 240Hz refresh rate and 1ms response time for incredibly vivid and smooth gameplay.",
       "price": "1,399.99",
-      "image_url": "https://m.media-amazon.com/images/I/71nyeKrwdnL.SL1500.jpg"
+      "image_url": "https://m.media-amazon.com/images/I/71yEwB+4DfL.SL1500.jpg"
     },
     {
       "id": 16,
@@ -199,7 +203,7 @@
       "title": "Canon PIXMA TR8620",
       "description": "A versatile home office printer. Print, scan, copy, and fax. Features automatic duplex printing and a 250-sheet paper capacity.",
       "price": "299.99",
-      "image_url": "https://m.media-amazon.com/images/I/51XRimXugOL.SL1333.jpg"
+      "image_url": "https://m.media-amazon.com/images/I/71Hv51A6SkL.AC_SL1500.jpg"
     },
     {
       "id": 20,
@@ -207,41 +211,41 @@
       "title": "Anker 737 Power Bank",
       "description": "A giant 24,000mAh capacity with 140W output. Can charge a laptop, tablet, and phone simultaneously with a digital display.",
       "price": "149.99",
-      "image_url": "https://m.media-amazon.com/images/I/717ByupjUvL.SL1500.jpg"
+      "image_url": "https://m.media-amazon.com/images/I/6119GgXfulL.SL1500.jpg"
     },
     {
       "id": 21,
       "title": "UltraSound Wireless Earbuds",
       "description": "Compact true wireless earbuds with noise cancellation & 30 hr battery life.",
-      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhsezTlcsU_I-0t0Go6NQNq8Uu8K3thyFkqw&s",
+      "image_url": "https://m.media-amazon.com/images/I/61L+MKA7-EL.SL1500.jpg",
       "price": 59.99
     },
     {
       "id": 22,
       "title": "ProFit Fitness Tracker",
       "description": "Water‑resistant fitness band with heart‑rate monitor and sleep tracking.",
-      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXErXWVrqnU6mkSzyr99NgeU2oQbRo3NxTEw&s",
+      "image_url": "https://m.media-amazon.com/images/I/715EFChDukL.SL1500.jpg",
       "price": 39.99
     },
     {
       "id": 23,
       "title": "EcoBlend Bamboo Cutting Board Set",
       "description": "Set of 3 eco‑friendly bamboo boards with juice groove and non‑slip feet.",
-      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7vMhZ1F9VcmtXAkHmzNr8wRkU3SPKxTUglg&s",
+      "image_url": "https://m.media-amazon.com/images/I/61KRV3nLTqL.SL1200.jpg",
       "price": 24.5
     },
     {
       "id": 24,
       "title": "ThermaCozy Electric Blanket",
       "description": "Fleece electric blanket with 10 heat settings and auto shut‑off timer.",
-      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREg0dH5aJF3JU3bMjQCHug-Hp_CITRCIgElg&s",
+      "image_url": "https://m.media-amazon.com/images/I/71+ytw6dWdL.SL1500.jpg",
       "price": 69.99
     },
     {
       "id": 25,
       "title": "WindCharge USB‑C Power Bank 20,000 mAh",
       "description": "High‑capacity power bank with dual fast‑charge ports and LED display.",
-      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuXw7Dfag3E5tVFWH5ADtx3B7qe3xwK4r70A&s",
+      "image_url": "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/EnergyShroom_PB250_medium.png?v=1739270067",
       "price": 29.99
     },
     {
@@ -255,77 +259,77 @@
       "id": 27,
       "title": "Lumina LED Desk Lamp",
       "description": "Adjustable color‑temperature lamp with wireless phone charging pad.",
-      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5FMJHAaY3tCn6QvKl9ru669Tsv05yXPMpuQ&s",
+      "image_url": "https://m.media-amazon.com/images/I/21ccbdx44BL.jpg_BO30,255,255,255_UF900,850_SR1910,1000,0,C_QL100_.jpg",
       "price": 45.75
     },
     {
       "id": 28,
       "title": "UrbanTrail Backpack 25 L",
       "description": "Lightweight daypack with laptop compartment and water‑resistant fabric.",
-      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDQgUvt6r5wd3DcR5V-XTgp6ptXIyUopwOMw&s",
+      "image_url": "https://m.media-amazon.com/images/I/61PT9LfpOWL.SX679.jpg",
       "price": 49.99
     },
     {
       "id": 29,
       "title": "PureMist Cool‑Mist Humidifier",
       "description": "Ultrasonic humidifier for rooms up to 500 sq ft, quiet operation, 10‑hr run time.",
-      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsMEMpJMtIvjbvG0wBhuqvyLouhv_OeiCTRA&s",
+      "image_url": "https://m.media-amazon.com/images/I/71fJRVDnrHL.SL1500.jpg",
       "price": 39.95
     },
     {
       "id": 30,
       "title": "SteelChef 10″ Non‑Stick Frying Pan",
       "description": "Durable kitchen pan with PFOA‑free non‑stick coating and stay‑cool handle.",
-      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmVRp0CFja5YHCnNRkeOLh20xLWRJtwrPfLA&s",
+      "image_url": "https://m.media-amazon.com/images/I/61Fh3LfSCsL.SL1500.jpg",
       "price": 27.99
     },
     {
       "id": 31,
-      "title": "Refresh Natural Shampoo Bar – Lavender",
+      "title": "Amla Shikakai Shampoo Bar | All Hair Types",
       "description": "Solid shampoo bar for all hair types, sulfate‑free, vegan & cruelty‑free.",
-      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFU5I1L4QspkPtdE165PF2-14idQfZc9UGpw&s",
+      "image_url": "https://www.rusticart.in/cdn/shop/files/AMLA_SHIKAKAI_fe90322a-159c-4231-a1c7-6c11ce1a7554_1080x.jpg?v=1750577732",
       "price": 8.99
     },
     {
       "id": 32,
       "title": "GamerPro RGB Mechanical Keyboard",
       "description": "Full‑size mechanical keyboard with customizable RGB lighting and tactile switches.",
-      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO_Zp1elcegFB1yRQv94LL41f_nkdUj6HhaQ&s",
+      "image_url": "https://m.media-amazon.com/images/I/61eonV8rcEL.SL1500.jpg",
       "price": 79.99
     },
     {
       "id": 33,
       "title": "AromaHome Reed Diffuser – Ocean Breeze",
       "description": "Luxury reed diffuser that provides up to 3 months of fresh scent.",
-      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZVHRbhCEfCqKDUPWY7M13vtzeXsTvpiQlwA&s",
+      "image_url": "https://m.media-amazon.com/images/I/71g9qbrFPaL.SL1500.jpg",
       "price": 22.5
     },
     {
       "id": 34,
       "title": "FlexiMat Eco Yoga Mat",
       "description": "Non‑slip, eco‑friendly TPE yoga mat with alignment lines, 6 mm thickness.",
-      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqkRbAjb0Cs1CTyPF5sb9nYV5w0J6BY27tVQ&s",
+      "image_url": "https://m.media-amazon.com/images/I/71M297JjglL.SL1500.jpg",
       "price": 29.95
     },
     {
       "id": 35,
       "title": "QuickBrew Portable Espresso Maker",
       "description": "Compact manual espresso press—no electricity needed, up to 16 bar pressure.",
-      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7tLdbiXgrrCDwN9WqEuhBhQ8fCa4RyGs-yw&s",
+      "image_url": "https://m.media-amazon.com/images/I/61YemJhQSvL.SL1500.jpg",
       "price": 59
     },
     {
       "id": 36,
       "title": "SkyView 200″ Inflatable Outdoor Movie Screen",
       "description": "Portable on‑ground screen with tripod and carrying case; suitable for backyard theaters.",
-      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4WIDkuSo5AmNEx16ftrXh_9eBLdxuD_FiDg&s",
+      "image_url": "https://m.media-amazon.com/images/I/71IpS-GrFQL.SL1500.jpg",
       "price": 129.99
     },
     {
       "id": 37,
       "title": "ClearTone Bluetooth Portable Speaker",
       "description": "Water‑resistant speaker with 12‑hr playback, built‑in mic for calls.",
-      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsk9ob06IjrywZpvyavg0zvE8Cc1u63RDl9w&s",
+      "image_url": "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/kv_1.png?v=1741590305",
       "price": 49.5
     },
     {
@@ -339,42 +343,42 @@
       "id": 39,
       "title": "PhotoSnap 12‑pack Prop Display Frames",
       "description": "Set of 12 decorative frames ideal for events, photo booths, or home multiplex displays.",
-      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxBRg7MCRs80Z23qrnt7kqASGVlNuxmgiNVw&s",
+      "image_url": "https://m.media-amazon.com/images/I/81jiQuUvIPL.SL1500.jpg",
       "price": 19.99
     },
     {
       "id": 40,
       "title": "EcoSip Stainless Steel Insulated Bottle 750 ml",
       "description": "Double‑wall vacuum insulated bottle keeps drinks cold for 24 hrs or hot for 12 hrs.",
-      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOsButy4Iwhu20UwibimBoZWmXuI56USTGIA&s",
+      "image_url": "https://m.media-amazon.com/images/I/81RNzqueY4L.SL1500.jpg",
       "price": 32
     },
     {
       "id": 41,
       "title": "Samsung QLED 55",
       "description": "55-inch 4K UHD Smart QLED TV with HDR10+ support.",
-      "image_url": "https://m.media-amazon.com/images/I/91o7HR7zOdL.SL1500.jpg",
+      "image_url": "https://m.media-amazon.com/images/I/71zRCVIsJLL.SL1500.jpg",
       "price": 799
     },
     {
       "id": 42,
       "title": "LG OLED CX 65",
       "description": "65-inch OLED display with Dolby Vision and AI ThinQ.",
-      "image_url": "https://m.media-amazon.com/images/I/71GjXK9tjTL.SL1500.jpg",
+      "image_url": "https://m.media-amazon.com/images/I/71G8p4gaHvL.SL1000.jpg",
       "price": 1499
     },
     {
       "id": 43,
       "title": "Sony Bravia 50",
       "description": "50-inch 4K HDR Smart TV with Android TV OS.",
-      "image_url": "https://m.media-amazon.com/images/I/81+NlCubhAL.SL1500.jpg",
+      "image_url": "https://m.media-amazon.com/images/I/81gYgSOXT-L.SL1500.jpg",
       "price": 699
     },
     {
       "id": 44,
       "title": "TCL Roku TV 55",
       "description": "55-inch 4K UHD Roku Smart TV with HDR.",
-      "image_url": "https://m.media-amazon.com/images/I/81PLRd3HtUL.SL1500.jpg",
+      "image_url": "https://m.media-amazon.com/images/I/713rM2vloXL.SL1500.jpg",
       "price": 499
     },
     {
@@ -409,14 +413,14 @@
       "id": 49,
       "title": "OnePlus TV U1S 65",
       "description": "65-inch UHD Smart TV with Android TV OS.",
-      "image_url": "https://m.media-amazon.com/images/I/61WXPPeQLhL.SL1500.jpg",
+      "image_url": "https://m.media-amazon.com/images/I/71WP6JNtJ-S.SL1500.jpg",
       "price": 729
     },
     {
       "id": 50,
       "title": "Mi TV 4X 55",
       "description": "55-inch 4K HDR Smart Android TV.",
-      "image_url": "https://m.media-amazon.com/images/I/61V7cDH8AAS.SL1188.jpg",
+      "image_url": "https://m.media-amazon.com/images/I/810ESAVnE2L.SL1500.jpg",
       "price": 459
     },
     {
@@ -430,7 +434,7 @@
       "id": 52,
       "title": "Samsung Top Load 6.5kg",
       "description": "Top load washing machine with eco bubble technology.",
-      "image_url": "https://m.media-amazon.com/images/I/61wstFqAjyL.SL1500.jpg",
+      "image_url": "https://images.samsung.com/is/image/samsung/p6pim/in/wa80bg4441bgtl/gallery/in-wa4000b-433542-wa80bg4441bgtl-533454834?$684_547_PNG$",
       "price": 379
     },
     {
@@ -444,7 +448,7 @@
       "id": 54,
       "title": "Bosch Series 6 8kg",
       "description": "Front load washer with EcoSilence Drive motor.",
-      "image_url": "https://m.media-amazon.com/images/I/71Ki-zTX8HL.SL1500.jpg",
+      "image_url": "https://m.media-amazon.com/images/I/71Ki-zTX8HL.SY879.jpg",
       "price": 699
     },
     {
@@ -456,16 +460,16 @@
     },
     {
       "id": 56,
-      "title": "Samsung Double Door 253L",
+      "title": "Samsung Double Door 658L",
       "description": "Frost free refrigerator with digital inverter compressor.",
-      "image_url": "https://m.media-amazon.com/images/I/71cO8RwidAL.SL1500.jpg",
+      "image_url": "https://images.samsung.com/is/image/samsung/p6pim/in/rm90f66cnctl/gallery/in-4-door-french-door-refrigerators-with-ai-home-and-ai-hybrid-cooling-rm90f66cnctl-548045057?$Q90_684_547_JPG$",
       "price": 649
     },
     {
       "id": 57,
-      "title": "LG Smart Inverter 260L",
+      "title": "LG Smart Inverter 630L",
       "description": "Smart inverter frost-free double door refrigerator.",
-      "image_url": "https://m.media-amazon.com/images/I/61QHgcNZpDL.SL1500.jpg",
+      "image_url": "https://www.lg.com/content/dam/channel/wcms/in/images/refrigerators/gl-x257amc3_dmczebn_eail_in_c/gallery/GL-X257AMC3-DZ-2.jpg/_jcr_content/renditions/thum-1600x1062.jpeg",
       "price": 579
     },
     {
@@ -535,14 +539,14 @@
       "id": 67,
       "title": "LG Dual Inverter 1.5 Ton",
       "description": "Split AC with 5-star energy rating and WiFi control.",
-      "image_url": "https://m.media-amazon.com/images/I/61JZ82cn8WL.SL1500.jpg",
+      "image_url": "https://www.lg.com/content/dam/channel/wcms/in/images/split-ac/gallery/split-ac-right-open-door-view-S-0111.jpg/_jcr_content/renditions/thum-1600x1062.jpeg",
       "price": 749
     },
     {
       "id": 68,
       "title": "Samsung Wind-Free AC",
       "description": "1.5 Ton split AC with wind-free cooling technology.",
-      "image_url": "https://m.media-amazon.com/images/I/71VdcWMerhL.SL1500.jpg",
+      "image_url": "https://images.samsung.com/is/image/samsung/p6pim/in/ar60f19d1zwnna/gallery/in-ar9500tar70f12caawneu-533699-ar60f19d1zwnna-544635281?$Q90_684_547_JPG$",
       "price": 799
     },
     {
@@ -668,28 +672,28 @@
       "id": 86,
       "title": "Rolex Submariner",
       "description": "Luxury automatic diving watch with stainless steel case and ceramic bezel.",
-      "image_url": "https://www.simoneventuresindia.com/wp-content/uploads/2025/04/m126610ln-0001_slide2.webp",
+      "image_url": "https://timeavenue.com/wp-content/uploads/2025/05/m126618ln-0002.webp",
       "price": 9999
     },
     {
       "id": 87,
       "title": "Tag Heuer Carrera",
       "description": "Luxury chronograph with automatic movement and stainless steel bracelet.",
-      "image_url": "https://www.tagheuer.com/on/demandware.static/-/Sites-tagheuer-master/default/dwac587214/TAG_Heuer_Carrera/CBU5081.FT6274/CBU5081.FT6274.jpg",
+      "image_url": "https://www.kamalwatch.com/cdn/shop/products/142172-tagheuercarreracalibre5silverdialstainlesssteelmenswatch.jpg?v=1685481655",
       "price": 4200
     },
     {
       "id": 88,
       "title": "Casio G-Shock GA2100",
       "description": "Durable shock-resistant sports watch with carbon core guard structure.",
-      "image_url": "https://media.karousell.com/media/photos/products/2022/4/11/casio_g_shock_ga_2100_cg_froze_1649658062_de7e4e19_progressive.jpg",
+      "image_url": "https://www.casio.com/content/dam/casio/product-info/locales/in/en/timepiece/product/watch/G/GM/gmc/gmc-b2100d-1a/assets/GMC-B2100D-1A.png.transform/main-visual-pc/image.png",
       "price": 110
     },
     {
       "id": 89,
       "title": "Seiko Prospex Diver",
       "description": "diving watch with automatic movement and 200m water resistance.",
-      "image_url": "https://content.thewosgroup.com/productimage/40990778/40990778_7.jpg?impolicy=hero&imwidth=700",
+      "image_url": "https://m.media-amazon.com/images/I/618ZWr0mNbL.SX679.jpg",
       "price": 550
     },
     {
@@ -703,7 +707,7 @@
       "id": 91,
       "title": "Omega Speedmaster Moonwatch",
       "description": "Chronograph watch famously worn during the Apollo moon missions.",
-      "image_url": "https://swisswatch.com.my/cdn/shop/files/IMG_9036_de276e27-a468-4c57-9e49-8eaa1fd6e384.jpg?v=1708500623&width=5000",
+      "image_url": "https://zimsonwatches.com/cdn/shop/files/omega-speedmaster-moonwatch-professional-co-axial-master-chronometer-chronograph-42-mm-31032425001002-78e3aa.png?v=1708751671",
       "price": 6500
     },
     {
@@ -806,143 +810,248 @@
     },
     {
       "id": 106,
-      "title": "Levi's  Jeans",
-      "description": "Classic straight-leg denim jeans with button fly and timeless style.",
-      "image_url": "https://m.media-amazon.com/images/I/5137bplE4kL.AC_SX679.jpg",
-      "price": 79
+      "title": "Men's Classic Black Blazer",
+      "description": "Tailored black blazer with a refined fit, perfect for business meetings, formal occasions, or evening wear.",
+      "image_url": "https://5.imimg.com/data5/SELLER/Default/2025/2/486578504/OB/EA/II/197455575/men-blazer-suit-1000x1000.jpg",
+      "price": 120
     },
     {
       "id": 107,
-      "title": "Nike Sportswear Club Hoodie",
-      "description": "Pullover fleece hoodie with soft comfort and a casual fit.",
-      "image_url": "https://m.media-amazon.com/images/I/51OpumKGjPL.AC_SY741.jpg",
-      "price": 55
-    },
-    {
-      "id": 108,
-      "title": "Adidas Essentials Track Jacket",
-      "description": "Lightweight polyester track jacket with signature 3-stripes design.",
-      "image_url": "https://m.media-amazon.com/images/I/51+AM2vUC3L.AC_SX679.jpg",
+      "title": "Men's Light Blue Formal Shirt",
+      "description": "Elegant light blue button-up shirt with a sharp collar and slim fit design, ideal for office and formal wear.",
+      "image_url": "https://images.unsplash.com/photo-1552252059-9d77e4059ad1?q=80&w=685&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "price": 65
     },
     {
+      "id": 108,
+      "title": "Men's Casual White T-Shirt",
+      "description": "Simple crew-neck white t-shirt with a clean and modern fit, perfect for casual everyday wear.",
+      "image_url": "https://images.unsplash.com/photo-1618001789159-ffffe6f96ef2?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "price": 30
+    },
+    {
       "id": 109,
-      "title": "Calvin Klein Slim Fit Dress Shirt",
-      "description": "Long sleeve button-up dress shirt in a slim fit design.",
-      "image_url": "https://m.media-amazon.com/images/I/61ouKFVd0UL.AC_UL1500.jpg",
-      "price": 60
+      "title": "Men's Green Bomber Jacket",
+      "description": "Trendy olive green bomber jacket with zip front and ribbed cuffs, offering a stylish urban look.",
+      "image_url": "https://images.unsplash.com/photo-1626557981101-aae6f84aa6ff?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "price": 85
     },
     {
       "id": 110,
       "title": "Tommy Hilfiger Polo Shirt",
       "description": "Classic short-sleeve polo shirt with embroidered flag logo.",
-      "image_url": "https://m.media-amazon.com/images/I/81S0v8iU6NL.AC_UL1500.jpg",
+      "image_url": "https://m.media-amazon.com/images/I/51hdN2CnvPL.SX679.jpg",
       "price": 50
     },
     {
       "id": 111,
       "title": "Under Armour Tech T-Shirt",
       "description": "Moisture-wicking short sleeve athletic t-shirt for workouts.",
-      "image_url": "https://m.media-amazon.com/images/I/71a0Vc38ciL.AC_UL1500.jpg",
+      "image_url": "https://m.media-amazon.com/images/I/417ADyFsZiL.SX679.jpg",
       "price": 25
     },
     {
       "id": 112,
-      "title": "Ralph Lauren Classic Fit Oxford Shirt",
-      "description": "Button-down oxford shirt in breathable cotton with iconic pony logo.",
-      "image_url": "https://m.media-amazon.com/images/I/71gN2c0v4qL.AC_UL1500.jpg",
-      "price": 89
+      "title": "Men's Navy Blue Polo Shirt",
+      "description": "Classic navy blue short-sleeve polo shirt with a clean collar design, perfect for casual and semi-casual wear.",
+      "image_url": "https://images.unsplash.com/photo-1630173250799-2813d34ed14b?q=80&w=765&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "price": 50
     },
     {
       "id": 113,
-      "title": "Columbia Steens Mountain Fleece Jacket",
-      "description": "Full zip fleece jacket for outdoor comfort and warmth.",
-      "image_url": "https://m.media-amazon.com/images/I/81pZ0zq4dgL.AC_UL1500.jpg",
-      "price": 45
+      "title": "Men's Beige Linen Shirt",
+      "description": "Lightweight beige linen shirt with a relaxed fit and breathable fabric, ideal for summer and casual outings.",
+      "image_url": "https://images.unsplash.com/photo-1622450180332-3da1126f10a4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDMzfHx8ZW58MHx8fHx8",
+      "price": 62
     },
     {
       "id": 114,
-      "title": "Dockers Khaki Pants",
-      "description": "Classic fit khaki chino pants suitable for casual and business wear.",
-      "image_url": "https://m.media-amazon.com/images/I/71FdPhAF0PL.AC_UL1500.jpg",
+      "title": "Men's Grey Casual Hoodie",
+      "description": "Comfortable light grey pullover hoodie with a minimalist design, great for casual and streetwear style.",
+      "image_url": "https://images.unsplash.com/photo-1636590416708-68a4867918f1?q=80&w=765&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "price": 55
     },
     {
       "id": 115,
-      "title": "The North Face Resolve Jacket",
-      "description": "Waterproof lightweight rain jacket with breathable mesh lining.",
-      "image_url": "https://m.media-amazon.com/images/I/71hjsMIfX2L.AC_UL1500.jpg",
-      "price": 99
+      "title": "Men's Black Leather Jacket",
+      "description": "Stylish black leather jacket with a sleek fit and zip-up closure, perfect for biker and casual fashion looks.",
+      "image_url": "https://images.unsplash.com/photo-1642886512785-b5fee9faad7f?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "price": 140
     },
     {
       "id": 116,
-      "title": "Levi's Women's 721 High Rise Skinny Jeans",
-      "description": "Classic high-rise skinny jeans made from stretch denim for comfort.",
-      "image_url": "https://m.media-amazon.com/images/I/71AiQZkP2fL.AC_UL1500.jpg",
-      "price": 79
+      "title": "Men's Olive Green Linen-Blend Shirt",
+      "description": "Relaxed-fit olive green linen-blend shirt with full sleeves and classic button-down design—versatile for both casual and smart-casual wear.",
+      "image_url": "https://images.unsplash.com/photo-1577394580379-0b59ce5e1f01?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE1fHx8ZW58MHx8fHx8",
+      "price": 68
     },
     {
       "id": 117,
-      "title": "Calvin Klein Women's Sleeveless Sheath Dress",
+      "title": "Calvin Klein",
       "description": "Elegant knee-length sheath dress suitable for office or evening wear.",
-      "image_url": "https://m.media-amazon.com/images/I/71r4Ag93u8L.AC_UL1500.jpg",
+      "image_url": "https://m.media-amazon.com/images/I/51+y9XmFJYL.SX679.jpg",
       "price": 120
     },
     {
       "id": 118,
-      "title": "Nike Women's Dri-FIT Training T-Shirt",
-      "description": "Breathable, sweat-wicking athletic t-shirt designed for workouts.",
-      "image_url": "https://m.media-amazon.com/images/I/71iXbtZ4sCL.AC_UL1500.jpg",
+      "title": "Stylish Workout T-Shirt for Women",
+      "description": "A comfortable and breathable t-shirt designed for fitness and casual wear, offering both style and performance.",
+      "image_url": "https://images.pexels.com/photos/6810134/pexels-photo-6810134.jpeg",
       "price": 30
     },
     {
       "id": 119,
-      "title": "Adidas Originals Women's 3-Stripes Leggings",
-      "description": "Stretchy cotton leggings with signature Adidas 3-stripes design.",
-      "image_url": "https://m.media-amazon.com/images/I/71qKP8yPqML.AC_UL1500.jpg",
+      "title": "Trendy Casual Outfit for Women",
+      "description": "A stylish casual outfit perfect for everyday wear, featuring a modern and comfortable look.",
+      "image_url": "https://images.unsplash.com/photo-1562572159-4efc207f5aff?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZmFzaGlvbiUyMGdpcmx8ZW58MHx8MHx8fDA%3D",
       "price": 40
     },
     {
       "id": 120,
-      "title": "Columbia Women's Benton Springs Fleece Jacket",
-      "description": "Soft, lightweight fleece jacket for casual wear and layering.",
-      "image_url": "https://m.media-amazon.com/images/I/81yHgfdqMCL.AC_UL1500.jpg",
+      "title": "Cozy Women's Casual Fleece Jacket",
+      "description": "Warm and lightweight fleece jacket, perfect for layering in cool weather with a stylish everyday look.",
+      "image_url": "https://images.pexels.com/photos/15953857/pexels-photo-15953857.jpeg?_gl=1*1rq2tg5*_ga*MTk0ODgyNTA3MC4xNzUxNzM1NzQx*_ga_8JE65Q40S6*czE3NTU5MzU2NjckbzIkZzEkdDE3NTU5MzU3NTgkajYwJGwwJGgw",
       "price": 55
     },
     {
       "id": 121,
-      "title": "Ralph Lauren Women's Classic Oxford Shirt",
-      "description": "Button-up cotton oxford shirt with a tailored fit and iconic logo.",
-      "image_url": "https://m.media-amazon.com/images/I/71hjQKu0LzL.AC_UL1500.jpg",
+      "title": "Women's White Button-Up Shirt",
+      "description": "Elegant long-sleeve white button-up shirt with a sleek and timeless design, ideal for casual and semi-formal wear.",
+      "image_url": "https://www.roadtosolidity.com/wp-content/uploads/2018/02/charm-a-woman.jpg",
       "price": 89
     },
     {
       "id": 122,
-      "title": "Adidas Women's Essentials 3-Stripes Track Jacket",
-      "description": "Lightweight track jacket with zip front and sporty design.",
-      "image_url": "https://m.media-amazon.com/images/I/61yidDdEb2L.AC_UL1500.jpg",
-      "price": 65
+      "title": "Women's Beige Casual Jacket",
+      "description": "Stylish beige zip-up jacket with a relaxed fit, perfect for layering in casual and semi-formal looks.",
+      "image_url": "https://images.unsplash.com/photo-1646926896393-5ae59b9ef90a?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "price": 72
     },
     {
       "id": 123,
-      "title": "Tommy Hilfiger Women's Polo Shirt",
-      "description": "Casual short-sleeve polo shirt with embroidered flag logo.",
-      "image_url": "https://m.media-amazon.com/images/I/81TnKaXt7kL.AC_UL1500.jpg",
-      "price": 50
+      "title": "Women's Striped Casual Shirt",
+      "description": "Trendy long-sleeve button-up shirt with vertical stripes, offering a modern yet casual style for everyday wear.",
+      "image_url": "https://images.unsplash.com/photo-1623685618586-6d3d152ccefc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MTV8fHxlbnwwfHx8fHw%3D",
+      "price": 58
     },
     {
       "id": 124,
-      "title": "Under Armour Women's HeatGear Leggings",
-      "description": "Compression-fit leggings designed for training and performance.",
-      "image_url": "https://m.media-amazon.com/images/I/71sE3zB9n+L.AC_UL1500.jpg",
-      "price": 45
+      "title": "Women's Black Casual Pants",
+      "description": "Chic high-waist black pants with a relaxed fit, perfect for pairing with both formal and casual outfits.",
+      "image_url": "https://images.pexels.com/photos/9241604/pexels-photo-9241604.jpeg?_gl=1*1m15eqc*_ga*MTk0ODgyNTA3MC4xNzUxNzM1NzQx*_ga_8JE65Q40S6*czE3NTU5MzU2NjckbzIkZzEkdDE3NTU5MzYzNzkkajYwJGwwJGgw",
+      "price": 60
     },
     {
       "id": 125,
-      "title": "The North Face Women's Venture 2 Jacket",
-      "description": "Waterproof lightweight rain jacket with adjustable hood.",
-      "image_url": "https://m.media-amazon.com/images/I/71d8ZpISx0L.AC_UL1500.jpg",
-      "price": 110
+      "title": "Women's Light Blue Denim Jacket",
+      "description": "Classic light blue denim jacket with button-front closure and casual styling, perfect for layering in everyday outfits.",
+      "image_url": "https://images.unsplash.com/photo-1523260578934-e9318da58c8d?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "price": 75
+    },
+    {
+      "id": 126,
+      "title": "Canon EOS Rebel T7 DSLR Camera",
+      "description": "Beginner-friendly DSLR camera with 18-55mm lens and 24.1MP sensor.",
+      "image_url": "https://m.media-amazon.com/images/I/61QoynZYblL.SL1000.jpg",
+      "price": 479
+    },
+    {
+      "id": 127,
+      "title": "Nikon D3500 DSLR Camera",
+      "description": "Lightweight DSLR camera with 24.2MP sensor and 18-55mm VR lens.",
+      "image_url": "https://m.media-amazon.com/images/I/41tszoNu0KL.jpg",
+      "price": 496
+    },
+    {
+      "id": 128,
+      "title": "Sony Alpha a6400 Mirrorless Camera",
+      "description": "APS-C mirrorless camera with 24.2MP sensor and fast autofocus.",
+      "image_url": "https://m.media-amazon.com/images/I/61-yhe06tyL.SX679.jpg",
+      "price": 998
+    },
+    {
+      "id": 129,
+      "title": "Fujifilm X-T30 II Mirrorless Camera",
+      "description": "Compact mirrorless camera with retro design and 26.1MP X-Trans sensor.",
+      "image_url": "https://m.media-amazon.com/images/I/61d3Z7GYoFL.SX679.jpg",
+      "price": 899
+    },
+    {
+      "id": 130,
+      "title": "GoPro HERO11 Black Action Camera",
+      "description": "Waterproof 5.3K action camera ideal for adventure and sports filming.",
+      "image_url": "https://m.media-amazon.com/images/I/51JwcRWiefL.SX679.jpg",
+      "price": 399
+    },
+    {
+      "id": 131,
+      "title": "Maybelline SuperStay Matte Ink Lipstick",
+      "description": "Long-lasting matte liquid lipstick with intense color payoff.",
+      "image_url": "https://m.media-amazon.com/images/I/51GOIpaXM8L._SX679_.jpg",
+      "price": 9.99
+    },
+    {
+      "id": 132,
+      "title": "L'Oreal Paris Voluminous Mascara",
+      "description": "Volumizing mascara for bold, dramatic eyelashes.",
+      "image_url": "https://m.media-amazon.com/images/I/713L3Vl+bUL._SX679_.jpg",
+      "price": 8.99
+    },
+    {
+      "id": 133,
+      "title": "Neutrogena Hydro Boost Water Gel",
+      "description": "Lightweight gel moisturizer with hyaluronic acid for hydrated skin.",
+      "image_url": "https://m.media-amazon.com/images/I/51YTdG8RPSL._SL1001_.jpg",
+      "price": 18.49
+    },
+    {
+      "id": 134,
+      "title": "Revlon One-Step Hair Dryer & Volumizer",
+      "description": "2-in-1 hair dryer and volumizing brush for smooth blowouts.",
+      "image_url": "https://m.media-amazon.com/images/I/717ubYggVJL._SX679_.jpg",
+      "price": 39.99
+    },
+    {
+      "id": 135,
+      "title": "CeraVe Foaming Facial Cleanser",
+      "description": "Gentle foaming cleanser for normal to oily skin.",
+      "image_url": "https://www.cerave.com/-/media/project/loreal/brand-sites/cerave/americas/us/skincare/cleansers/hydrating-facial-cleanser/photos/2025/hydrating-facial-cleanser_front.jpg?rev=0dbda3ea882842279d59341505ad4a93&w=900&hash=3D916FF592FE619D485851D27C485306",
+      "price": 14.99
+    },
+    {
+      "id": 136,
+      "title": "Olaplex No.3 Hair Perfector",
+      "description": "At-home hair treatment that repairs and strengthens damaged hair.",
+      "image_url": "https://m.media-amazon.com/images/I/61J1mJhNJfL._SX679_.jpg",
+      "price": 30
+    },
+    {
+      "id": 137,
+      "title": "E.L.F. Poreless Putty Primer",
+      "description": "Silky primer that blurs imperfections for a smooth makeup base.",
+      "image_url": "https://images.albertsons-media.com/is/image/ABS/970751531-C1N1?$ng-ecom-pdp-desktop$&defaultImage=Not_Available",
+      "price": 9
+    },
+    {
+      "id": 138,
+      "title": "Urban Decay All Nighter Setting Spray",
+      "description": "Long-lasting makeup setting spray for up to 16 hours of wear.",
+      "image_url": "https://m.media-amazon.com/images/I/51QVlVe7ujL._SX679_.jpg",
+      "price": 33
+    },
+    {
+      "id": 139,
+      "title": "The Ordinary Niacinamide 10% + Zinc 1%",
+      "description": "Clinical serum to reduce blemishes and improve skin texture.",
+      "image_url": "https://m.media-amazon.com/images/I/51o33HKtEML._SX679_.jpg",
+      "price": 8.9
+    },
+    {
+      "id": 140,
+      "title": "Clinique Moisture Surge 72-Hour Auto-Replenishing Hydrator",
+      "description": "Refreshing gel-cream moisturizer for all-day hydration.",
+      "image_url": "https://m.media-amazon.com/images/I/61w0uxDbLNL._SX679_.jpg",
+      "price": 29.5
     }
   ],
   "category": [

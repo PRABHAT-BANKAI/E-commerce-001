@@ -98,7 +98,7 @@ const Forgotpassword = () => {
             {vboolean ? (
                 <div>
                     <form action="" onSubmit={handleSubmit}>
-                        <p>user id : {userId}</p>
+                       
                         <br />
                         <label >
                             <input className='border' type="text" placeholder='Enter your New Password' value={cdata.password} onChange={(e) => setCdata({ ...cdata, password: e.target.value })} />
