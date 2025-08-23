@@ -30,7 +30,7 @@ const AllRoute = () => {
         <Route path="/features" element={<Features/>} />
         <Route path="/contact" element={<Contact />} />
 
-        <Route path="/cart" element={<CartPage/>}/>
+        <Route path="/cartpage" element={<CartPage/>}/>
 
       </Routes>
     </div>

@@ -27,13 +27,18 @@ const ProductPage = () => {
 
   const dispatch = useDispatch();
   const  navigate = useNavigate();
+  const cartItems = useSelector((state) => state.cart.cartItems);
+
   const handleAddToCart = (product) => {
     dispatch(addToCart(product));
     alert(`🛒 Added "${product.title}" to cart`);
   };
 
   const handleBuyNow = (product) => {
-    dispatch(addToCart(product)); 
+    const alreadyInCart = cartItems.find((item)=> item.id === product.id)
+    if(!alreadyInCart){
+      dispatch(addToCart(product))
+    } 
     navigate("/cartpage");
     alert(`💰 Buying "${product.title}"`);
   };

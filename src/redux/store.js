@@ -1,8 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit'
 import  productReducer  from './feature/productSlice'
 import userReducer from './feature/userSlice'
+
+import cartReducer, { persistCart } from './feature/cartSlice'
+
 import cartReducer from './feature/cartSlice'
 import loginReducer from './feature/loginSlice'
+
 
 export const store = configureStore({
   reducer: { 
@@ -11,4 +15,6 @@ export const store = configureStore({
        cart: cartReducer,
        login: loginReducer,
     },
+     middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(persistCart),
 })
