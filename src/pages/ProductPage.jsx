@@ -144,7 +144,7 @@ const ProductPage = () => {
                 <img
                   src={product.image_url}
                   alt={product.title}
-                  className="w-full h-64 object-cover hover:opacity-90 transition"
+                  className="w-[100%] h-64 object-cover hover:opacity-90 transition"
                 />
                 <div className="p-5">
                   <h2 className="font-bold text-lg text-gray-800 mb-2">
