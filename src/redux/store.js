@@ -4,7 +4,7 @@ import userReducer from './feature/userSlice'
 
 import cartReducer, { persistCart } from './feature/cartSlice'
 
-import cartReducer from './feature/cartSlice'
+
 import loginReducer from './feature/loginSlice'
 
 
