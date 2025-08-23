@@ -53,7 +53,7 @@ const Login = () => {
       navigate("/product")
       setData({ email: "", password: "" })
     }
-     else {
+    else {
       alert("Please enter a valid Email & Password");
     }
   }, [user,navigate])

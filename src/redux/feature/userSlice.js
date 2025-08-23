@@ -3,22 +3,31 @@ import axios from "axios";
 
 const USER_URL = "http://localhost:3000/users";
 
+// fetch all users
 export const fetchUsers = createAsyncThunk("users/fetchUsers", async () => {
   const res = await axios.get(USER_URL);
   return res.data;
 });
 
+// signup user with email check
 export const signupUser = createAsyncThunk(
   "users/signupUser",
   async (userData, { rejectWithValue }) => {
-    try {  
+    try {
+      // check if email exists in DB
+      const checkRes = await axios.get(`${USER_URL}?email=${userData.email}`);
+      if (checkRes.data.length > 0) {
+        return rejectWithValue("Email already exists. Please use another one.");
+      }
+
+      // if not exists -> create new user
       const res = await axios.post(USER_URL, userData);
       return res.data;
     } catch (error) {
       return rejectWithValue(error.message);
     }
   }
-);    
+);
 
 const userSlice = createSlice({
   name: "users",
@@ -36,6 +45,7 @@ const userSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
+      // fetch users
       .addCase(fetchUsers.pending, (state) => {
         state.loading = true;
       })
@@ -48,6 +58,7 @@ const userSlice = createSlice({
         state.error = action.payload;
       });
 
+    // signup user
     builder
       .addCase(signupUser.pending, (state) => {
         state.loading = true;
