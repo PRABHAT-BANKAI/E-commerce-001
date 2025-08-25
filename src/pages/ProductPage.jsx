@@ -20,8 +20,11 @@ const ProductPage = () => {
 
   // cart
   const dispatch = useDispatch();
-  const navigate = useNavigate();
+<<<<<<<<< Temporary merge branch 1
   const cartItems = useSelector((state) => state.cart.cartItems);
+=========
+  const navigate = useNavigate();
+>>>>>>>>> Temporary merge branch 2
 
   const handleAddToCart = (product) => {
     dispatch(addToCart(product));
@@ -29,10 +32,14 @@ const ProductPage = () => {
   };
 
   const handleBuyNow = (product) => {
-    const alreadyInCart = cartItems.find((item) => item.id === product.id);
-    if (!alreadyInCart) {
-      dispatch(addToCart(product));
-    }
+<<<<<<<<< Temporary merge branch 1
+    const alreadyInCart = cartItems.find((item)=> item.id === product.id)
+    if(!alreadyInCart){
+      dispatch(addToCart(product))
+    } 
+=========
+    dispatch(addToCart(product));
+>>>>>>>>> Temporary merge branch 2
     navigate("/cartpage");
     alert(`💰 Buying "${product.title}"`);
   };

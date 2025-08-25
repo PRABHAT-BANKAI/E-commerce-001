@@ -77,20 +77,10 @@ const Navbar = ({ onSearch }) => {
         <img src={image} alt="logo" className="w-24 md:w-28 h-auto" />
       </Link>
 
+
       <SearchBar/>
-      {/* Search Bar
-      {!hideCartProfileSearch && (
-        <div className="hidden sm:flex items-center border rounded-lg px-2 md:px-3 py-1 w-1/2 max-w-md bg-gray-50">
-          <IoMdSearch className="text-gray-500 text-lg md:text-xl mr-2" />
-          <input
-            type="text"
-            placeholder="Search products..."
-            value={search}
-            onChange={handleSearchChange}
-            className="w-full bg-transparent outline-none text-gray-700 text-sm md:text-base"
-          />
-        </div> */}
-      {/* )} */}
+    
+
 
       {/* Desktop Right Section */}
       <div className="hidden md:flex items-center space-x-6 relative">
@@ -151,6 +141,7 @@ const Navbar = ({ onSearch }) => {
           </Link>
         )}
       </div>
+
 
       {/* Mobile Hamburger */}
       <div className="md:hidden flex items-center">
