@@ -5,6 +5,7 @@ import { IoMdSearch } from "react-icons/io";
 import { HiMenu, HiX } from "react-icons/hi";
 import image from "../assets/main.png";
 import { useSelector } from "react-redux";
+import SearchBar from "../pages/SearchBar";
 
 // Helper: Get initials
 const getInitials = (firstName, lastName, fullName) => {
@@ -75,6 +76,9 @@ const Navbar = ({ onSearch }) => {
       <Link to="/product" className="flex items-center">
         <img src={image} alt="logo" className="w-24 md:w-28 h-auto" />
       </Link>
+
+
+      <SearchBar/>
 
       {/* Search Bar */}
       {!hideCartProfileSearch && (
@@ -149,6 +153,7 @@ const Navbar = ({ onSearch }) => {
           </Link>
         )}
       </div>
+
 
       {/* Mobile Hamburger */}
       <div className="md:hidden flex items-center">

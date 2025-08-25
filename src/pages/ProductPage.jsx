@@ -1,18 +1,13 @@
 import axios from "axios";
-import React, { useEffect, useState, } from "react";
+import React, { useEffect, useState } from "react";
 import { FaShoppingCart, FaMoneyBillWave } from "react-icons/fa";
 import { IoMdSearch } from "react-icons/io";
-import { useSelector,useDispatch } from "react-redux";
-import Slider from "./Slider";
+import { useDispatch } from "react-redux";
 import Footer from "../components/Footer";
 import { addToCart } from "../redux/feature/cartSlice";
 import { useNavigate } from "react-router";
 
-
 const ProductPage = () => {
-  const product = useSelector((state) => state.productData.products);
-  console.log(product);
-
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -23,11 +18,14 @@ const ProductPage = () => {
   const [category, setCategory] = useState("all");
   const [sort, setSort] = useState("");
 
-  //cart
-
+  // cart
   const dispatch = useDispatch();
+
+  const navigate = useNavigate();
+
   const  navigate = useNavigate();
   const cartItems = useSelector((state) => state.cart.cartItems);
+
 
   const handleAddToCart = (product) => {
     dispatch(addToCart(product));
@@ -35,11 +33,13 @@ const ProductPage = () => {
   };
 
   const handleBuyNow = (product) => {
+
+    dispatch(addToCart(product));
+
     const alreadyInCart = cartItems.find((item)=> item.id === product.id)
     if(!alreadyInCart){
       dispatch(addToCart(product))
-    } 
-    navigate("/cartpage");
+    }     navigate("/cartpage");
     alert(`💰 Buying "${product.title}"`);
   };
 
@@ -82,8 +82,6 @@ const ProductPage = () => {
 
   return (
     <div className="min-h-screen py-6 px-4 bg-gray-50">
-      {/* Header */}
-
       {/* Filters */}
       <div className="max-w-7xl mx-auto mb-6 flex flex-col sm:flex-row gap-4 items-center justify-between">
         {/* Search */}
@@ -131,7 +129,9 @@ const ProductPage = () => {
 
       {/* Main Section */}
       <main className="max-w-7xl mx-auto">
-        {loading && <p className="text-center text-gray-500">Loading products...</p>}
+        {loading && (
+          <p className="text-center text-gray-500">Loading products...</p>
+        )}
         {error && <p className="text-center text-red-500">Error: {error}</p>}
 
         {!loading && !error && (
