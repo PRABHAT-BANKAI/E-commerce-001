@@ -1,10 +1,18 @@
-
 import { createSlice } from "@reduxjs/toolkit";
+
+const loadCart = () => {
+  try {
+    const saved = localStorage.getItem("cart");
+    return saved ? JSON.parse(saved) : [];
+  } catch {
+    return [];
+  }
+};
 
 const cartSlice = createSlice({
   name: "cart",
   initialState: {
-    cartItems: [],
+    cartItems: loadCart(),  
   },
   reducers: {
     addToCart: (state, action) => {
@@ -33,6 +41,14 @@ const cartSlice = createSlice({
     }
   }
 });
+
+// middleware: save to localStorage on every change
+export const persistCart = store => next => action => {
+  const result = next(action);
+  const state = store.getState();
+  localStorage.setItem("cart", JSON.stringify(state.cart.cartItems));
+  return result;
+};
 
 export const { addToCart, increaseQty, decreaseQty, removeFromCart, clearCart } = cartSlice.actions;
 export default cartSlice.reducer;

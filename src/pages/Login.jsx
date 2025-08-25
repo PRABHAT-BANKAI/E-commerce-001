@@ -1,42 +1,25 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router";
+import { loginUser } from "../redux/feature/loginSlice";
 
 const Login = () => {
   const [data, setData] = useState({ email: "", password: "" });
-  const [fetchData, setFetchData] = useState([])
 
   const [error, setError] = useState({});
 
   const navigate = useNavigate()
+  const dispatch = useDispatch()
 
-  async function getData() {
-    let data = await axios.get("http://localhost:3000/users")
-
-    setFetchData(data.data)
- 
-  }
-
-
+  const { user, loading, error:loginError} = useSelector((state) => state.login)
 
   function handleLogin(e) {
     e.preventDefault();
 
     if (!validation()) return;
+    dispatch(loginUser(data))
 
-    let user = fetchData.find(
-      (user) =>
-        user.email.toLowerCase() === data.email.toLowerCase() &&
-        user.password.toLowerCase() === data.password.toLowerCase()
-    );
-
-    if (user) {
-      alert("Successfully Logged In!");
-      navigate("/product")
-      setData({ email: "", password: "" });
-    } else {
-      alert("Please enter a valid Email & Password");
-    }
 
     if (validation()) {
       setData({ email: "", password: "" });
@@ -65,8 +48,16 @@ const Login = () => {
   }
 
   useEffect(() => {
-    getData()
-  }, [])
+    if(user){
+      alert('login successful')
+      navigate("/product")
+      setData({ email: "", password: "" })
+    }
+    else {
+      alert("Please enter a valid Email & Password");
+    }
+  }, [user,navigate])
+
   return (
     <div
       className="w-[100vw] h-[100vh] flex justify-center items-center bg-white"
@@ -106,15 +97,19 @@ const Login = () => {
         {error.password && (
           <p className="text-red-600 text-sm mt-1">{error.password}</p>
         )}
+
+         {loginError && <p className="text-red-600 text-sm mt-2">{loginError}</p>}
+
         <Link to={"/fpass"}>
           <p>Forgot Password</p>
         </Link>
+
         <button
           type="submit"
-          className="mt-[40px] border w-[250px] h-[40px] rounded-[5px] bg-white cursor-pointer"
-        >
-          Submit
-        </button>
+          className="mt-[40px] border w-[250px] h-[40px] rounded-[5px] bg-white cursor-pointer">Submit
+            {loading && <p className="text-white mt-2">Login...</p>}
+
+          </button>
 
         <div className="flex mt-[20px] text-black">
           <p>Don't Have An Account?</p>
