@@ -20,7 +20,12 @@ const ProductPage = () => {
 
   // cart
   const dispatch = useDispatch();
+
   const navigate = useNavigate();
+
+  const  navigate = useNavigate();
+  const cartItems = useSelector((state) => state.cart.cartItems);
+
 
   const handleAddToCart = (product) => {
     dispatch(addToCart(product));
@@ -28,8 +33,13 @@ const ProductPage = () => {
   };
 
   const handleBuyNow = (product) => {
+
     dispatch(addToCart(product));
-    navigate("/cartpage");
+
+    const alreadyInCart = cartItems.find((item)=> item.id === product.id)
+    if(!alreadyInCart){
+      dispatch(addToCart(product))
+    }     navigate("/cartpage");
     alert(`💰 Buying "${product.title}"`);
   };
 
@@ -134,7 +144,7 @@ const ProductPage = () => {
                 <img
                   src={product.image_url}
                   alt={product.title}
-                  className="w-full h-64 object-cover hover:opacity-90 transition"
+                  className="w-[100%] h-64 object-cover hover:opacity-90 transition"
                 />
                 <div className="p-5">
                   <h2 className="font-bold text-lg text-gray-800 mb-2">
