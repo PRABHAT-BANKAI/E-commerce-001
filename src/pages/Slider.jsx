@@ -5,7 +5,10 @@ const images = [
   "https://images-eu.ssl-images-amazon.com/images/G/31/img22/Wireless/devjyoti/GW/Uber/Nov/uber_new_high._CB537689643_.jpg",
   "https://images-eu.ssl-images-amazon.com/images/G/31/img21/MA2025/GW/BAU/Unrec/PC/934044814._CB551384116_.jpg",
   "https://images-eu.ssl-images-amazon.com/images/G/31/Sudipta/AugART25/GW/low-res._CB803664281_.jpg",
-  "https://images-eu.ssl-images-amazon.com/images/G/31/img22/Wireless/devjyoti/GW/Uber/Nov/uber_new_high._CB537689643_.jpg"
+  // "https://rukminim3.flixcart.com/fk-p-flap/1400/232/image/6028dc8bdd996757.jpg?q=60",
+  // "https://rukminim3.flixcart.com/fk-p-flap/1400/232/image/53826e65590b7b94.jpg?q=60",
+  // "https://rukminim3.flixcart.com/fk-p-flap/1400/232/image/feeba52e738f64e5.jpg?q=60",
+  // "https://rukminim3.flixcart.com/fk-p-flap/1400/232/image/99d96e24b0a35dad.jpg?q=60"
 ];
 
 const Slider = () => {

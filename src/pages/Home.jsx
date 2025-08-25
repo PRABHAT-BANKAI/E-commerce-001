@@ -1,179 +1,112 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { FaShoppingCart, FaMoneyBillWave } from "react-icons/fa";
-import { IoMdSearch } from "react-icons/io";
-import { useSelector } from "react-redux";
+import { useNavigate } from "react-router";
 import Slider from "./Slider";
-import Footer from "../components/Footer";
+import CategorySection from "./CategorySection";
+import SearchBar from "./SearchBar";
 
 const Home = () => {
-  const product = useSelector((state) => state.productData.products);
-  console.log(product);
-
   const [products, setProducts] = useState([]);
-  const [filteredProducts, setFilteredProducts] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [sort, setSort] = useState("");
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
-  // filters
-  const [search, setSearch] = useState("");
-  const [category, setCategory] = useState("all");
-  const [sort, setSort] = useState("");
-
-  const handleAddToCart = (product) => {
-    alert(`🛒 Added "${product.title}" to cart`);
-  };
-
-  const handleBuyNow = (product) => {
-    alert(`💰 Buying "${product.title}"`);
-  };
-
-  // Fetch products
+  // Fetch Products
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/products");
-        setProducts(response.data);
-        setFilteredProducts(response.data);
+        const res = await axios.get("http://localhost:3000/products");
+        setProducts(res.data);
         setLoading(false);
       } catch (err) {
-        setError(err.message || "Something went wrong");
+        setError("Failed to fetch products");
         setLoading(false);
       }
     };
     fetchProducts();
   }, []);
 
-  // Filtering + Sorting
-  useEffect(() => {
-    let temp = [...products];
-
-    if (search.trim() !== "") {
-      temp = temp.filter((p) =>
-        p.title.toLowerCase().includes(search.toLowerCase())
-      );
-    }
-    if (category !== "all") {
-      temp = temp.filter((p) => p.category === category);
-    }
-    if (sort === "low-high") {
-      temp.sort((a, b) => a.price - b.price);
-    } else if (sort === "high-low") {
-      temp.sort((a, b) => b.price - a.price);
-    }
-
-    setFilteredProducts(temp);
-  }, [search, category, sort, products]);
+  // Filter + Sort Products
+  const filteredProducts = [...products]
+    .filter(
+      (product) =>
+        product.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        product.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        product.category?.toLowerCase().includes(searchQuery.toLowerCase())
+    )
+    .sort((a, b) => {
+      if (sort === "lowToHigh") return a.price - b.price;
+      if (sort === "highToLow") return b.price - a.price;
+      return 0;
+    });
 
   return (
-    <div className="min-h-screen py-6 px-4 bg-gray-50">
-      <Slider />
+    <div className="min-h-screen bg-gray-50">
+      {/* Category Section */}
+      <CategorySection />
 
-      {/* Filters */}
-      <div className="max-w-7xl mx-auto mb-6 flex flex-col sm:flex-row gap-4 items-center justify-between">
-        {/* Search */}
-        <div className="relative w-full sm:w-1/3">
-          <input
-            type="text"
-            placeholder="Search products..."
-            className="px-4 py-2 pl-10 border rounded-lg w-full shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-          />
-          <IoMdSearch className="absolute left-3 top-3 text-gray-500 text-lg" />
-        </div>
+      {/* Slider */}
+      <div className="max-w-7xl mx-auto px-4">
+        <Slider />
+      </div>
 
-        {/* Category Filter */}
+      {/* Search Bar */}
+      <div className="max-w-7xl mx-auto mb-6 px-4">
+        <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+      </div>
+
+      {/* Sort Dropdown */}
+      <div className="max-w-7xl mx-auto px-4 mb-6 flex justify-end">
         <select
-          className="px-4 py-2 border rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500"
-          value={category}
-          onChange={(e) => setCategory(e.target.value)}
-        >
-          <option value="all">All Categories</option>
-          <option value="electronics">Electronics</option>
-          <option value="fashion">Fashion</option>
-          <option value="books">Books</option>
-          <option value="home">Home</option>
-        </select>
-
-        {/* Price Sorting */}
-        <select
-          className="px-4 py-2 border rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500"
+          className="border rounded-lg px-3 py-2 shadow-sm"
           value={sort}
           onChange={(e) => setSort(e.target.value)}
         >
-          <option value="">Sort by Price</option>
-          <option value="low-high">Low → High</option>
-          <option value="high-low">High → Low</option>
+          <option value="">Sort By</option>
+          <option value="lowToHigh">Price: Low to High</option>
+          <option value="highToLow">Price: High to Low</option>
         </select>
       </div>
 
-      {/* Header */}
-      <header className="bg-white shadow p-6 mb-8 rounded-xl">
-        <h1 className="text-3xl font-bold text-center text-gray-800">
-          Product Catalog
-        </h1>
-      </header>
-
-      {/* Main Section */}
-      <main className="max-w-7xl mx-auto">
-        {loading && (
-          <p className="text-center text-gray-500">Loading products...</p>
-        )}
-        {error && <p className="text-center text-red-500">Error: {error}</p>}
-
-        {!loading && !error && filteredProducts.length === 0 && (
-          <p className="text-center text-gray-500">No products found.</p>
-        )}
-
-        {!loading && !error && filteredProducts.length > 0 && (
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      {/* Products Section */}
+      <div className="max-w-7xl mx-auto px-4">
+        {loading ? (
+          <p className="text-center text-gray-500">Loading...</p>
+        ) : error ? (
+          <p className="text-center text-red-500">{error}</p>
+        ) : filteredProducts.length > 0 ? (
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
             {filteredProducts.map((product) => (
               <div
                 key={product.id}
-                className="bg-white border border-gray-200 rounded-2xl shadow-lg overflow-hidden transform transition duration-300 hover:-translate-y-1 hover:shadow-xl"
+                className="bg-white border border-gray-200 rounded-xl shadow hover:shadow-lg overflow-hidden cursor-pointer transition transform hover:-translate-y-1"
+                onClick={() => navigate(`/product/${product.id}`)}
               >
                 <img
-                  src={product.image_url}
+                  src={product.image_url || "https://via.placeholder.com/300"}
                   alt={product.title}
-                  className="w-full h-64 object-cover hover:opacity-90 transition"
+                  className="w-full h-48 object-contain p-4"
                 />
-                <div className="p-5">
-                  <h2 className="font-bold text-lg text-gray-800 mb-2">
+                <div className="p-4">
+                  <h2 className="font-semibold text-gray-800 text-sm line-clamp-1">
                     {product.title}
                   </h2>
-                  <p className="text-sm text-gray-600 mb-3 line-clamp-3">
+                  <p className="text-gray-600 text-xs line-clamp-2">
                     {product.description}
                   </p>
-                  <div className="flex justify-between items-center mb-3">
-                    <span className="text-gray-900 font-extrabold text-lg">
-                      ${product.price}
-                    </span>
-                  </div>
-                  <div className="flex flex-col gap-2">
-                    <button
-                      onClick={() => handleAddToCart(product)}
-                      className="flex items-center justify-center gap-2 border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white text-sm font-semibold py-2 px-4 rounded-lg transition duration-300"
-                    >
-                      <FaShoppingCart />
-                      Add to Cart
-                    </button>
-                    <button
-                      onClick={() => handleBuyNow(product)}
-                      className="flex items-center justify-center gap-2 border border-green-600 text-green-600 hover:bg-green-600 hover:text-white text-sm font-semibold py-2 px-4 rounded-lg transition duration-300"
-                    >
-                      <FaMoneyBillWave />
-                      Buy Now
-                    </button>
-                  </div>
+                  <span className="text-gray-900 font-bold text-lg">
+                    ₹{product.price}
+                  </span>
                 </div>
               </div>
             ))}
           </div>
+        ) : (
+          <p className="text-center text-gray-500">No products found</p>
         )}
-      </main>
-
-      <Footer />
+      </div>
     </div>
   );
 };

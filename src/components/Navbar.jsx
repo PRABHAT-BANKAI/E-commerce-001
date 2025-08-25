@@ -5,6 +5,7 @@ import { FaShoppingCart } from "react-icons/fa";
 import { IoMdSearch } from "react-icons/io";
 import image from "../assets/main.png";
 import { useSelector } from "react-redux";
+import SearchBar from "../pages/SearchBar";
 
 
 // Helper: Get initials
@@ -78,17 +79,7 @@ const cartCount = cartItems.reduce((acc, item) => acc + item.quantity, 0);
         <img src={image} alt="logo" className="w-28 h-auto" />
       </Link>
 
-      {/* 🔍 Search Bar */}
-      <div className="flex items-center border rounded-lg px-3 py-1 w-1/2 max-w-md bg-gray-50">
-        <IoMdSearch className="text-gray-500 text-xl mr-2" />
-        <input
-          type="text"
-          placeholder="Search products..."
-          value={search}
-          onChange={handleSearchChange}
-          className="w-full bg-transparent outline-none text-gray-700"
-        />
-      </div>
+      <SearchBar/>
 
       {/* Right Section */}
       <div className="flex items-center space-x-6 relative"> 

@@ -211,182 +211,40 @@
   "price": "149.99",
   "image_url": "https://m.media-amazon.com/images/I/717ByupjUvL._SL1500_.jpg"
   }
-]
-=======
-    {
-      "id": "1",
-      "title": "UltraSound Wireless Earbuds",
-      "description": "Compact true wireless earbuds with noise cancellation & 30 hr battery life.",
-      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhsezTlcsU_I-0t0Go6NQNq8Uu8K3thyFkqw&s",
-      "price": 59.99
-    },
-    {
-      "id": "2",
-      "title": "ProFit Fitness Tracker",
-      "description": "Water‑resistant fitness band with heart‑rate monitor and sleep tracking.",
-      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXErXWVrqnU6mkSzyr99NgeU2oQbRo3NxTEw&s",
-      "price": 39.99
-    },
-    {
-      "id": "3",
-      "title": "EcoBlend Bamboo Cutting Board Set",
-      "description": "Set of 3 eco‑friendly bamboo boards with juice groove and non‑slip feet.",
-      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7vMhZ1F9VcmtXAkHmzNr8wRkU3SPKxTUglg&s",
-      "price": 24.5
-    },
-    {
-      "id": "4",
-      "title": "ThermaCozy Electric Blanket",
-      "description": "Fleece electric blanket with 10 heat settings and auto shut‑off timer.",
-      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREg0dH5aJF3JU3bMjQCHug-Hp_CITRCIgElg&s",
-      "price": 69.99
-    },
-    {
-      "id": "5",
-      "title": "WindCharge USB‑C Power Bank 20,000 mAh",
-      "description": "High‑capacity power bank with dual fast‑charge ports and LED display.",
-      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuXw7Dfag3E5tVFWH5ADtx3B7qe3xwK4r70A&s",
-      "price": 29.99
-    },
-    {
-      "id": "6",
-      "title": "Artisan Clay Serving Bowl",
-      "description": "Hand‑thrown ceramic bowl, dishwasher safe, 12″ diameter, speckled glaze.",
-      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoTnR-mAXBx8FMDgpoejwZbVD2KZP4lsQo0Q&s",
-      "price": 34
-    },
-    {
-      "id": "7",
-      "title": "Lumina LED Desk Lamp",
-      "description": "Adjustable color‑temperature lamp with wireless phone charging pad.",
-      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5FMJHAaY3tCn6QvKl9ru669Tsv05yXPMpuQ&s",
-      "price": 45.75
-    },
-    {
-      "id": "8",
-      "title": "UrbanTrail Backpack 25 L",
-      "description": "Lightweight daypack with laptop compartment and water‑resistant fabric.",
-      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDQgUvt6r5wd3DcR5V-XTgp6ptXIyUopwOMw&s",
-      "price": 49.99
-    },
-    {
-      "id": "9",
-      "title": "PureMist Cool‑Mist Humidifier",
-      "description": "Ultrasonic humidifier for rooms up to 500 sq ft, quiet operation, 10‑hr run time.",
-      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsMEMpJMtIvjbvG0wBhuqvyLouhv_OeiCTRA&s",
-      "price": 39.95
-    },
-    {
-      "id": "10",
-      "title": "SteelChef 10″ Non‑Stick Frying Pan",
-      "description": "Durable kitchen pan with PFOA‑free non‑stick coating and stay‑cool handle.",
-      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmVRp0CFja5YHCnNRkeOLh20xLWRJtwrPfLA&s",
-      "price": 27.99
-    },
-    {
-      "id": "11",
-      "title": "Refresh Natural Shampoo Bar – Lavender",
-      "description": "Solid shampoo bar for all hair types, sulfate‑free, vegan & cruelty‑free.",
-      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFU5I1L4QspkPtdE165PF2-14idQfZc9UGpw&s",
-      "price": 8.99
-    },
-    {
-      "id": "12",
-      "title": "GamerPro RGB Mechanical Keyboard",
-      "description": "Full‑size mechanical keyboard with customizable RGB lighting and tactile switches.",
-      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO_Zp1elcegFB1yRQv94LL41f_nkdUj6HhaQ&s",
-      "price": 79.99
-    },
-    {
-      "id": "13",
-      "title": "AromaHome Reed Diffuser – Ocean Breeze",
-      "description": "Luxury reed diffuser that provides up to 3 months of fresh scent.",
-      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZVHRbhCEfCqKDUPWY7M13vtzeXsTvpiQlwA&s",
-      "price": 22.5
-    },
-    {
-      "id": "14",
-      "title": "FlexiMat Eco Yoga Mat",
-      "description": "Non‑slip, eco‑friendly TPE yoga mat with alignment lines, 6 mm thickness.",
-      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqkRbAjb0Cs1CTyPF5sb9nYV5w0J6BY27tVQ&s",
-      "price": 29.95
-    },
-    {
-      "id": "15",
-      "title": "QuickBrew Portable Espresso Maker",
-      "description": "Compact manual espresso press—no electricity needed, up to 16 bar pressure.",
-      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7tLdbiXgrrCDwN9WqEuhBhQ8fCa4RyGs-yw&s",
-      "price": 59
-    },
-    {
-      "id": "16",
-      "title": "SkyView 200″ Inflatable Outdoor Movie Screen",
-      "description": "Portable on‑ground screen with tripod and carrying case; suitable for backyard theaters.",
-      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4WIDkuSo5AmNEx16ftrXh_9eBLdxuD_FiDg&s",
-      "price": 129.99
-    },
-    {
-      "id": "17",
-      "title": "ClearTone Bluetooth Portable Speaker",
-      "description": "Water‑resistant speaker with 12‑hr playback, built‑in mic for calls.",
-      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsk9ob06IjrywZpvyavg0zvE8Cc1u63RDl9w&s",
-      "price": 49.5
-    },
-    {
-      "id": "18",
-      "title": "ClassicWool Men’s Crew Sweater",
-      "description": "100% merino wool crewneck sweater, regular fit, multiple colors available.",
-      "image_url": "https://cdn.dsmcdn.com/mnresize/600/-/ty1542/product/media/images/ty1542/prod/QC/20240914/13/08e1020d-8194-3113-a2f2-768fd53a0ed1/1_org_zoom.jpg",
-      "price": 85
-    },
-    {
-      "id": "19",
-      "title": "PhotoSnap 12‑pack Prop Display Frames",
-      "description": "Set of 12 decorative frames ideal for events, photo booths, or home multiplex displays.",
-      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxBRg7MCRs80Z23qrnt7kqASGVlNuxmgiNVw&s",
-      "price": 19.99
-    },
-    {
-      "id": "20",
-      "title": "EcoSip Stainless Steel Insulated Bottle 750 ml",
-      "description": "Double‑wall vacuum insulated bottle keeps drinks cold for 24 hrs or hot for 12 hrs.",
-      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOsButy4Iwhu20UwibimBoZWmXuI56USTGIA&s",
-      "price": 32
-    }
   ],
   "category": [
     {
       "id": "",
-      "name": "",
+      "name": "all",
       "img": "",
       "description": "",
       "category": "all"
     },
     {
       "id": "",
-      "name": "",
-      "img": "",
+      "name": "mobiles",
+      "img": "https://rukminim2.flixcart.com/fk-p-flap/64/64/image/5f2ee7f883cdb774.png?q=100",
       "description": "",
       "category": "mobiles"
     },
     {
       "id": "",
-      "name": "",
-      "img": "",
+      "name": "electronics",
+      "img": "https://rukminim2.flixcart.com/fk-p-flap/64/64/image/e90944802d996756.jpg?q=100",
       "description": "",
       "category": "electronics"
     },
     {
       "id": "",
-      "name": "",
-      "img": "",
+      "name": "fashion",
+      "img": "https://rukminim2.flixcart.com/fk-p-flap/64/64/image/ff559cb9d803d424.png?q=100",
       "description": "",
       "category": "fashion"
     },
     {
       "id": "",
-      "name": "",
-      "img": "",
+      "name": "furniture",
+      "img": "https://rukminim2.flixcart.com/fk-p-flap/64/64/image/1788f177649e6991.png?q=100",
       "description": "",
       "category": "furniture"
     }
