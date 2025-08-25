@@ -4,6 +4,7 @@ import { useNavigate } from "react-router";
 import Slider from "./Slider";
 import CategorySection from "./CategorySection";
 import SearchBar from "./SearchBar";
+import Footer from "../components/Footer";
 
 const Home = () => {
   const [products, setProducts] = useState([]);
@@ -28,19 +29,42 @@ const Home = () => {
     fetchProducts();
   }, []);
 
-  // Filter + Sort Products
-  const filteredProducts = [...products]
-    .filter(
-      (product) =>
-        product.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        product.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        product.category?.toLowerCase().includes(searchQuery.toLowerCase())
-    )
-    .sort((a, b) => {
-      if (sort === "lowToHigh") return a.price - b.price;
-      if (sort === "highToLow") return b.price - a.price;
-      return 0;
-    });
+  // Filter Products
+  const filteredProducts = [...products].filter(
+    (product) =>
+      product.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      product.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      product.category?.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
+  // Sort Products
+  const sortedProducts = [...filteredProducts].sort((a, b) => {
+    if (sort === "lowToHigh") return a.price - b.price;
+    if (sort === "highToLow") return b.price - a.price;
+    return 0;
+  });
+
+  const ProductSection = ({ title, items }) => (
+    <section className="mt-6 px-4 bg-white shadow rounded-lg p-4">
+      <h2 className="text-lg font-semibold mb-3">{title}</h2>
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+        {items.map((p) => (
+          <div
+            key={p.id}
+            className="bg-gray-50 p-3 rounded-lg border hover:shadow-lg cursor-pointer"
+          >
+            <img
+              src={p.image_url || "https://via.placeholder.com/200"}
+              alt={p.title}
+              className="w-full h-36 object-contain"
+            />
+            <h3 className="text-sm font-medium mt-2 line-clamp-1">{p.title}</h3>
+            <p className="text-green-600 font-bold">₹{p.price}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -57,58 +81,18 @@ const Home = () => {
         <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       </div>
 
-      {/* Sort Dropdown */}
-      <div className="max-w-7xl mx-auto px-4 mb-6 flex justify-end">
-        <select
-          className="border rounded-lg px-3 py-2 shadow-sm"
-          value={sort}
-          onChange={(e) => setSort(e.target.value)}
-        >
-          <option value="">Sort By</option>
-          <option value="lowToHigh">Price: Low to High</option>
-          <option value="highToLow">Price: High to Low</option>
-        </select>
-      </div>
+      {/* Product Sections */}
+      <ProductSection title="Deals of the Day" items={products.slice(0, 5)} />
+      <ProductSection title="Top Offers" items={products.slice(5, 10)} />
+      <ProductSection title="Best of Electronics" items={products.slice(10, 15)} />
+      <ProductSection title="Fashion Best Sellers" items={products.slice(15, 20)} />
 
-      {/* Products Section */}
-      <div className="max-w-7xl mx-auto px-4">
-        {loading ? (
-          <p className="text-center text-gray-500">Loading...</p>
-        ) : error ? (
-          <p className="text-center text-red-500">{error}</p>
-        ) : filteredProducts.length > 0 ? (
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
-            {filteredProducts.map((product) => (
-              <div
-                key={product.id}
-                className="bg-white border border-gray-200 rounded-xl shadow hover:shadow-lg overflow-hidden cursor-pointer transition transform hover:-translate-y-1"
-                onClick={() => navigate(`/product/${product.id}`)}
-              >
-                <img
-                  src={product.image_url || "https://via.placeholder.com/300"}
-                  alt={product.title}
-                  className="w-full h-48 object-contain p-4"
-                />
-                <div className="p-4">
-                  <h2 className="font-semibold text-gray-800 text-sm line-clamp-1">
-                    {product.title}
-                  </h2>
-                  <p className="text-gray-600 text-xs line-clamp-2">
-                    {product.description}
-                  </p>
-                  <span className="text-gray-900 font-bold text-lg">
-                    ₹{product.price}
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
-        ) : (
-          <p className="text-center text-gray-500">No products found</p>
-        )}
-      </div>
+
+
+      <Footer />
     </div>
   );
 };
 
 export default Home;
+

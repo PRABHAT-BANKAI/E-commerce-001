@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router";
 import { FaShoppingCart } from "react-icons/fa";
 import { IoMdSearch } from "react-icons/io";
 import { HiMenu, HiX } from "react-icons/hi";
@@ -77,10 +77,8 @@ const Navbar = ({ onSearch }) => {
         <img src={image} alt="logo" className="w-24 md:w-28 h-auto" />
       </Link>
 
-<<<<<<< HEAD
       <SearchBar/>
-=======
-      {/* Search Bar */}
+      {/* Search Bar
       {!hideCartProfileSearch && (
         <div className="hidden sm:flex items-center border rounded-lg px-2 md:px-3 py-1 w-1/2 max-w-md bg-gray-50">
           <IoMdSearch className="text-gray-500 text-lg md:text-xl mr-2" />
@@ -91,9 +89,8 @@ const Navbar = ({ onSearch }) => {
             onChange={handleSearchChange}
             className="w-full bg-transparent outline-none text-gray-700 text-sm md:text-base"
           />
-        </div>
-      )}
->>>>>>> b648ba9014f40afad2427a947ff38ba00b4fae72
+        </div> */}
+      {/* )} */}
 
       {/* Desktop Right Section */}
       <div className="hidden md:flex items-center space-x-6 relative">

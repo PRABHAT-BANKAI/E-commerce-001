@@ -90,8 +90,6 @@
     }
   ],
   "products": [
-<<<<<<< HEAD
-
 {
 "id":"01",
 "name": "Apple (iPhone)",
@@ -251,8 +249,7 @@
   "description": "A giant 24,000mAh capacity with 140W output. Can charge a laptop, tablet, and phone simultaneously with a digital display.",
   "price": "149.99",
   "image_url": "https://m.media-amazon.com/images/I/717ByupjUvL._SL1500_.jpg"
-  }
-=======
+  },
     {
       "id": 1,
       "name": "Apple (iPhone)",
@@ -1533,7 +1530,6 @@
       "image_url": "https://m.media-amazon.com/images/I/61w0uxDbLNL._SX679_.jpg",
       "price": 29.5
     }
->>>>>>> b648ba9014f40afad2427a947ff38ba00b4fae72
   ],
   "category": [
     {

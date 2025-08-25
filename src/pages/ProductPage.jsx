@@ -1,11 +1,11 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { FaShoppingCart, FaMoneyBillWave } from "react-icons/fa";
-import { IoMdSearch } from "react-icons/io";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux"; 
 import Footer from "../components/Footer";
 import { addToCart } from "../redux/feature/cartSlice";
 import { useNavigate } from "react-router";
+import SearchBar from "./SearchBar";
 
 const ProductPage = () => {
   const [products, setProducts] = useState([]);
@@ -14,18 +14,14 @@ const ProductPage = () => {
   const [error, setError] = useState(null);
 
   // filters
-  const [search, setSearch] = useState("");
+  const [searchQuery, setSearchQuery] = useState(""); // ✅ FIXED (was missing)
   const [category, setCategory] = useState("all");
   const [sort, setSort] = useState("");
 
   // cart
   const dispatch = useDispatch();
-<<<<<<< HEAD
   const navigate = useNavigate();
-=======
-  const  navigate = useNavigate();
   const cartItems = useSelector((state) => state.cart.cartItems);
->>>>>>> b648ba9014f40afad2427a947ff38ba00b4fae72
 
   const handleAddToCart = (product) => {
     dispatch(addToCart(product));
@@ -33,14 +29,10 @@ const ProductPage = () => {
   };
 
   const handleBuyNow = (product) => {
-<<<<<<< HEAD
-    dispatch(addToCart(product));
-=======
-    const alreadyInCart = cartItems.find((item)=> item.id === product.id)
-    if(!alreadyInCart){
-      dispatch(addToCart(product))
-    } 
->>>>>>> b648ba9014f40afad2427a947ff38ba00b4fae72
+    const alreadyInCart = cartItems.find((item) => item.id === product.id);
+    if (!alreadyInCart) {
+      dispatch(addToCart(product));
+    }
     navigate("/cartpage");
     alert(`💰 Buying "${product.title}"`);
   };
@@ -65,37 +57,35 @@ const ProductPage = () => {
   useEffect(() => {
     let temp = [...products];
 
-    if (search.trim() !== "") {
-      temp = temp.filter((p) =>
-        p.title.toLowerCase().includes(search.toLowerCase())
+    if (searchQuery.trim() !== "") {
+      temp = temp.filter(
+        (p) =>
+          p.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          p.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          p.category?.toLowerCase().includes(searchQuery.toLowerCase())
       );
     }
+
     if (category !== "all") {
       temp = temp.filter((p) => p.category === category);
     }
+
     if (sort === "low-high") {
-      temp.sort((a, b) => a.price - b.price);
+      temp.sort((a, b) => Number(a.price) - Number(b.price));
     } else if (sort === "high-low") {
-      temp.sort((a, b) => b.price - a.price);
+      temp.sort((a, b) => Number(b.price) - Number(a.price));
     }
 
     setFilteredProducts(temp);
-  }, [search, category, sort, products]);
+  }, [searchQuery, category, sort, products]);
 
   return (
     <div className="min-h-screen py-6 px-4 bg-gray-50">
       {/* Filters */}
       <div className="max-w-7xl mx-auto mb-6 flex flex-col sm:flex-row gap-4 items-center justify-between">
-        {/* Search */}
-        <div className="relative w-full sm:w-1/3">
-          <input
-            type="text"
-            placeholder="Search products..."
-            className="px-4 py-2 pl-10 border rounded-lg w-full shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-          />
-          <IoMdSearch className="absolute left-3 top-3 text-gray-500 text-lg" />
+        {/* Search Bar */}
+        <div className="w-full sm:w-1/3">
+          <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
         </div>
 
         {/* Category Filter */}
@@ -157,7 +147,7 @@ const ProductPage = () => {
                   </p>
                   <div className="flex justify-between items-center mb-3">
                     <span className="text-gray-900 font-extrabold text-lg">
-                      ${product.price}
+                      ₹{product.price}
                     </span>
                   </div>
                   <div className="flex flex-col gap-2">
