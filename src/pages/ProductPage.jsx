@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { FaShoppingCart, FaMoneyBillWave } from "react-icons/fa";
 import { IoMdSearch } from "react-icons/io";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Footer from "../components/Footer";
 import { addToCart } from "../redux/feature/cartSlice";
 import { useNavigate } from "react-router";
@@ -23,7 +23,6 @@ const ProductPage = () => {
 
   const navigate = useNavigate();
 
-  const  navigate = useNavigate();
   const cartItems = useSelector((state) => state.cart.cartItems);
 
 
