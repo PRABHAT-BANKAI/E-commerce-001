@@ -29,21 +29,6 @@ const Home = () => {
     fetchProducts();
   }, []);
 
-  // Filter Products
-  const filteredProducts = [...products].filter(
-    (product) =>
-      product.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      product.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      product.category?.toLowerCase().includes(searchQuery.toLowerCase())
-  );
-
-  // Sort Products
-  const sortedProducts = [...filteredProducts].sort((a, b) => {
-    if (sort === "lowToHigh") return a.price - b.price;
-    if (sort === "highToLow") return b.price - a.price;
-    return 0;
-  });
-
   const ProductSection = ({ title, items }) => (
     <section className="mt-6 px-4 bg-white shadow rounded-lg p-4">
       <h2 className="text-lg font-semibold mb-3">{title}</h2>
@@ -59,7 +44,7 @@ const Home = () => {
               className="w-full h-36 object-contain"
             />
             <h3 className="text-sm font-medium mt-2 line-clamp-1">{p.title}</h3>
-            <p className="text-green-600 font-bold">₹{p.price}</p>
+            <p className="text-blue-900 font-bold">₹{p.price}</p>
           </div>
         ))}
       </div>
@@ -74,11 +59,6 @@ const Home = () => {
       {/* Slider */}
       <div className="max-w-7xl mx-auto px-4">
         <Slider />
-      </div>
-
-      {/* Search Bar */}
-      <div className="max-w-7xl mx-auto mb-6 px-4">
-        <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       </div>
 
       {/* Product Sections */}
