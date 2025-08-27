@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from "react";
-import { Link, useNavigate, useLocation } from "react-router";
+import React, { useState } from "react";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
 import { IoMdSearch } from "react-icons/io";
 import { HiMenu, HiX } from "react-icons/hi";
 import image from "../assets/main.png";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import SearchBar from "../pages/SearchBar";
+import { logout } from "../redux/feature/loginSlice";
 
 // Helper: Get initials
 const getInitials = (firstName, lastName, fullName) => {
@@ -34,33 +35,25 @@ const getRandomBgColor = () => {
 };
 
 const Navbar = ({ onSearch }) => {
-  const [user, setUser] = useState(null);
-  const [bgColor, setBgColor] = useState("bg-gray-500 text-white");
   const [menuOpen, setMenuOpen] = useState(false);
   const [search, setSearch] = useState("");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [bgColor] = useState(getRandomBgColor());
 
   const navigate = useNavigate();
   const location = useLocation();
+  const dispatch = useDispatch();
+
+  // ✅ Get user from Redux instead of fetching manually
+  const { user } = useSelector((state) => state.login);
   const cartItems = useSelector((state) => state.cart.cartItems);
   const cartCount = cartItems.length;
 
   // Hide Cart/Profile/Search on login/signup pages
   const hideCartProfileSearch = location.pathname === "/" || location.pathname === "/signup";
 
-
-  useEffect(() => {
-    fetch("http://localhost:3000/users/1")
-      .then((res) => res.json())
-      .then((data) => {
-        setUser(data);
-        setBgColor(getRandomBgColor());
-      })
-      .catch(() => setUser(null));
-  }, []);
-
   const handleLogout = () => {
-    setUser(null);
+    dispatch(logout());
     setMenuOpen(false);
     navigate("/");
   };
@@ -77,10 +70,7 @@ const Navbar = ({ onSearch }) => {
         <img src={image} alt="logo" className="w-24 md:w-28 h-auto" />
       </Link>
 
-
-      <SearchBar/>
-    
-
+      <SearchBar />
 
       {/* Desktop Right Section */}
       <div className="hidden md:flex items-center space-x-6 relative">
@@ -141,7 +131,6 @@ const Navbar = ({ onSearch }) => {
           </Link>
         )}
       </div>
-
 
       {/* Mobile Hamburger */}
       <div className="md:hidden flex items-center">
