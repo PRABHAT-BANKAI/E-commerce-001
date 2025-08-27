@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, useNavigate } from "react-router-dom"; // ✅ fixed import
+import { Link, useNavigate } from "react-router"; // ✅ fixed import
 import { resetSignupState, signupUser } from "../redux/feature/userSlice";
 import { CheckCircle2, Eye, EyeOff, Lock, Mail, User } from "lucide-react";
 import { IoPhonePortraitOutline } from "react-icons/io5";

@@ -1,45 +1,48 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import { FaShoppingCart, FaMoneyBillWave } from "react-icons/fa";
+
+import { useNavigate } from "react-router";
 import { IoMdSearch } from "react-icons/io";
 import { useDispatch, useSelector } from "react-redux";
 import Footer from "../components/Footer";
 import { addToCart } from "../redux/feature/cartSlice";
-import { useNavigate } from "react-router";
+
+// ✅ Clean Price Parser
+const parsePrice = (price) => {
+  if (!price) return 0;
+  return Number(price.toString().replace(/[^0-9.]/g, "")) || 0;
+};
 
 const ProductPage = () => {
   const [products, setProducts] = useState([]);
-  const [filteredProducts, setFilteredProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   // filters
-  const [search, setSearch] = useState("");
+  const [searchQuery, setSearchQuery] = useState("");
   const [category, setCategory] = useState("all");
   const [sort, setSort] = useState("");
 
   // cart
   const dispatch = useDispatch();
-
   const navigate = useNavigate();
 
   const cartItems = useSelector((state) => state.cart.cartItems);
 
-
+  // Add to Cart
   const handleAddToCart = (product) => {
     dispatch(addToCart(product));
     alert(`🛒 Added "${product.title}" to cart`);
   };
 
+  // Buy Now
   const handleBuyNow = (product) => {
-
-    dispatch(addToCart(product));
-
-    const alreadyInCart = cartItems.find((item)=> item.id === product.id)
-    if(!alreadyInCart){
-      dispatch(addToCart(product))
-    }     navigate("/cartpage");
-    alert(`💰 Buying "${product.title}"`);
+    const alreadyInCart = cartItems.find((item) => item.id === product.id);
+    if (!alreadyInCart) {
+      dispatch(addToCart(product));
+    }
+    navigate("/cartpage");
   };
 
   // Fetch products
@@ -48,7 +51,6 @@ const ProductPage = () => {
       try {
         const response = await axios.get("http://localhost:3000/products");
         setProducts(response.data);
-        setFilteredProducts(response.data);
         setLoading(false);
       } catch (err) {
         setError(err.message || "Something went wrong");
@@ -58,42 +60,49 @@ const ProductPage = () => {
     fetchProducts();
   }, []);
 
-  // Filtering + Sorting
-  useEffect(() => {
+  // ✅ Optimized Filtering & Sorting (memoized for speed)
+  const filteredProducts = useMemo(() => {
     let temp = [...products];
 
-    if (search.trim() !== "") {
-      temp = temp.filter((p) =>
-        p.title.toLowerCase().includes(search.toLowerCase())
+    // Search
+    if (searchQuery.trim() !== "") {
+      temp = temp.filter(
+        (p) =>
+          p.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          p.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          p.category?.toLowerCase().includes(searchQuery.toLowerCase())
       );
     }
+
+    // Category
     if (category !== "all") {
-      temp = temp.filter((p) => p.category === category);
-    }
-    if (sort === "low-high") {
-      temp.sort((a, b) => a.price - b.price);
-    } else if (sort === "high-low") {
-      temp.sort((a, b) => b.price - a.price);
+      temp = temp.filter(
+        (p) => p.category?.toLowerCase() === category.toLowerCase()
+      );
     }
 
-    setFilteredProducts(temp);
-  }, [search, category, sort, products]);
+    // Sorting
+    if (sort === "low-high") {
+      temp.sort((a, b) => parsePrice(a.price) - parsePrice(b.price));
+    } else if (sort === "high-low") {
+      temp.sort((a, b) => parsePrice(b.price) - parsePrice(a.price));
+    }
+
+    return temp;
+  }, [searchQuery, category, sort, products]);
 
   return (
     <div className="min-h-screen py-6 px-4 bg-gray-50">
-      {/* Filters */}
+      {/* Filters Section */}
       <div className="max-w-7xl mx-auto mb-6 flex flex-col sm:flex-row gap-4 items-center justify-between">
-        {/* Search */}
-        <div className="relative w-full sm:w-1/3">
-          <input
-            type="text"
-            placeholder="Search products..."
-            className="px-4 py-2 pl-10 border rounded-lg w-full shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-          />
-          <IoMdSearch className="absolute left-3 top-3 text-gray-500 text-lg" />
-        </div>
+        {/* Search Bar */}
+        <input
+          type="text"
+          placeholder="🔍 Search for products..."
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          className="w-full sm:w-1/3 px-4 py-2 border rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500"
+        />
 
         {/* Category Filter */}
         <select
@@ -102,10 +111,11 @@ const ProductPage = () => {
           onChange={(e) => setCategory(e.target.value)}
         >
           <option value="all">All Categories</option>
-          <option value="electronics">Electronics</option>
-          <option value="fashion">Fashion</option>
-          <option value="books">Books</option>
-          <option value="home">Home</option>
+          {[...new Set(products.map((p) => p.category))].map((cat, i) => (
+            <option key={i} value={cat}>
+              {cat.charAt(0).toUpperCase() + cat.slice(1)}
+            </option>
+          ))}
         </select>
 
         {/* Price Sorting */}
@@ -120,20 +130,25 @@ const ProductPage = () => {
         </select>
       </div>
 
+      {/* Header */}
       <header className="bg-white shadow p-6 mb-8 rounded-xl">
         <h1 className="text-3xl font-bold text-center text-gray-800">
-          Product Catalog
+          🛍️ Explore Products
         </h1>
       </header>
 
-      {/* Main Section */}
+      {/* Main Products */}
       <main className="max-w-7xl mx-auto">
         {loading && (
           <p className="text-center text-gray-500">Loading products...</p>
         )}
         {error && <p className="text-center text-red-500">Error: {error}</p>}
 
-        {!loading && !error && (
+        {!loading && !error && filteredProducts.length === 0 && (
+          <p className="text-center text-gray-600">No products found 😔</p>
+        )}
+
+        {!loading && !error && filteredProducts.length > 0 && (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             {filteredProducts.map((product) => (
               <div
@@ -143,18 +158,18 @@ const ProductPage = () => {
                 <img
                   src={product.image_url}
                   alt={product.title}
-                  className="w-[100%] h-64 object-cover hover:opacity-90 transition"
+                  className="w-full h-64 object-cover hover:opacity-90 transition"
                 />
                 <div className="p-5">
-                  <h2 className="font-bold text-lg text-gray-800 mb-2">
+                  <h2 className="font-bold text-lg text-gray-800 mb-2 truncate">
                     {product.title}
                   </h2>
-                  <p className="text-sm text-gray-600 mb-3 line-clamp-3">
+                  <p className="text-sm text-gray-600 mb-3 line-clamp-2">
                     {product.description}
                   </p>
                   <div className="flex justify-between items-center mb-3">
                     <span className="text-gray-900 font-extrabold text-lg">
-                      ${product.price}
+                      ₹{parsePrice(product.price).toFixed(2)}
                     </span>
                   </div>
                   <div className="flex flex-col gap-2">
@@ -179,6 +194,7 @@ const ProductPage = () => {
           </div>
         )}
       </main>
+
       <Footer />
     </div>
   );

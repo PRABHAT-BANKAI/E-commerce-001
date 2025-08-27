@@ -49,7 +49,7 @@ export default function CartPage() {
               <img src={item.image_url} alt={item.title} className="w-20 h-20 object-cover rounded" />
               <div>
                 <h2 className="font-semibold">{item.title}</h2>
-                <p className="text-sm text-gray-600">${getPrice(item.price).toFixed(2)}</p>
+                <p className="text-sm text-gray-600">₹{getPrice(item.price).toFixed(2)}</p>
               </div>
             </div>
 

@@ -90,10 +90,6 @@
     }],
 
   "products": [
-
-
-
-
     {
       "id": 1,
       "name": "Apple (iPhone)",
@@ -1830,6 +1826,7 @@
       "r_img3":"https://m.media-amazon.com/images/I/61ikYT3nBrL._SX522_.jpg",
       "r_img4":"https://m.media-amazon.com/images/I/51STbuyj4XL._SX679_.jpg",
       "price": 29.5
+
     },
      {
       "id": "141",
