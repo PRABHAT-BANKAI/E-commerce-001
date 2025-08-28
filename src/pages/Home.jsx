@@ -61,7 +61,7 @@ const Home = () => {
   // 🔹 Filter products category-wise & pick random 5
   const mobiles = getRandomProducts(products.filter((p) => p.category === "mobiles"), 5);
   const electronics = getRandomProducts(products.filter((p) => p.category === "electronics"), 5);
-  const fashion = getRandomProducts(products.filter((p) => p.category === "fashion"), 5);
+  const fashion = getRandomProducts(products.filter((p) => p.category === "fashion"), 5);  //
   const furniture = getRandomProducts(products.filter((p) => p.category === "furniture"), 5);
 
   return (
