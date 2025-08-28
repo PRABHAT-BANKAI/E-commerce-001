@@ -108,8 +108,8 @@
       "name": "iphone",
       "title": "iPhone 16 Pro",
       "description": "Titanium design with larger 15.9 cm (6.3″) Super Retina XDR display, footnote 1 durable, latest-generation Ceramic Shield, Action button, and USB-C with USB 3 speeds footnote 2",
-      "price": "1,599",
-        "category": "mobiles",
+      "price": "1599",
+      "category": "mobiles",
       "image_url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone16pro-digitalmat-gallery-3-202409?wid=728&hei=666&fmt=p-jpg&qlt=95&.v=VWJuckJvbkZqeTMwRFJZSHhSVnN1K2tBbTY2NGE0RXZvM3VONU9MVlluajBVMUIwNFV6MXNoZGhsYWgvZGlmdEJnNER5bEtzeFpoMTlNVnpVcXBTR0NDaXNCSFl3ajdkc3ZBMkZreEM2YjArdUxKZmY1NUtWbjl2NkdEREpaOVo",
       "r_img1": "https://m.media-amazon.com/images/I/61+VZB9U1BL._SL1500_.jpg",
       "r_img2": "https://m.media-amazon.com/images/I/710SV4EG9SL._SL1500_.jpg",
@@ -148,7 +148,7 @@
       "title": "Xiaomi 15",
         "category": "mobiles",
       "description": "A photography masterclass in your pocket. Created in collaboration with Leica, this device features a state-of-the-art quad-camera array with a 1-inch-type main sensor, offering unparalleled versatility and image quality for mobile photographers.",
-      "price": "1,299",
+      "price": "1299",
       "image_url": "https://m.media-amazon.com/images/I/61+unAVMvUL._SL1500_.jpg",
       "r_img1": "https://m.media-amazon.com/images/I/81tWqGULZoL._SL1500_.jpg",
       "r_img2": "https://m.media-amazon.com/images/I/71HPCiPqBzL._SL1500_.jpg",
@@ -212,7 +212,7 @@
       "name": "Xiaomi",
       "title": "Xiaomi 15 Black 12 GB + 512 GB",
       "description": "Celebrating aesthetics and imaging innovation. Renowned for its unique Rococo Pearl finish and ultra-bright, variable aperture camera system, the P60 Pro captures breathtaking light and detail in any condition, showcasing a truly artistic design philosophy.",
-      "price": "1,200",
+      "price": "1200",
          "category": "mobiles",
       "image_url": "https://i03.appmifile.com/783_item_in/17/03/2025/d8ecae0f2ed29d943d83c44afac14873.png?thumb=1&f=webp&q=85",
       "r_img1": "https://m.media-amazon.com/images/I/81SgiWBBerL.SL1500.jpg",
@@ -225,7 +225,7 @@
       "name": "Sony WH-1000XM5 Wireless Headphones",
       "title": "Sony WH-1000XM5",
       "description": "Experience industry-leading noise cancellation for immersive sound. With 30-hour battery life, crystal-clear call quality, and ultra-comfortable design.",
-      "price": "328.00",
+      "price": "328",
       "category":"electronics",
       "image_url": "https://m.media-amazon.com/images/I/61C9nWyExyL.SL1500.jpg",
       "r_img1": "https://m.media-amazon.com/images/I/71fzfw8rNlL.SL1500.jpg",
@@ -239,7 +239,7 @@
       "title": "MacBook Air 13\" (M3)",
       "description": "Supercharged by the M3 chip. Featuring a stunning Liquid Retina display, all-day battery life, and a silent, fanless design.",
       "category":"electronics",
-      "price": "1,099.00",
+      "price": "1099",
       "image_url": "https://m.media-amazon.com/images/I/71wKmwQQgLL.SL1500.jpg",
       "r_img1": "https://m.media-amazon.com/images/I/71X86mTtOxL.SL1500.jpg",
       "r_img2": "https://m.media-amazon.com/images/I/61S2t5yhVSL.SL1500.jpg",
@@ -252,7 +252,7 @@
       "title": "Nintendo Switch - OLED Model",
       "description": "Play at home or on the go with a vibrant 7-inch OLED screen, enhanced audio, and a wide adjustable stand.",
       "category":"electronics",
-      "price": "349.99",
+      "price": "349",
       "image_url": "https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_1240/b_white/f_auto/q_auto/ncom/en_US/products/hardware/nintendo-switch-oled-model-white-set/115461-switch-oled-white-boxart-1200x675",
       "r_img1": "https://m.media-amazon.com/images/I/51zjE7FRXmL.SL1000.jpg",
       "r_img2": "https://m.media-amazon.com/images/I/61K2-KBzM6L.SL1500.jpg",
@@ -265,7 +265,7 @@
       "title": "Dyson V15 Detect",
       "description": "Powerful suction with intelligent laser detection that reveals hidden dust. A piezoelectric sensor automatically adjusts suction.",
       "category":"electronics",
-      "price": "749.99",
+      "price": "749",
       "image_url": "https://m.media-amazon.com/images/I/81A-a1HatmL.SL1500.jpg",
       "r_img1": "https://m.media-amazon.com/images/I/61bXGHeYuhL.SL1500.jpg",
       "r_img2": "https://m.media-amazon.com/images/I/41CDaJjXZxL.SL1200.jpg",
@@ -278,7 +278,7 @@
       "title": "Samsung Odyssey G9",
       "description": "A massive 49-inch Dual QHD curved screen with a 240Hz refresh rate and 1ms response time for incredibly vivid and smooth gameplay.",
       "category":"electronics",
-      "price": "1,399.99",
+      "price": "1399",
       "image_url": "https://m.media-amazon.com/images/I/71yEwB+4DfL.SL1500.jpg",
       "r_img1": "https://m.media-amazon.com/images/I/81V6-xtst7L.SL1500.jpg",
       "r_img2": "https://m.media-amazon.com/images/I/91MqtInmMyL.SL1500.jpg",
@@ -291,7 +291,7 @@
       "title": "Fujifilm X-T5",
       "description": "A classic camera with modern power. Features a 40.2MP sensor, 6.2K video, and in-body image stabilization.",
       "category":"electronics",
-      "price": "1,699.00",
+      "price": "1699",
       "image_url": "https://m.media-amazon.com/images/I/71sR1sF3yhL.SL1500.jpg",
       "r_img1": "https://m.media-amazon.com/images/I/71YzmhKImjL.SL1500.jpg",
       "r_img2": "https://m.media-amazon.com/images/I/616Pa9MFYRL.SL1500.jpg",
@@ -304,7 +304,7 @@
       "title": "Echo Show 10 (3rd Gen)",
       "description": "A smart display that moves with you. The 10.1\" HD screen rotates to keep you on camera during video calls.",
       "category":"electronics",
-      "price": "249.99",
+      "price": "249",
       "image_url": "https://m.media-amazon.com/images/I/61KVpz9L0gL.SL1000.jpg",
       "r_img1": "https://m.media-amazon.com/images/I/61FoLADzh0L.SL1500.jpg",
       "r_img2": "https://m.media-amazon.com/images/I/71QH7GYL8XL.SL1500.jpg",
@@ -317,7 +317,7 @@
       "title": "MX Keys Mini for Mac",
       "description": "A compact, wireless keyboard with smart backlighting, perfect stroke keys, and multi-device pairing.",
       "category":"electronics",
-      "price": "99.99",
+      "price": "99",
       "image_url": "https://m.media-amazon.com/images/I/71F0FsBoFWL.SL1500.jpg",
       "r_img1": "https://m.media-amazon.com/images/I/61hdJbhZeVL.SL1000.jpg",
       "r_img2": "https://m.media-amazon.com/images/I/71g9f35CsOL.SL1500.jpg",
@@ -330,7 +330,7 @@
       "title": "Canon PIXMA TR8620",
       "description": "A versatile home office printer. Print, scan, copy, and fax. Features automatic duplex printing and a 250-sheet paper capacity.",
       "category":"electronics",
-      "price": "299.99",
+      "price": "299",
       "image_url": "https://m.media-amazon.com/images/I/71Hv51A6SkL.AC_SL1500.jpg",
       "r_img1": "https://m.media-amazon.com/images/I/81NrArjPswL.SL1500.jpg",
       "r_img2": "https://m.media-amazon.com/images/I/51YCYcqikXL.SL1500.jpg",
@@ -343,7 +343,7 @@
       "title": "Anker 737 Power Bank",
       "description": "A giant 24,000mAh capacity with 140W output. Can charge a laptop, tablet, and phone simultaneously with a digital display.",
       "category":"electronics",
-      "price": "149.99",
+      "price": "149",
       "image_url": "https://m.media-amazon.com/images/I/6119GgXfulL.SL1500.jpg",
       "r_img1": "https://m.media-amazon.com/images/I/71rq4wlWe8L.SL1500.jpg",
       "r_img2": "https://m.media-amazon.com/images/I/71bQCM9bGkL.SL1500.jpg",
@@ -356,7 +356,7 @@
       "description": "Compact true wireless earbuds with noise cancellation & 30 hr battery life.",
       "category":"electronics",
       "image_url": "https://m.media-amazon.com/images/I/61L+MKA7-EL.SL1500.jpg",
-      "price": 59.99,
+      "price": 59,
       "r_img1": "https://mobtude.in/wp-content/uploads/2025/04/51lxHwhO96L.SY450.jpg",
       "r_img2": "https://mobtude.in/wp-content/uploads/2025/04/615z6RukRgL.SY450.jpg",
       "r_img3": "https://mobtude.in/wp-content/uploads/2025/04/61LwxmmBSL.SY450.jpg",
@@ -368,7 +368,7 @@
       "description": "Water‑resistant fitness band with heart‑rate monitor and sleep tracking.",
       "category":"fashion",
       "image_url": "https://m.media-amazon.com/images/I/715EFChDukL.SL1500.jpg",
-      "price": 39.99,
+      "price": 39,
       "r_img1": "https://m.media-amazon.com/images/I/71nENFuxw+L.SL1500.jpg",
       "r_img2": "https://m.media-amazon.com/images/I/71a7PO+v2qL.SL1500.jpg",
       "r_img3": "https://m.media-amazon.com/images/I/81CN38bjNHL.SL1500.jpg",
@@ -380,7 +380,7 @@
       "description": "Set of 3 eco‑friendly bamboo boards with juice groove and non‑slip feet.",
       "image_url": "https://m.media-amazon.com/images/I/61KRV3nLTqL.SL1200.jpg",
       "category":"furniture",
-      "price": 24.5,
+      "price": 24,
       "r_img1": "https://m.media-amazon.com/images/I/71Pi-bnenQL.SL1500.jpg",
       "r_img2": "https://m.media-amazon.com/images/I/712UBcKDAVL.SL1445.jpg",
       "r_img3": "https://m.media-amazon.com/images/I/71e-eJZ1LFL.SL1445.jpg",
@@ -392,7 +392,7 @@
       "description": "Fleece electric blanket with 10 heat settings and auto shut‑off timer.",
       "category":"electronics",
       "image_url": "https://m.media-amazon.com/images/I/71+ytw6dWdL.SL1500.jpg",
-      "price": 69.99,
+      "price": 69,
       "r_img1": "https://m.media-amazon.com/images/I/81n3stPmfZL.SL1500.jpg",
       "r_img2": "https://m.media-amazon.com/images/I/91MW+khtlML.SL1500.jpg",
       "r_img3": "https://m.media-amazon.com/images/I/51mjhnEAdTL.SL1500.jpg",
@@ -404,7 +404,7 @@
       "description": "High‑capacity power bank with dual fast‑charge ports and LED display.",
       "category":"electronics",
       "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuXw7Dfag3E5tVFWH5ADtx3B7qe3xwK4r70A&s",
-      "price": 29.99,
+      "price": 29,
       "r_img1": "https://m.media-amazon.com/images/I/61z0YKs4J8L.SL1500.jpg",
       "r_img2": "https://m.media-amazon.com/images/I/81ba8yZKo7L.SL1500.jpg",
       "r_img3": "https://m.media-amazon.com/images/I/81eOXfVrlLL.SL1500.jpg",
@@ -427,7 +427,7 @@
       "description": "Adjustable color‑temperature lamp with wireless phone charging pad.",
       "category":"electronics",
       "image_url": "https://m.media-amazon.com/images/I/21ccbdx44BL.jpg_BO30,255,255,255_UF900,850_SR1910,1000,0,C_QL100_.jpg",
-      "price": 45.75,
+      "price": 45,
       "r_img1": "https://m.media-amazon.com/images/I/41eDPgCShQL.jpg",
       "r_img2": "https://m.media-amazon.com/images/I/31+d5rHqmfL.jpg",
       "r_img3": "https://m.media-amazon.com/images/I/31gjV4HZ4QL.jpg",
@@ -439,7 +439,7 @@
       "description": "Lightweight daypack with laptop compartment and water‑resistant fabric.",
       "category":"electronics",
       "image_url": "https://m.media-amazon.com/images/I/81Arj6GdjKL.SL1500.jpg",
-      "price": 49.99,
+      "price": 49,
       "r_img1": "https://m.media-amazon.com/images/I/71K5P+w6PRL.SL1500.jpg",
       "r_img2": "https://m.media-amazon.com/images/I/71F9qzn7ZUL.SL1500.jpg",
       "r_img3": "https://m.media-amazon.com/images/I/71Mw7Ewf0nL.SL1500.jpg",
@@ -451,7 +451,7 @@
       "description": "Ultrasonic humidifier for rooms up to 500 sq ft, quiet operation, 10‑hr run time.",
       "category":"electronics",
       "image_url": "https://m.media-amazon.com/images/I/71fJRVDnrHL.SL1500.jpg",
-      "price": 39.95,
+      "price": 39,
       "r_img1": "https://m.media-amazon.com/images/I/8181FxqeDlL.SL1500.jpg",
       "r_img2": "https://m.media-amazon.com/images/I/81152JyNW0L.SL1500.jpg",
       "r_img3": "https://m.media-amazon.com/images/I/81pVQhKqkXL.SL1500.jpg",
@@ -463,7 +463,7 @@
       "description": "Durable kitchen pan with PFOA‑free non‑stick coating and stay‑cool handle.",
       "category":"furniture",
       "image_url": "https://m.media-amazon.com/images/I/61Fh3LfSCsL.SL1500.jpg",
-      "price": 27.99,
+      "price": 27,
       "r_img1": "https://m.media-amazon.com/images/I/71iR3af8sTL.SL1500.jpg",
       "r_img2": "https://m.media-amazon.com/images/I/715WkNCsWRL.SL1500.jpg",
       "r_img3": "https://m.media-amazon.com/images/I/71KY7L1H9HL.SL1500.jpg",
@@ -475,7 +475,7 @@
       "description": "Solid shampoo bar for all hair types, sulfate‑free, vegan & cruelty‑free.",
       "category":"Beauty",
       "image_url": "https://m.media-amazon.com/images/I/71PRdB3cJML.SL1500.jpg",
-      "price": 8.99,
+      "price": 8,
       "r_img1": "https://m.media-amazon.com/images/I/61AsmNOvS2L.SL1080.jpg",
       "r_img2": "https://m.media-amazon.com/images/I/51obBTaV-rL.SL1080.jpg",
       "r_img3": "https://m.media-amazon.com/images/I/61Vy0Bu8v5L.SL1080.jpg",
@@ -487,7 +487,7 @@
       "description": "Full‑size mechanical keyboard with customizable RGB lighting and tactile switches.",
       "category":"electronics",
       "image_url": "https://m.media-amazon.com/images/I/61eonV8rcEL.SL1500.jpg",
-      "price": 79.99,
+      "price": 79,
       "r_img1": "https://m.media-amazon.com/images/I/71nbvJBoJqL.SL1500.jpg",
       "r_img2": "https://m.media-amazon.com/images/I/715qSQsjhyL.SL1500.jpg",
       "r_img3": "https://m.media-amazon.com/images/I/71LmlzRl89L.SL1500.jpg",
@@ -499,7 +499,7 @@
       "description": "Luxury reed diffuser that provides up to 3 months of fresh scent.",
       "category":"Beauty",
       "image_url": "https://m.media-amazon.com/images/I/71g9qbrFPaL.SL1500.jpg",
-      "price": 22.5,
+      "price": 22,
       "r_img1": "https://m.media-amazon.com/images/I/51GuKsu7U8L.jpg",
       "r_img2": "https://m.media-amazon.com/images/I/813scAmEYsL.SL1500.jpg",
       "r_img3": "https://m.media-amazon.com/images/I/71qgHJJ-r1L.SL1500.jpg",
@@ -510,7 +510,7 @@
       "title": "FlexiMat Eco Yoga Mat",
       "description": "Non‑slip, eco‑friendly TPE yoga mat with alignment lines, 6 mm thickness.",
       "image_url": "https://m.media-amazon.com/images/I/71M297JjglL.SL1500.jpg",
-      "price": 29.95,
+      "price": 29,
       "r_img1": "https://m.media-amazon.com/images/I/71XAilrfbRL.SL1500.jpg",
       "r_img2": "https://m.media-amazon.com/images/I/71bTGLhWfVL.SL1500.jpg",
       "r_img3": "https://m.media-amazon.com/images/I/710-HMmFIZL.SL1500.jpg",
@@ -534,7 +534,7 @@
       "description": "Portable on‑ground screen with tripod and carrying case; suitable for backyard theaters.",
       "category":"electronics",
       "image_url": "https://m.media-amazon.com/images/I/71IpS-GrFQL.SL1500.jpg",
-      "price": 129.99,
+      "price": 129,
       "r_img1": "https://m.media-amazon.com/images/I/81sF7-GYepL.SL1500.jpg",
       "r_img2": "https://m.media-amazon.com/images/I/71X9jgifg6L.SL1500.jpg",
       "r_img3": "https://m.media-amazon.com/images/I/71f6LjVV6tL.SL1500.jpg",
@@ -546,7 +546,7 @@
       "description": "Water‑resistant speaker with 12‑hr playback, built‑in mic for calls.",
       "category":"electronics",
       "image_url": "https://m.media-amazon.com/images/I/714nuXVIn5L.SL1196.jpg",
-      "price": 49.5,
+      "price": 49,
       "r_img1": "https://m.media-amazon.com/images/I/71Qx39JVwZL.SL1500.jpg",
       "r_img2": "https://m.media-amazon.com/images/I/61XOIKiR3nL.SL1500.jpg",
       "r_img3": "https://m.media-amazon.com/images/I/71nOhiMN8sL.SL1500.jpg",
@@ -570,7 +570,7 @@
       "description": "Set of 12 decorative frames ideal for events, photo booths, or home multiplex displays.",
       "category":"electronics",
       "image_url": "https://m.media-amazon.com/images/I/81jiQuUvIPL.SL1500.jpg",
-      "price": 19.99,
+      "price": 19,
       "r_img1": "https://m.media-amazon.com/images/I/51MSLr60sGL.jpg",
       "r_img2": "https://m.media-amazon.com/images/I/81h1sBZNlKL.SL1500.jpg",
       "r_img3": "https://m.media-amazon.com/images/I/61E-NVBY1EL.SL1500.jpg",
@@ -1138,7 +1138,7 @@
       "r_img2":"https://timeavenue.com/wp-content/uploads/2025/06/m126618lb-0002.webp",
       "r_img3":"https://wempe-media.com/media/image/m126613ln-0002_upright_landscape.jpg?w=1262&fm=webp&id=3f29dd9dda9faaa06e4b1d1909b3f7ba",
       "r_img4":"https://cdn-ildpenm.nitrocdn.com/edHKbOfSkrevXHoHbuzpBMHUilyHPRIE/assets/images/optimized/rev-4c9ed51/precisionwatches.com/wp-content/uploads/2021/11/Vintage-Rolex-Submariner-16800.jpg.webp",
-      "price": 9999
+      "price": 999
     },
     {
       "id": 87,
@@ -1151,7 +1151,7 @@
       "r_img2":"https://m.media-amazon.com/images/I/61sf9jtVUgL._SX679_.jpg",
       "r_img3":"https://m.media-amazon.com/images/I/71HkRjRYq8L._SX679_.jpg",
       "r_img4":"https://m.media-amazon.com/images/I/81S7xCntmyL._SY879_.jpg",
-      "price": 4200
+      "price": 420
     },
     {
       "id":88,
@@ -1203,7 +1203,7 @@
       "r_img2":"https://www.omegawatches.com/media/catalog/product/o/m/omega-speedmaster-moonwatch-professional-co-axial-master-chronometer-chronograph-42-mm-31020425002001-3c3ebb.png?w=700",
       "r_img3":"https://www.omegawatches.com/media/catalog/product/o/m/omega-speedmaster-moonwatch-professional-co-axial-master-chronometer-chronograph-42-mm-31023425002001-87f9a8.png?w=700",
       "r_img4":"https://www.omegawatches.com/media/catalog/product/o/m/omega-speedmaster-moonwatch-professional-co-axial-master-chronometer-chronograph-42-mm-31060425001001-2a5cdb.png?w=700",
-      "price": 6500
+      "price": 650
     },
     {
       "id": 92,
@@ -1717,7 +1717,7 @@
       "r_img2":"https://m.media-amazon.com/images/I/51v8EPWHXeL._SX679_.jpg",
       "r_img3":"https://m.media-amazon.com/images/I/51ywtqqp+EL._SX679_.jpg",
       "r_img4":"https://m.media-amazon.com/images/I/21RY5uUcrcL._SX600_SY600_QL70_FMwebp_.jpg",
-      "price": 9.99
+      "price": 9
     },
     {
       "id": 132,
@@ -1729,7 +1729,7 @@
       "r_img2":"https://m.media-amazon.com/images/I/61eEDqymMwL._SX679_.jpg",
       "r_img3":"https://m.media-amazon.com/images/I/31OWqsdljyL._SY300_SX300_QL70_FMwebp_.jpg",
       "r_img4":"https://m.media-amazon.com/images/I/31p+Euc91IL._SX800_SY800_.jpg",
-      "price": 8.99
+      "price": 8
     },
     {
       "id": 133,
@@ -1741,7 +1741,7 @@
       "r_img2":"https://m.media-amazon.com/images/I/41h29E8mjqL._SX679_.jpg",
       "r_img3":"https://m.media-amazon.com/images/I/51ad+6CNLHL._SX679_.jpg",
       "r_img4":"https://m.media-amazon.com/images/I/610pYxOqmOL._SX679_.jpg",
-      "price": 18.49
+      "price": 18
     },
     {
       "id": 134,
@@ -1753,7 +1753,7 @@
       "r_img2":"https://m.media-amazon.com/images/I/612RazyNlAL._SX679_.jpg",
       "r_img3":"https://m.media-amazon.com/images/I/71J6ywLisxL._SX679_.jpg",
       "r_img4":"https://m.media-amazon.com/images/I/61BBeoP1+wL._SX679_.jpg",
-      "price": 39.99
+      "price": 39
     },
     {
       "id": 135,
@@ -1765,7 +1765,7 @@
       "r_img2":"https://m.media-amazon.com/images/I/618vjORHFmL._SX679_.jpg",
       "r_img3":"https://m.media-amazon.com/images/I/51hM8NBi4uL._SX522_.jpg",
       "r_img4":"https://m.media-amazon.com/images/I/618sG1QinaL._SX522_.jpg",
-      "price": 14.99
+      "price": 14
     },
     {
       "id": 136,
@@ -1813,7 +1813,7 @@
       "r_img2":"https://m.media-amazon.com/images/I/51fo5Cdx4YL._SX679_.jpg",
       "r_img3":"https://m.media-amazon.com/images/I/41H+b8GL4IL._SX679_.jpg",
       "r_img4":"https://m.media-amazon.com/images/I/71YAA9rQ-EL._SX679_.jpg",
-      "price": 8.9
+      "price": 9
     },
     {
       "id": 140,
@@ -1825,15 +1825,15 @@
       "r_img2":"https://m.media-amazon.com/images/I/61el7GZRsBL._SX522_.jpg",
       "r_img3":"https://m.media-amazon.com/images/I/61ikYT3nBrL._SX522_.jpg",
       "r_img4":"https://m.media-amazon.com/images/I/51STbuyj4XL._SX679_.jpg",
-      "price": 29.5
+      "price": 30
 
     },
      {
-      "id": "141",
+      "id": 141,
       "title": "Apple MacBook Air M3",
       "description": "13.6-inch Retina display, M2 chip, 8GB RAM, 256GB SSD.",
       "image_url": "https://m.media-amazon.com/images/I/71WkDp--uqL.SL1500.jpg",
-      "price": 1199.99,
+      "price": 1199,
       "category": "electronics",
       "r_img1": "https://m.media-amazon.com/images/I/61-PdeOvVOL.SL1500.jpg",
       "r_img2": "https://m.media-amazon.com/images/I/61S2t5yhVSL.SL1500.jpg",
@@ -1841,11 +1841,11 @@
       "r_img4": "https://m.media-amazon.com/images/I/61MfDA5hdhL.SL1500.jpg"
     },
       {
-      "id": "142",
+      "id": 142,
       "title": "Dell XPS 13",
       "description": "13.4-inch FHD+ display, Intel i7, 16GB RAM, 512GB SSD.",
       "image_url": "https://m.media-amazon.com/images/I/61B1lT6YoyL.SL1080.jpg",
-      "price": 1349.99,
+      "price": 1349,
       "category": "electronics",
       "r_img1": "https://m.media-amazon.com/images/I/71pPCkW183L.SL1080.jpg",
       "r_img2": "https://m.media-amazon.com/images/I/71l24pMlC5L.SL1080.jpg",
@@ -1853,11 +1853,11 @@
       "r_img4": "https://m.media-amazon.com/images/I/51cNsNzFG6L.SL1080.jpg"
     },
        {
-      "id": "143",
+      "id": 143,
       "title": "HP Spectre x360",
       "description": "Convertible 2-in-1 laptop with Intel i7, 16GB RAM, 512GB SSD.",
       "image_url": "https://m.media-amazon.com/images/I/71vFiBdplZL.SL1500.jpg",
-      "price": 1399.99,
+      "price": 1399,
       "category": "electronics",
       "r_img1": "https://m.media-amazon.com/images/I/71fWwXvzYIL.SL1500.jpg",
       "r_img2": "https://m.media-amazon.com/images/I/81IGWlhNflL.SL1500.jpg",
@@ -1865,11 +1865,11 @@
       "r_img4": "https://m.media-amazon.com/images/I/91+50wLk23L.SL1500.jpg"
     },
     {
-      "id": "144",
+      "id": 144,
       "title": "Lenovo ThinkPad X1 Carbon",
       "description": "14-inch Ultrabook, Intel i7, 16GB RAM, 1TB SSD.",
       "image_url": "https://m.media-amazon.com/images/I/61ZENtLhqhL.SL1500.jpg",
-      "price": 1599.99,
+      "price": 1599,
       "category": "electronics",
       "r_img1": "https://m.media-amazon.com/images/I/71eJLZy4EPL.SL1500.jpg",
       "r_img2": "https://m.media-amazon.com/images/I/71khjJOk9VL.SL1500.jpg",
@@ -1877,11 +1877,11 @@
       "r_img4": "https://m.media-amazon.com/images/I/71iWZJuhD1L.SL1500.jpg"
     },
        {
-      "id": "145",
+      "id": 145,
       "title": "Asus ROG Zephyrus G14",
       "description": "14-inch gaming laptop, AMD Ryzen 9, RTX 3060, 16GB RAM, 1TB SSD.",
       "image_url": "https://m.media-amazon.com/images/I/71OkP3ps6HL.SL1500.jpg",
-      "price": 1699.99,
+      "price": 1699,
       "category": "electronics",
       "r_img1": "https://m.media-amazon.com/images/I/81Pn3r-mmXL.SL1500.jpg",
       "r_img2": "https://m.media-amazon.com/images/I/81AI7xOV-2L.SL1500.jpg",
@@ -1889,11 +1889,11 @@
       "r_img4": "https://m.media-amazon.com/images/I/81GXVYoHgTL.SL1500.jpg"
     },
     {
-      "id": "146",
+      "id": 146,
       "title": "Microsoft Surface Laptop 5",
       "description": "13.5-inch touchscreen, Intel i5, 8GB RAM, 512GB SSD.",
       "image_url": "https://m.media-amazon.com/images/I/61XVMdu1eKL.SL1500.jpg",
-      "price": 1099.99,
+      "price": 1099,
       "category": "electronics",
       "r_img1": "https://m.media-amazon.com/images/I/61B3NpNPvLL.SL1080.jpg",
       "r_img2": "https://m.media-amazon.com/images/I/61sGUC4Pn4L.SL1080.jpg",
@@ -1901,11 +1901,11 @@
       "r_img4": "https://m.media-amazon.com/images/I/51ATqd3OOyL.SL1080.jpg"
     },
      {
-      "id": "147",
+      "id": 147,
       "title": "acer AspireGo14",
       "description": "14-inch FHD display, Ryzen 7, RTX 3050Ti, 16GB RAM, 512GB SSD.",
       "image_url": "https://m.media-amazon.com/images/I/71JI131B9SL.SL1500.jpg",
-      "price": 999.99,
+      "price": 999,
       "category": "electronics",
       "r_img1": "https://m.media-amazon.com/images/I/71Qy2qwGmYL.SL1500.jpg",
       "r_img2": "https://m.media-amazon.com/images/I/71ajJKMzJDL.SL1500.jpg",
@@ -1913,11 +1913,11 @@
       "r_img4": "https://m.media-amazon.com/images/I/716EkzIVtKL.SL1500.jpg"
     },
     {
-      "id": "148",
+      "id": 148,
       "title": "Razer Blade 15",
       "description": "15.6-inch gaming laptop, Intel i7, RTX 3070, 16GB RAM, 1TB SSD.",
       "image_url": "https://m.media-amazon.com/images/I/61WdX6qqDqL.SL1500.jpg",
-      "price": 1999.99,
+      "price": 1999,
       "category": "electronics",
       "r_img1": "https://m.media-amazon.com/images/I/715rAV1hShL.SL1500.jpg",
       "r_img2": "https://m.media-amazon.com/images/I/71IPVktR9AL.SL1500.jpg",
@@ -1925,11 +1925,11 @@
       "r_img4": "https://m.media-amazon.com/images/I/71s9ps8uajL.SL1500.jpg"
     },
      {
-      "id": "149",
+      "id": 149,
       "title": "Samsung Galaxy Book3 Pro",
       "description": "16-inch AMOLED display, Intel i7, 16GB RAM, 512GB SSD.",
       "image_url": "https://m.media-amazon.com/images/I/71B0Gu0Iz1L.SL1500.jpg",
-      "price": 1399.99,
+      "price": 1399,
       "category": "electronics",
       "r_img1": "https://images.samsung.com/in/computers/galaxy-book3-pro/buy/kv_pro_front_PC.jpg?imbypass=true",
       "r_img2": "https://images.samsung.com/in/computers/galaxy-book3-pro/buy/kv_360_front_PC.jpg?imbypass=true",
@@ -1937,11 +1937,11 @@
       "r_img4": "https://m.media-amazon.com/images/I/81JDqIQa3wL.SL1500.jpg"
     },
     {
-      "id": "150",
+      "id": 150,
       "title": "LG Gram 17",
       "description": "17-inch ultra-lightweight laptop, Intel i7, 16GB RAM, 1TB SSD.",
       "image_url": "https://m.media-amazon.com/images/I/51J5WrOUxPL.SL1500.jpg",
-      "price": 1699.99,
+      "price": 1699,
       "category": "electronics",
       "r_img1": "https://m.media-amazon.com/images/I/61NV-Wb1iSL.SL1500.jpg",
       "r_img2": "https://m.media-amazon.com/images/I/61TGs0gSErL.SL1500.jpg",
@@ -1949,11 +1949,11 @@
       "r_img4": "https://m.media-amazon.com/images/I/61JvaOqAGML.SL1500.jpg"
     },
      {
-      "id": "151",
+      "id": 151,
       "title": "Sennheiser Momentum 4 Wireless Over Ear Headphones",
       "description": "Premium noise-cancelling wireless headphones with 30-hour battery.",
       "image_url": "https://m.media-amazon.com/images/I/71sLOtsK2UL.SL1500.jpg",
-      "price": 349.99,
+      "price": 349,
       "category": "electronics",
       "r_img1": "https://m.media-amazon.com/images/I/71bRFFsEcvL.SL1500.jpg",
       "r_img2": "https://m.media-amazon.com/images/I/81W3MD8zwcL.SL1500.jpg",
@@ -1961,11 +1961,11 @@
       "r_img4": "https://m.media-amazon.com/images/I/81pa9Ex1EBL.SL1500.jpg"
     },
     {
-      "id": "152",
+      "id": 152,
       "title": "Bose QuietComfort 45",
       "description": "Wireless noise-cancelling headphones with crystal-clear sound.",
       "image_url": "https://m.media-amazon.com/images/I/51f7KKP25PL.SL1000.jpg",
-      "price": 329.99,
+      "price": 329,
       "category": "electronics",
       "r_img1": "https://m.media-amazon.com/images/I/61j+d6wLCEL.SL1500.jpg",
       "r_img2": "https://m.media-amazon.com/images/I/61RtjXyVzqL.SL1500.jpg",
@@ -1973,11 +1973,11 @@
       "r_img4": "https://m.media-amazon.com/images/I/615c64LJhBL.SL1500.jpg"
     },
      {
-      "id": "153",
+      "id": 153,
       "title": "Apple AirPods Pro 2",
       "description": "Active noise cancellation, transparency mode, adaptive EQ.",
       "image_url": "https://m.media-amazon.com/images/I/61SUj2aKoEL.SL1500.jpg",
-      "price": 249.99,
+      "price": 249,
       "category": "electronics",
       "r_img1": "https://m.media-amazon.com/images/I/61sRKTAfrhL.SL1500.jpg",
       "r_img2": "https://m.media-amazon.com/images/I/51emillNpWL.SL1500.jpg",
@@ -1985,11 +1985,11 @@
       "r_img4": "https://m.media-amazon.com/images/I/51s3yLTjWSL.SL1500.jpg"
     },
     {
-      "id": "154",
+      "id": 154,
       "title": "Samsung Galaxy Buds2 Pro",
       "description": "Hi-fi wireless earbuds with ANC and 360 Audio.",
       "image_url": "https://m.media-amazon.com/images/I/31Clxhds78L.jpg",
-      "price": 229.99,
+      "price": 229,
       "category": "electronics",
       "r_img1": "https://m.media-amazon.com/images/I/41jnNR4FQtL.jpg",
       "r_img2": "https://m.media-amazon.com/images/I/41GDt0FFVQL.jpg",
@@ -1997,11 +1997,11 @@
       "r_img4": "https://m.media-amazon.com/images/I/51MyDst2TkL.jpg"
     },
      {
-      "id": "155",
+      "id": 155,
       "title": "Jabra Elite 7 Pro",
       "description": "Noise-cancelling earbuds with adjustable sound profiles.",
       "image_url": "https://m.media-amazon.com/images/I/51mpMb31haL.SL1400.jpg",
-      "price": 199.99,
+      "price": 199,
       "category": "electronics",
       "r_img1": "https://m.media-amazon.com/images/I/61tWgefOffL.SL1400.jpg",
       "r_img2": "https://m.media-amazon.com/images/I/71Fhlj5AI1L.SL1400.jpg",
@@ -2009,11 +2009,11 @@
       "r_img4": "https://m.media-amazon.com/images/I/71hBDSYqJXL.SL1400.jpg"
     },
     {
-      "id": "156",
+      "id": 156,
       "title": "Beats Studio3 Wireless",
       "description": "Over-ear wireless headphones with ANC and Apple W1 chip.",
       "image_url": "https://m.media-amazon.com/images/I/618aVzbPMjL.SL1500.jpg",
-      "price": 279.99,
+      "price": 279,
       "category": "electronics",
       "r_img1": "https://m.media-amazon.com/images/I/61zCi3GMH4L.SL1500.jpg",
       "r_img2": "https://m.media-amazon.com/images/I/61uzr5IjpHL.SL1500.jpg",
@@ -2021,11 +2021,11 @@
       "r_img4": "https://m.media-amazon.com/images/I/61hgInhkwXL.SL1500.jpg"
     },
      {
-      "id": "157",
+      "id": 157,
       "title": "Sennheiser Momentum 4 Wireless",
       "description": "Audiophile-grade wireless headphones with adaptive noise-cancelling.",
       "image_url": "https://m.media-amazon.com/images/I/41FKoyeDkfL.SL1080.jpg",
-      "price": 379.99,
+      "price": 379,
       "category": "electronics",
       "r_img1": "https://m.media-amazon.com/images/I/41Qp4C4Ve+L.SL1080.jpg",
       "r_img2": "https://m.media-amazon.com/images/I/41Foia72nGL.SL1080.jpg",
@@ -2033,11 +2033,11 @@
       "r_img4": "https://m.media-amazon.com/images/I/61ohspzOPML.SL1080.jpg"
     },
     {
-      "id": "158",
+      "id": 158,
       "title": "Anker Soundcore Life Q35",
       "description": "Affordable ANC wireless headphones with 40-hour battery.",
       "image_url": "https://m.media-amazon.com/images/I/51-OJkYsU1L.SL1500.jpg",
-      "price": 129.99,
+      "price": 129,
       "category": "electronics",
       "r_img1": "https://m.media-amazon.com/images/I/71QjobL2dLL.SL1500.jpg",
       "r_img2": "https://m.media-amazon.com/images/I/81DXp+sS1hS.SL1500.jpg",
@@ -2045,11 +2045,11 @@
       "r_img4": "https://m.media-amazon.com/images/I/61MdRz6XxVS.SL1500.jpg"
     },
      {
-      "id": "157",
+      "id": 157,
       "title": "Sennheiser Momentum 4 Wireless",
       "description": "Audiophile-grade wireless headphones with adaptive noise-cancelling.",
       "image_url": "https://m.media-amazon.com/images/I/41FKoyeDkfL.SL1080.jpg",
-      "price": 379.99,
+      "price": 379,
       "category": "electronics",
       "r_img1": "https://m.media-amazon.com/images/I/41Qp4C4Ve+L.SL1080.jpg",
       "r_img2": "https://m.media-amazon.com/images/I/41Foia72nGL.SL1080.jpg",
@@ -2057,11 +2057,11 @@
       "r_img4": "https://m.media-amazon.com/images/I/61ohspzOPML.SL1080.jpg"
     },
     {
-      "id": "158",
+      "id": 158,
       "title": "Anker Soundcore Life Q35",
       "description": "Affordable ANC wireless headphones with 40-hour battery.",
       "image_url": "https://m.media-amazon.com/images/I/51-OJkYsU1L.SL1500.jpg",
-      "price": 129.99,
+      "price": 129,
       "category": "electronics",
       "r_img1": "https://m.media-amazon.com/images/I/71QjobL2dLL.SL1500.jpg",
       "r_img2": "https://m.media-amazon.com/images/I/81DXp+sS1hS.SL1500.jpg",
@@ -2069,11 +2069,11 @@
       "r_img4": "https://m.media-amazon.com/images/I/61MdRz6XxVS.SL1500.jpg"
     },
      {
-      "id": "159",
+      "id": 159,
       "title": "Google Pixel Buds Pro",
       "description": "Wireless earbuds with active noise cancellation and long battery life.",
       "image_url": "https://m.media-amazon.com/images/I/61DGBXMDMpL.SL1500.jpg",
-      "price": 199.99,
+      "price": 199,
       "category": "electronics",
       "r_img1": "https://m.media-amazon.com/images/I/41s+0eID2RL.SL1080.jpg",
       "r_img2": "https://m.media-amazon.com/images/I/41kZ2DMzm0L.jpg",
@@ -2081,11 +2081,11 @@
       "r_img4": "https://m.media-amazon.com/images/I/51+-J2MuywL.jpg"
     },
     {
-      "id": "160",
+      "id": 160,
       "title": "Skullcandy Crusher Evo",
       "description": "Wireless headphones with adjustable bass and 40-hour playtime.",
       "image_url": "https://m.media-amazon.com/images/I/41webYtsILL.SL1080.jpg",
-      "price": 199.99,
+      "price": 199,
       "category": "electronics",
       "r_img1": "https://m.media-amazon.com/images/I/61TXFypup2L.SL1500.jpg",
       "r_img2": "https://m.media-amazon.com/images/I/51P-EAsV1ML.SL1500.jpg",
@@ -2147,14 +2147,14 @@
     {
       "id": "",
       "name": "Tv&Applinces",
-      "img": "https://rukminim2.flixcart.com/fk-p-flap/64/64/image/1788f177649e6991.png?q=100",
+      "img": "https://rukminim1.flixcart.com/fk-p-flap/64/64/image/e90944802d996756.jpg?q=100",
       "description": "",
       "category": "Tv&Applinces"
     },
       {
       "id": "",
       "name": "Beauty",
-      "img": "https://rukminim2.flixcart.com/fk-p-flap/64/64/image/1788f177649e6991.png?q=100",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7tCaiqy3-LoC06ccaRdeX4F252zgrxfcZBA&s",
       "description": "",
       "category": "Beauty"
     }
