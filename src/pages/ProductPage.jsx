@@ -1,18 +1,10 @@
 import axios from "axios";
-import React, { useEffect, useState, useMemo } from "react";
+import React, { useEffect, useState } from "react";
 import { FaShoppingCart, FaMoneyBillWave } from "react-icons/fa";
-
-import { useNavigate } from "react-router";
-import { IoMdSearch } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import Footer from "../components/Footer";
 import { addToCart } from "../redux/feature/cartSlice";
-
-// ✅ Clean Price Parser
-const parsePrice = (price) => {
-  if (!price) return 0;
-  return Number(price.toString().replace(/[^0-9.]/g, "")) || 0;
-};
 
 const ProductPage = () => {
   const [products, setProducts] = useState([]);
@@ -27,7 +19,6 @@ const ProductPage = () => {
   // cart
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
   const cartItems = useSelector((state) => state.cart.cartItems);
 
   // Add to Cart
@@ -60,36 +51,33 @@ const ProductPage = () => {
     fetchProducts();
   }, []);
 
-  // ✅ Optimized Filtering & Sorting (memoized for speed)
-  const filteredProducts = useMemo(() => {
-    let temp = [...products];
-
-    // Search
-    if (searchQuery.trim() !== "") {
-      temp = temp.filter(
-        (p) =>
-          p.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          p.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          p.category?.toLowerCase().includes(searchQuery.toLowerCase())
+  // Filter + Sort (simple JS)
+  const filteredProducts = products
+    .filter((p) => {
+      // search
+      if (searchQuery.trim() === "") return true;
+      const q = searchQuery.toLowerCase();
+      return (
+        (p.title || "").toLowerCase().includes(q) ||
+        (p.description || "").toLowerCase().includes(q) ||
+        (p.category || "").toLowerCase().includes(q)
       );
-    }
+    })
+    .filter((p) => {
+      // category
+      if (category === "all") return true;
+      return (p.category || "").toLowerCase() === category.toLowerCase();
+    })
+    .sort((a, b) => {
+      if (sort === "low-high") return a.price - b.price;
+      if (sort === "high-low") return b.price - a.price;
+      return 0;
+    });
 
-    // Category
-    if (category !== "all") {
-      temp = temp.filter(
-        (p) => p.category?.toLowerCase() === category.toLowerCase()
-      );
-    }
-
-    // Sorting
-    if (sort === "low-high") {
-      temp.sort((a, b) => parsePrice(a.price) - parsePrice(b.price));
-    } else if (sort === "high-low") {
-      temp.sort((a, b) => parsePrice(b.price) - parsePrice(a.price));
-    }
-
-    return temp;
-  }, [searchQuery, category, sort, products]);
+  // Unique Categories
+  const uniqueCategories = [
+    ...new Set(products.map((p) => p.category).filter(Boolean)),
+  ];
 
   return (
     <div className="min-h-screen py-6 px-4 bg-gray-50">
@@ -111,9 +99,9 @@ const ProductPage = () => {
           onChange={(e) => setCategory(e.target.value)}
         >
           <option value="all">All Categories</option>
-          {[...new Set(products.map((p) => p.category))].map((cat, i) => (
+          {uniqueCategories.map((cat, i) => (
             <option key={i} value={cat}>
-              {cat.charAt(0).toUpperCase() + cat.slice(1)}
+              {cat}
             </option>
           ))}
         </select>
@@ -139,9 +127,7 @@ const ProductPage = () => {
 
       {/* Main Products */}
       <main className="max-w-7xl mx-auto">
-        {loading && (
-          <p className="text-center text-gray-500">Loading products...</p>
-        )}
+        {loading && <p className="text-center text-gray-500">Loading products...</p>}
         {error && <p className="text-center text-red-500">Error: {error}</p>}
 
         {!loading && !error && filteredProducts.length === 0 && (
@@ -156,7 +142,7 @@ const ProductPage = () => {
                 className="bg-white border border-gray-200 rounded-2xl shadow-lg overflow-hidden transform transition duration-300 hover:-translate-y-1 hover:shadow-xl"
               >
                 <img
-                  src={product.image_url}
+                  src={product.image_url || "https://via.placeholder.com/300"}
                   alt={product.title}
                   className="w-full h-64 object-cover hover:opacity-90 transition"
                 />
@@ -169,7 +155,7 @@ const ProductPage = () => {
                   </p>
                   <div className="flex justify-between items-center mb-3">
                     <span className="text-gray-900 font-extrabold text-lg">
-                      ₹{parsePrice(product.price).toFixed(2)}
+                      ₹{product.price}
                     </span>
                   </div>
                   <div className="flex flex-col gap-2">
