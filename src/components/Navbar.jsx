@@ -78,10 +78,6 @@ const Navbar = ({ onSearch }) => {
       </Link>
 
 
-      <SearchBar/>
-    
-
-
       {/* Desktop Right Section */}
       <div className="hidden md:flex items-center space-x-6 relative">
         {/* Cart & Profile (hide on login/signup) */}

@@ -96,14 +96,14 @@ const ProductPage = () => {
       {/* Filters Section */}
       <div className="max-w-7xl mx-auto mb-6 flex flex-col sm:flex-row gap-4 items-center justify-between">
         {/* Search Bar */}
-        <input
+       { /*<input
           type="text"
           placeholder="🔍 Search for products..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           className="w-full sm:w-1/3 px-4 py-2 border rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500"
         />
-
+      */ }
         {/* Category Filter */}
         <select
           className="px-4 py-2 border rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500"
