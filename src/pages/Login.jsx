@@ -60,7 +60,7 @@ const Login = () => {
 
   return (
     <div className="min-h-screen w-full flex items-center justify-center bg-[#a9bafc] p-6">
-      <div className="w-full max-w-5xl bg-white rounded-2xl shadow-[0_10px_25px_rgba(0,0,0,0.08)] overflow-hidden grid grid-cols-1 md:grid-cols-2">
+      <div className="w-full max-w-5xl bg-white rounded-2xl mt-[60px] shadow-[0_10px_25px_rgba(0,0,0,0.08)] overflow-hidden grid grid-cols-1 md:grid-cols-2">
         
         {/* Left: Login Form */}
         <form

@@ -91,7 +91,7 @@ const Signup = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center p-6 bg-[#a9bafc]">
-      <div className="relative w-full max-w-6xl bg-white rounded-[32px] shadow-xl overflow-hidden grid md:grid-cols-2">
+      <div className="relative w-full max-w-6xl mt-[60px]  bg-white rounded-[32px] shadow-xl overflow-hidden grid md:grid-cols-2">
         {/* Left Section */}
         <div className="p-10 relative z-10">
           <div className="flex justify-between items-center text-sm text-gray-500">
