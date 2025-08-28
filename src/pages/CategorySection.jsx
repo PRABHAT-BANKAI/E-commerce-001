@@ -28,7 +28,7 @@ const CategorySection = () => {
           >
             {/* Category Image */}
             <div
-              onClick={() => navigate(`/products/${cat.category}`)}
+              onClick={() => navigate(`/products?category=${cat.category}`)}
               className="flex flex-col items-center hover:text-blue-600 transition"
             >
               <img
@@ -50,7 +50,7 @@ const CategorySection = () => {
                       key={i}
                       className="px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-blue-600 transition"
                       onClick={() =>
-                        navigate(`/products/${sub.toLowerCase()}`)
+                        navigate(`/product?${sub.toLowerCase()}`)
                       }
                     >
                       {sub}

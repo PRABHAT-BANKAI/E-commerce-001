@@ -70,8 +70,6 @@ const Navbar = ({ onSearch }) => {
         <img src={image} alt="logo" className="w-24 md:w-28 h-auto" />
       </Link>
 
-      <SearchBar />
-
       {/* Desktop Right Section */}
       <div className="hidden md:flex items-center space-x-6 relative">
         {/* Cart & Profile (hide on login/signup) */}
