@@ -19,7 +19,7 @@ const CategorySection = () => {
   }, []);
 
   return (
-    <div className="bg-white shadow-md border-b sticky top-0 z-40">
+    <div className="bg-white shadow-md border-b sticky  top-15 z-40">
       <div className="max-w-7xl mx-auto flex justify-start gap-6 items-center px-6 py-3 overflow-x-auto scrollbar-hide">
         {categories.map((cat) => (
           <div
@@ -45,9 +45,9 @@ const CategorySection = () => {
             {cat.subcategories && cat.subcategories.length > 0 && (
               <div className="absolute top-14 left-1/2 -translate-x-1/2 hidden group-hover:block bg-white shadow-xl rounded-lg border z-50 w-56">
                 <ul className="py-2">
-                  {cat.subcategories.map((sub, i) => (
+                  {cat.subcategories.map((sub) => (
                     <li
-                      key={i}
+                      key={sub}
                       className="px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-blue-600 transition"
                       onClick={() =>
                         navigate(`/${sub.toLowerCase()}`)
