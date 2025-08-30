@@ -4,33 +4,20 @@ import { useNavigate } from "react-router";
 import Slider from "./Slider";
 import CategorySection from "./CategorySection";
 import Footer from "../components/Footer";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchProducts } from "../redux/feature/productSlice";
+import { getRandomProducts } from "../redux/feature/homeSlice";
 
 const Home = () => {
-  const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
   const navigate = useNavigate();
+  const dispatch = useDispatch()
+
+  const { products, loading, error } = useSelector((state) => state.home)
 
   // Fetch Products
   useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const res = await axios.get("http://localhost:3000/products");
-        setProducts(res.data);
-        setLoading(false);
-      } catch (err) {
-        setError("Failed to fetch products");
-        setLoading(false);
-      }
-    };
-    fetchProducts();
-  }, []);
-
-  // Helper to pick random N products
-  const getRandomProducts = (arr, count) => {
-    const shuffled = [...arr].sort(() => 0.5 - Math.random());
-    return shuffled.slice(0, count);
-  };
+     dispatch(fetchProducts())
+  }, [dispatch]);
 
   const ProductSection = ({ title, items }) => (
     <section className="mt-6 px-4 bg-white shadow rounded-lg p-4">
@@ -73,6 +60,9 @@ const Home = () => {
       <div className="max-w-7xl mx-auto px-4">
         <Slider />
       </div>
+
+      {/* {loading && <p className="text-center">Loading...</p>}
+      {error && <p className="text-center text-red-500">{error}</p>} */}
 
       {/* Product Sections - Random 5 per category */}
       <ProductSection title="Deals of the Day (Mobiles)" items={mobiles} />

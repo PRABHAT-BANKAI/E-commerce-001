@@ -7,7 +7,7 @@ import { loginUser } from "../redux/feature/loginSlice";
 
 const Login = () => {
   const [data, setData] = useState({ email: "", password: "" });
-  const [formError, setFormError] = useState({});   // ✅ renamed
+  const [formError, setFormError] = useState({});  
   const [hasSubmitted, setHasSubmitted] = useState(false);
 
   const navigate = useNavigate();
@@ -52,7 +52,7 @@ const Login = () => {
 
     if (user) {
       alert("Login successful");
-      navigate("/product");
+      navigate("/home");
     } else if (Object.keys(formError).length === 0 && loginError) {
       alert("Invalid email or password");
     }
