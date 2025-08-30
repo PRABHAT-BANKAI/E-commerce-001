@@ -1,32 +1,50 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React, { useEffect, useMemo } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router";
+import { fetchProducts } from "../redux/feature/homeSlice";
 import Slider from "./Slider";
 import CategorySection from "./CategorySection";
 import Footer from "../components/Footer";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchProducts } from "../redux/feature/productSlice";
-import { getRandomProducts } from "../redux/feature/homeSlice";
 
 const Home = () => {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
-  const dispatch = useDispatch()
+  const { products, loading, error } = useSelector((state) => state.home);
 
-  const { products, loading, error } = useSelector((state) => state.home)
-
-  // Fetch Products
   useEffect(() => {
-     dispatch(fetchProducts())
+    dispatch(fetchProducts());
   }, [dispatch]);
 
+  // 🔹 Local getRandomProducts function
+  const getRandomProducts = (arr, count) => {
+    if (!arr || arr.length === 0) return [];
+    const shuffled = [...arr].sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, count);
+  };
+
+  // 🔹 Memoized category products
+  const mobiles = useMemo(() =>
+    getRandomProducts(products.filter((p) => p.category === "mobiles"), 5), [products]);
+
+  const electronics = useMemo(() =>
+    getRandomProducts(products.filter((p) => p.category === "electronics"), 5), [products]);
+
+  const fashion = useMemo(() =>
+    getRandomProducts(products.filter((p) => p.category === "fashion"), 5), [products]);
+
+  const furniture = useMemo(() =>
+    getRandomProducts(products.filter((p) => p.category === "furniture"), 5), [products]);
+
+  // 🔹 Product section component
   const ProductSection = ({ title, items }) => (
-    <section className="mt-6 px-4 bg-white shadow rounded-lg p-4">
+    <section className="mt-20 px-4 bg-white shadow rounded-lg p-4">
       <h2 className="text-lg font-semibold mb-3">{title}</h2>
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
         {items.length > 0 ? (
           items.map((p) => (
             <div
               key={p.id}
+              onClick={() => navigate(`/product/${p.id}`)}
               className="bg-gray-50 p-3 rounded-lg border hover:shadow-lg cursor-pointer"
             >
               <img
@@ -45,26 +63,17 @@ const Home = () => {
     </section>
   );
 
-  // 🔹 Filter products category-wise & pick random 5
-  const mobiles = getRandomProducts(products.filter((p) => p.category === "mobiles"), 5);
-  const electronics = getRandomProducts(products.filter((p) => p.category === "electronics"), 5);
-  const fashion = getRandomProducts(products.filter((p) => p.category === "fashion"), 5);  //
-  const furniture = getRandomProducts(products.filter((p) => p.category === "furniture"), 5);
-
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Category Section */}
       <CategorySection />
 
-      {/* Slider */}
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl mt-[100px] mx-auto px-4">
         <Slider />
       </div>
 
-      {/* {loading && <p className="text-center">Loading...</p>}
-      {error && <p className="text-center text-red-500">{error}</p>} */}
+      {loading && <p className="text-center">Loading...</p>}
+      {error && <p className="text-center text-red-500">{error}</p>}
 
-      {/* Product Sections - Random 5 per category */}
       <ProductSection title="Deals of the Day (Mobiles)" items={mobiles} />
       <ProductSection title="Best of Electronics" items={electronics} />
       <ProductSection title="Fashion Best Sellers" items={fashion} />

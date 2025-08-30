@@ -1,8 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const PRODUCT_URL = "http://localhost:3004/products";
-const USER_URL = "http://localhost:3004/users";
+const PRODUCT_URL = "http://localhost:3000/products";
 
 // Thunks for CRUD operations
 

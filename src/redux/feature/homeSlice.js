@@ -1,16 +1,17 @@
+// redux/feature/homeSlice.js
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
 const PRODUCT_URL = "http://localhost:3000/products";
 
 export const fetchProducts = createAsyncThunk(
-  'home/fetchProducts',
-  async ({ rejectWithValue }) => {
+  "home/fetchProducts",
+  async (_, { rejectWithValue }) => {
     try {
       const res = await axios.get(PRODUCT_URL);
       return res.data;
     } catch (err) {
-      return rejectWithValue("products is not fetch");
+      return rejectWithValue("Failed to fetch products");
     }
   }
 );
@@ -18,20 +19,14 @@ export const fetchProducts = createAsyncThunk(
 const homeSlice = createSlice({
   name: "home",
   initialState: {
-    products:[],
+    products: [],
     error: null,
-    loading: false
+    loading: false,
   },
-  reducers: {
-    getRandomProducts: (state, action) => {
-      const { arr, count, category } = action.payload;
-      const shuffled = [...arr].sort(() => 0.5 - Math.random());
-      state[category] = shuffled.slice(0, count);
-    }
-  },
+  reducers: {},
   extraReducers: (builder) => {
     builder
-    .addCase(fetchProducts.pending, (state) => {
+      .addCase(fetchProducts.pending, (state) => {
         state.loading = true;
         state.error = null;
       })
@@ -46,5 +41,4 @@ const homeSlice = createSlice({
   },
 });
 
-export const { getRandomProducts } = homeSlice.actions;
 export default homeSlice.reducer;
